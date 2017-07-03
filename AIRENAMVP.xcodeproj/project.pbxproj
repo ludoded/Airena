@@ -1,0 +1,835 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B22014DA1EFAB49F00DE66D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014D91EFAB49F00DE66D1 /* CoreMotion.framework */; };
+		B22014DC1EFAB4AC00DE66D1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014DB1EFAB4AC00DE66D1 /* HealthKit.framework */; };
+		B22014DE1EFAB4C500DE66D1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014DD1EFAB4C500DE66D1 /* libz.tbd */; };
+		B22014E01EFAB4D000DE66D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014DF1EFAB4D000DE66D1 /* libc++.tbd */; };
+		B22014E21EFAB4FD00DE66D1 /* WatchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014E11EFAB4FD00DE66D1 /* WatchKit.framework */; };
+		B22014E41EFAB50600DE66D1 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014E31EFAB50600DE66D1 /* AudioToolbox.framework */; };
+		B22014E61EFAB50F00DE66D1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014E51EFAB50F00DE66D1 /* libz.tbd */; };
+		B22014E81EFAB51900DE66D1 /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014E71EFAB51900DE66D1 /* WatchConnectivity.framework */; };
+		B22014EA1EFAB52300DE66D1 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014E91EFAB52300DE66D1 /* CoreLocation.framework */; };
+		B22014EC1EFAB53000DE66D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014EB1EFAB53000DE66D1 /* CoreMotion.framework */; };
+		B22014EE1EFAB53700DE66D1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014ED1EFAB53700DE66D1 /* HealthKit.framework */; };
+		B22014F21EFAB63F00DE66D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014F11EFAB63F00DE66D1 /* libc++.tbd */; };
+		B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B01EFA900000B9BE57 /* AppDelegate.swift */; };
+		B29452B31EFA900000B9BE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* ViewController.swift */; };
+		B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29452B41EFA900000B9BE57 /* Main.storyboard */; };
+		B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29452B71EFA900000B9BE57 /* Assets.xcassets */; };
+		B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29452B91EFA900000B9BE57 /* LaunchScreen.storyboard */; };
+		B29452C61EFA900000B9BE57 /* AIRENAMVPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452C51EFA900000B9BE57 /* AIRENAMVPTests.swift */; };
+		B29452CB1EFA900000B9BE57 /* AIRENAMVP WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B29452CA1EFA900000B9BE57 /* AIRENAMVP WatchKit App.app */; };
+		B29452D11EFA900000B9BE57 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29452CF1EFA900000B9BE57 /* Interface.storyboard */; };
+		B29452D31EFA900000B9BE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29452D21EFA900000B9BE57 /* Assets.xcassets */; };
+		B29452DA1EFA900100B9BE57 /* AIRENAMVP WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B29452D91EFA900100B9BE57 /* AIRENAMVP WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B29452E11EFA900100B9BE57 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452E01EFA900100B9BE57 /* InterfaceController.swift */; };
+		B29452E31EFA900100B9BE57 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452E21EFA900100B9BE57 /* ExtensionDelegate.swift */; };
+		B29452E51EFA900100B9BE57 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452E41EFA900100B9BE57 /* NotificationController.swift */; };
+		B29452E71EFA900100B9BE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29452E61EFA900100B9BE57 /* Assets.xcassets */; };
+		B29452FA1EFA90CE00B9BE57 /* data in Resources */ = {isa = PBXBuildFile; fileRef = B29452F91EFA90CE00B9BE57 /* data */; };
+		B29453021EFA919800B9BE57 /* FocusMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453001EFA919800B9BE57 /* FocusMotion.framework */; };
+		B29453031EFA919800B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */; };
+		B29453061EFA91A400B9BE57 /* FocusMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453041EFA91A400B9BE57 /* FocusMotion.framework */; };
+		B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
+		B29453081EFAA5DE00B9BE57 /* FocusMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453041EFA91A400B9BE57 /* FocusMotion.framework */; };
+		B29453091EFAA5DE00B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B29452C21EFA900000B9BE57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29452A51EFA900000B9BE57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29452AC1EFA900000B9BE57;
+			remoteInfo = AIRENAMVP;
+		};
+		B29452CC1EFA900000B9BE57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29452A51EFA900000B9BE57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29452C91EFA900000B9BE57;
+			remoteInfo = "AIRENAMVP WatchKit App";
+		};
+		B29452DB1EFA900100B9BE57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B29452A51EFA900000B9BE57 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B29452D81EFA900100B9BE57;
+			remoteInfo = "AIRENAMVP WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B29452EE1EFA900100B9BE57 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B29452DA1EFA900100B9BE57 /* AIRENAMVP WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452F21EFA900100B9BE57 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B29452CB1EFA900000B9BE57 /* AIRENAMVP WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B22014D91EFAB49F00DE66D1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
+		B22014DB1EFAB4AC00DE66D1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		B22014DD1EFAB4C500DE66D1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
+		B22014DF1EFAB4D000DE66D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/usr/lib/libc++.tbd"; sourceTree = DEVELOPER_DIR; };
+		B22014E11EFAB4FD00DE66D1 /* WatchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchKit.framework; path = System/Library/Frameworks/WatchKit.framework; sourceTree = SDKROOT; };
+		B22014E31EFAB50600DE66D1 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		B22014E51EFAB50F00DE66D1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		B22014E71EFAB51900DE66D1 /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = System/Library/Frameworks/WatchConnectivity.framework; sourceTree = SDKROOT; };
+		B22014E91EFAB52300DE66D1 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B22014EB1EFAB53000DE66D1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		B22014ED1EFAB53700DE66D1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B22014EF1EFAB58700DE66D1 /* AIRENAMVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AIRENAMVP.entitlements; sourceTree = "<group>"; };
+		B22014F01EFAB5A500DE66D1 /* AIRENAMVP WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AIRENAMVP WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		B22014F11EFAB63F00DE66D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIRENAMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29452B01EFA900000B9BE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B29452B21EFA900000B9BE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B29452B51EFA900000B9BE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B29452B71EFA900000B9BE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B29452BA1EFA900000B9BE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B29452BC1EFA900000B9BE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29452C11EFA900000B9BE57 /* AIRENAMVPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AIRENAMVPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29452C51EFA900000B9BE57 /* AIRENAMVPTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AIRENAMVPTests.swift; sourceTree = "<group>"; };
+		B29452C71EFA900000B9BE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29452CA1EFA900000B9BE57 /* AIRENAMVP WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIRENAMVP WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29452D01EFA900000B9BE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B29452D21EFA900000B9BE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B29452D41EFA900000B9BE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29452D91EFA900100B9BE57 /* AIRENAMVP WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AIRENAMVP WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B29452DF1EFA900100B9BE57 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B29452E01EFA900100B9BE57 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B29452E21EFA900100B9BE57 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		B29452E41EFA900100B9BE57 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B29452E61EFA900100B9BE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B29452E81EFA900100B9BE57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B29452F91EFA90CE00B9BE57 /* data */ = {isa = PBXFileReference; lastKnownFileType = folder; name = data; path = AIRENAMVP/data; sourceTree = "<group>"; };
+		B29453001EFA919800B9BE57 /* FocusMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotion.framework; path = AIRENAMVP/Frameworks/iOS/FocusMotion.framework; sourceTree = "<group>"; };
+		B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/iOS/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
+		B29453041EFA91A400B9BE57 /* FocusMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotion.framework; path = AIRENAMVP/Frameworks/watch/FocusMotion.framework; sourceTree = "<group>"; };
+		B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/watch/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B29452AA1EFA900000B9BE57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22014F21EFAB63F00DE66D1 /* libc++.tbd in Frameworks */,
+				B22014EE1EFAB53700DE66D1 /* HealthKit.framework in Frameworks */,
+				B22014EC1EFAB53000DE66D1 /* CoreMotion.framework in Frameworks */,
+				B22014EA1EFAB52300DE66D1 /* CoreLocation.framework in Frameworks */,
+				B22014E81EFAB51900DE66D1 /* WatchConnectivity.framework in Frameworks */,
+				B22014E61EFAB50F00DE66D1 /* libz.tbd in Frameworks */,
+				B22014E41EFAB50600DE66D1 /* AudioToolbox.framework in Frameworks */,
+				B22014E21EFAB4FD00DE66D1 /* WatchKit.framework in Frameworks */,
+				B29453061EFA91A400B9BE57 /* FocusMotion.framework in Frameworks */,
+				B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
+				B29453021EFA919800B9BE57 /* FocusMotion.framework in Frameworks */,
+				B29453031EFA919800B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452BE1EFA900000B9BE57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452D61EFA900100B9BE57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B22014E01EFAB4D000DE66D1 /* libc++.tbd in Frameworks */,
+				B22014DE1EFAB4C500DE66D1 /* libz.tbd in Frameworks */,
+				B22014DC1EFAB4AC00DE66D1 /* HealthKit.framework in Frameworks */,
+				B22014DA1EFAB49F00DE66D1 /* CoreMotion.framework in Frameworks */,
+				B29453081EFAA5DE00B9BE57 /* FocusMotion.framework in Frameworks */,
+				B29453091EFAA5DE00B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B29452A41EFA900000B9BE57 = {
+			isa = PBXGroup;
+			children = (
+				B29452FB1EFA90F300B9BE57 /* Frameworks */,
+				B29452F91EFA90CE00B9BE57 /* data */,
+				B29452AF1EFA900000B9BE57 /* AIRENAMVP */,
+				B29452C41EFA900000B9BE57 /* AIRENAMVPTests */,
+				B29452CE1EFA900000B9BE57 /* AIRENAMVP WatchKit App */,
+				B29452DD1EFA900100B9BE57 /* AIRENAMVP WatchKit Extension */,
+				B29452AE1EFA900000B9BE57 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B29452AE1EFA900000B9BE57 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */,
+				B29452C11EFA900000B9BE57 /* AIRENAMVPTests.xctest */,
+				B29452CA1EFA900000B9BE57 /* AIRENAMVP WatchKit App.app */,
+				B29452D91EFA900100B9BE57 /* AIRENAMVP WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B29452AF1EFA900000B9BE57 /* AIRENAMVP */ = {
+			isa = PBXGroup;
+			children = (
+				B22014EF1EFAB58700DE66D1 /* AIRENAMVP.entitlements */,
+				B29452B01EFA900000B9BE57 /* AppDelegate.swift */,
+				B29452B21EFA900000B9BE57 /* ViewController.swift */,
+				B29452B41EFA900000B9BE57 /* Main.storyboard */,
+				B29452B71EFA900000B9BE57 /* Assets.xcassets */,
+				B29452B91EFA900000B9BE57 /* LaunchScreen.storyboard */,
+				B29452BC1EFA900000B9BE57 /* Info.plist */,
+			);
+			path = AIRENAMVP;
+			sourceTree = "<group>";
+		};
+		B29452C41EFA900000B9BE57 /* AIRENAMVPTests */ = {
+			isa = PBXGroup;
+			children = (
+				B29452C51EFA900000B9BE57 /* AIRENAMVPTests.swift */,
+				B29452C71EFA900000B9BE57 /* Info.plist */,
+			);
+			path = AIRENAMVPTests;
+			sourceTree = "<group>";
+		};
+		B29452CE1EFA900000B9BE57 /* AIRENAMVP WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				B29452CF1EFA900000B9BE57 /* Interface.storyboard */,
+				B29452D21EFA900000B9BE57 /* Assets.xcassets */,
+				B29452D41EFA900000B9BE57 /* Info.plist */,
+			);
+			path = "AIRENAMVP WatchKit App";
+			sourceTree = "<group>";
+		};
+		B29452DD1EFA900100B9BE57 /* AIRENAMVP WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B22014F01EFAB5A500DE66D1 /* AIRENAMVP WatchKit Extension.entitlements */,
+				B29452E01EFA900100B9BE57 /* InterfaceController.swift */,
+				B29452E21EFA900100B9BE57 /* ExtensionDelegate.swift */,
+				B29452E41EFA900100B9BE57 /* NotificationController.swift */,
+				B29452E61EFA900100B9BE57 /* Assets.xcassets */,
+				B29452E81EFA900100B9BE57 /* Info.plist */,
+				B29452DE1EFA900100B9BE57 /* Supporting Files */,
+			);
+			path = "AIRENAMVP WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		B29452DE1EFA900100B9BE57 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B29452DF1EFA900100B9BE57 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B29452FB1EFA90F300B9BE57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B22014F11EFAB63F00DE66D1 /* libc++.tbd */,
+				B22014ED1EFAB53700DE66D1 /* HealthKit.framework */,
+				B22014EB1EFAB53000DE66D1 /* CoreMotion.framework */,
+				B22014E91EFAB52300DE66D1 /* CoreLocation.framework */,
+				B22014E71EFAB51900DE66D1 /* WatchConnectivity.framework */,
+				B22014E51EFAB50F00DE66D1 /* libz.tbd */,
+				B22014E31EFAB50600DE66D1 /* AudioToolbox.framework */,
+				B22014E11EFAB4FD00DE66D1 /* WatchKit.framework */,
+				B22014DF1EFAB4D000DE66D1 /* libc++.tbd */,
+				B22014DD1EFAB4C500DE66D1 /* libz.tbd */,
+				B22014DB1EFAB4AC00DE66D1 /* HealthKit.framework */,
+				B22014D91EFAB49F00DE66D1 /* CoreMotion.framework */,
+				B29453041EFA91A400B9BE57 /* FocusMotion.framework */,
+				B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */,
+				B29453001EFA919800B9BE57 /* FocusMotion.framework */,
+				B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B29452AC1EFA900000B9BE57 /* AIRENAMVP */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29452F31EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP" */;
+			buildPhases = (
+				B29452A91EFA900000B9BE57 /* Sources */,
+				B29452AA1EFA900000B9BE57 /* Frameworks */,
+				B29452AB1EFA900000B9BE57 /* Resources */,
+				B29452F21EFA900100B9BE57 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B29452CD1EFA900000B9BE57 /* PBXTargetDependency */,
+			);
+			name = AIRENAMVP;
+			productName = AIRENAMVP;
+			productReference = B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B29452C01EFA900000B9BE57 /* AIRENAMVPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29452F61EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVPTests" */;
+			buildPhases = (
+				B29452BD1EFA900000B9BE57 /* Sources */,
+				B29452BE1EFA900000B9BE57 /* Frameworks */,
+				B29452BF1EFA900000B9BE57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B29452C31EFA900000B9BE57 /* PBXTargetDependency */,
+			);
+			name = AIRENAMVPTests;
+			productName = AIRENAMVPTests;
+			productReference = B29452C11EFA900000B9BE57 /* AIRENAMVPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B29452C91EFA900000B9BE57 /* AIRENAMVP WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29452EF1EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP WatchKit App" */;
+			buildPhases = (
+				B29452C81EFA900000B9BE57 /* Resources */,
+				B29452EE1EFA900100B9BE57 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B29452DC1EFA900100B9BE57 /* PBXTargetDependency */,
+			);
+			name = "AIRENAMVP WatchKit App";
+			productName = "AIRENAMVP WatchKit App";
+			productReference = B29452CA1EFA900000B9BE57 /* AIRENAMVP WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B29452D81EFA900100B9BE57 /* AIRENAMVP WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B29452EB1EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP WatchKit Extension" */;
+			buildPhases = (
+				B29452D51EFA900100B9BE57 /* Sources */,
+				B29452D61EFA900100B9BE57 /* Frameworks */,
+				B29452D71EFA900100B9BE57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AIRENAMVP WatchKit Extension";
+			productName = "AIRENAMVP WatchKit Extension";
+			productReference = B29452D91EFA900100B9BE57 /* AIRENAMVP WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B29452A51EFA900000B9BE57 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "challengeme llc";
+				TargetAttributes = {
+					B29452AC1EFA900000B9BE57 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2JRU28287L;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
+					};
+					B29452C01EFA900000B9BE57 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2JRU28287L;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B29452AC1EFA900000B9BE57;
+					};
+					B29452C91EFA900000B9BE57 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2JRU28287L;
+						ProvisioningStyle = Automatic;
+					};
+					B29452D81EFA900100B9BE57 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2JRU28287L;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = B29452A81EFA900000B9BE57 /* Build configuration list for PBXProject "AIRENAMVP" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B29452A41EFA900000B9BE57;
+			productRefGroup = B29452AE1EFA900000B9BE57 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B29452AC1EFA900000B9BE57 /* AIRENAMVP */,
+				B29452C01EFA900000B9BE57 /* AIRENAMVPTests */,
+				B29452C91EFA900000B9BE57 /* AIRENAMVP WatchKit App */,
+				B29452D81EFA900100B9BE57 /* AIRENAMVP WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B29452AB1EFA900000B9BE57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */,
+				B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */,
+				B29452FA1EFA90CE00B9BE57 /* data in Resources */,
+				B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452BF1EFA900000B9BE57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452C81EFA900000B9BE57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29452D31EFA900000B9BE57 /* Assets.xcassets in Resources */,
+				B29452D11EFA900000B9BE57 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452D71EFA900100B9BE57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29452E71EFA900100B9BE57 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B29452A91EFA900000B9BE57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29452B31EFA900000B9BE57 /* ViewController.swift in Sources */,
+				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452BD1EFA900000B9BE57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29452C61EFA900000B9BE57 /* AIRENAMVPTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B29452D51EFA900100B9BE57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B29452E51EFA900100B9BE57 /* NotificationController.swift in Sources */,
+				B29452E31EFA900100B9BE57 /* ExtensionDelegate.swift in Sources */,
+				B29452E11EFA900100B9BE57 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B29452C31EFA900000B9BE57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29452AC1EFA900000B9BE57 /* AIRENAMVP */;
+			targetProxy = B29452C21EFA900000B9BE57 /* PBXContainerItemProxy */;
+		};
+		B29452CD1EFA900000B9BE57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29452C91EFA900000B9BE57 /* AIRENAMVP WatchKit App */;
+			targetProxy = B29452CC1EFA900000B9BE57 /* PBXContainerItemProxy */;
+		};
+		B29452DC1EFA900100B9BE57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B29452D81EFA900100B9BE57 /* AIRENAMVP WatchKit Extension */;
+			targetProxy = B29452DB1EFA900100B9BE57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B29452B41EFA900000B9BE57 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B29452B51EFA900000B9BE57 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B29452B91EFA900000B9BE57 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B29452BA1EFA900000B9BE57 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B29452CF1EFA900000B9BE57 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B29452D01EFA900000B9BE57 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B29452E91EFA900100B9BE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B29452EA1EFA900100B9BE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B29452EC1EFA900100B9BE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "AIRENAMVP WatchKit Extension/AIRENAMVP WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/watch",
+				);
+				INFOPLIST_FILE = "AIRENAMVP WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		B29452ED1EFA900100B9BE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "AIRENAMVP WatchKit Extension/AIRENAMVP WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/watch",
+				);
+				INFOPLIST_FILE = "AIRENAMVP WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		B29452F01EFA900100B9BE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				IBSC_MODULE = AIRENAMVP_WatchKit_Extension;
+				INFOPLIST_FILE = "AIRENAMVP WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		B29452F11EFA900100B9BE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				IBSC_MODULE = AIRENAMVP_WatchKit_Extension;
+				INFOPLIST_FILE = "AIRENAMVP WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		B29452F41EFA900100B9BE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AIRENAMVP/AIRENAMVP.entitlements;
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/iOS",
+					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/watch",
+				);
+				INFOPLIST_FILE = AIRENAMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B29452F51EFA900100B9BE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AIRENAMVP/AIRENAMVP.entitlements;
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/iOS",
+					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/watch",
+				);
+				INFOPLIST_FILE = AIRENAMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "-fembed-bitcode";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		B29452F71EFA900100B9BE57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				INFOPLIST_FILE = AIRENAMVPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIRENAMVP.app/AIRENAMVP";
+			};
+			name = Debug;
+		};
+		B29452F81EFA900100B9BE57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 2JRU28287L;
+				INFOPLIST_FILE = AIRENAMVPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIRENAMVP.app/AIRENAMVP";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B29452A81EFA900000B9BE57 /* Build configuration list for PBXProject "AIRENAMVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29452E91EFA900100B9BE57 /* Debug */,
+				B29452EA1EFA900100B9BE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29452EB1EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29452EC1EFA900100B9BE57 /* Debug */,
+				B29452ED1EFA900100B9BE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29452EF1EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29452F01EFA900100B9BE57 /* Debug */,
+				B29452F11EFA900100B9BE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29452F31EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29452F41EFA900100B9BE57 /* Debug */,
+				B29452F51EFA900100B9BE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B29452F61EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B29452F71EFA900100B9BE57 /* Debug */,
+				B29452F81EFA900100B9BE57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B29452A51EFA900000B9BE57 /* Project object */;
+}
