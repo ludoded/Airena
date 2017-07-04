@@ -19,8 +19,9 @@
 		B22014EC1EFAB53000DE66D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014EB1EFAB53000DE66D1 /* CoreMotion.framework */; };
 		B22014EE1EFAB53700DE66D1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014ED1EFAB53700DE66D1 /* HealthKit.framework */; };
 		B22014F21EFAB63F00DE66D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014F11EFAB63F00DE66D1 /* libc++.tbd */; };
+		B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */; };
 		B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B01EFA900000B9BE57 /* AppDelegate.swift */; };
-		B29452B31EFA900000B9BE57 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* ViewController.swift */; };
+		B29452B31EFA900000B9BE57 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* CreateViewController.swift */; };
 		B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29452B41EFA900000B9BE57 /* Main.storyboard */; };
 		B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29452B71EFA900000B9BE57 /* Assets.xcassets */; };
 		B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29452B91EFA900000B9BE57 /* LaunchScreen.storyboard */; };
@@ -40,6 +41,10 @@
 		B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
 		B29453081EFAA5DE00B9BE57 /* FocusMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453041EFA91A400B9BE57 /* FocusMotion.framework */; };
 		B29453091EFAA5DE00B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
+		B2E7E1281F0BADD600618D72 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E1271F0BADD600618D72 /* JoinViewController.swift */; };
+		B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */; };
+		B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */; };
+		B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E7E1301F0BAEF600618D72 /* JoinCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,9 +111,10 @@
 		B22014EF1EFAB58700DE66D1 /* AIRENAMVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AIRENAMVP.entitlements; sourceTree = "<group>"; };
 		B22014F01EFAB5A500DE66D1 /* AIRENAMVP WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AIRENAMVP WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		B22014F11EFAB63F00DE66D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TableView.swift"; sourceTree = "<group>"; };
 		B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIRENAMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29452B01EFA900000B9BE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B29452B21EFA900000B9BE57 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B29452B21EFA900000B9BE57 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		B29452B51EFA900000B9BE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B29452B71EFA900000B9BE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29452BA1EFA900000B9BE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +138,10 @@
 		B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/iOS/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
 		B29453041EFA91A400B9BE57 /* FocusMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotion.framework; path = AIRENAMVP/Frameworks/watch/FocusMotion.framework; sourceTree = "<group>"; };
 		B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/watch/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
+		B2E7E1271F0BADD600618D72 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
+		B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCell.swift; sourceTree = "<group>"; };
+		B2E7E1301F0BAEF600618D72 /* JoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +187,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B29121BF1F0BB3080074EAE8 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		B29452A41EFA900000B9BE57 = {
 			isa = PBXGroup;
 			children = (
@@ -204,9 +222,11 @@
 		B29452AF1EFA900000B9BE57 /* AIRENAMVP */ = {
 			isa = PBXGroup;
 			children = (
+				B29121BF1F0BB3080074EAE8 /* Helper */,
+				B2E7E1291F0BADF800618D72 /* ViewModel */,
+				B2E7E1261F0BAD9400618D72 /* Controller */,
 				B22014EF1EFAB58700DE66D1 /* AIRENAMVP.entitlements */,
 				B29452B01EFA900000B9BE57 /* AppDelegate.swift */,
-				B29452B21EFA900000B9BE57 /* ViewController.swift */,
 				B29452B41EFA900000B9BE57 /* Main.storyboard */,
 				B29452B71EFA900000B9BE57 /* Assets.xcassets */,
 				B29452B91EFA900000B9BE57 /* LaunchScreen.storyboard */,
@@ -277,6 +297,41 @@
 				B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2E7E1261F0BAD9400618D72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7E12C1F0BAED600618D72 /* Join */,
+				B29452B21EFA900000B9BE57 /* CreateViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B2E7E1291F0BADF800618D72 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B2E7E12C1F0BAED600618D72 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7E12D1F0BAEDC00618D72 /* Cell */,
+				B2E7E1271F0BADD600618D72 /* JoinViewController.swift */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
+		B2E7E12D1F0BAEDC00618D72 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */,
+				B2E7E1301F0BAEF600618D72 /* JoinCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,6 +482,7 @@
 			files = (
 				B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */,
 				B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */,
+				B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */,
 				B29452FA1EFA90CE00B9BE57 /* data in Resources */,
 				B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */,
 			);
@@ -463,8 +519,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B29452B31EFA900000B9BE57 /* ViewController.swift in Sources */,
+				B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */,
+				B29452B31EFA900000B9BE57 /* CreateViewController.swift in Sources */,
+				B2E7E1281F0BADD600618D72 /* JoinViewController.swift in Sources */,
+				B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */,
 				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
+				B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
