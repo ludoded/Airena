@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HFg-iI-Cgl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qoh-gy-Nrf">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="HFg-iI-Cgl" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="a3t-yz-pff">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="oZL-TM-Y9T" kind="relationship" relationship="rootViewController" id="hl6-sN-6v4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1sA-hc-Ocv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="407" y="-193"/>
+        </scene>
+        <!--Auth View Controller-->
+        <scene sceneID="y3O-OC-gd6">
+            <objects>
+                <viewController id="oZL-TM-Y9T" customClass="AuthViewController" customModule="AIRENAMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gMr-bF-K0Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="8me-sv-YFX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u8G-y3-qrD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AUTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxH-w1-XhG">
+                                <rect key="frame" x="159.5" y="70" width="56" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZUa-2G-z1W">
+                                <rect key="frame" x="137" y="283" width="100" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="nEO-nd-udp">
+                                        <rect key="frame" x="32" y="32" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Brg-Ig-ViH"/>
+                                    <constraint firstItem="nEO-nd-udp" firstAttribute="centerX" secondItem="ZUa-2G-z1W" secondAttribute="centerX" id="V2w-gh-zOv"/>
+                                    <constraint firstAttribute="width" constant="100" id="Wwf-Vk-7S9"/>
+                                    <constraint firstItem="nEO-nd-udp" firstAttribute="centerY" secondItem="ZUa-2G-z1W" secondAttribute="centerY" id="xZ8-I1-9YA"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fetching your address." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1l-Bx-KTv">
+                                <rect key="frame" x="99.5" y="102" width="175" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="c1l-Bx-KTv" firstAttribute="centerX" secondItem="u8G-y3-qrD" secondAttribute="centerX" id="67f-iW-J1F"/>
+                            <constraint firstItem="ZUa-2G-z1W" firstAttribute="centerX" secondItem="u8G-y3-qrD" secondAttribute="centerX" id="AQB-dO-r1T"/>
+                            <constraint firstItem="nxH-w1-XhG" firstAttribute="centerX" secondItem="u8G-y3-qrD" secondAttribute="centerX" id="GYe-ig-lHy"/>
+                            <constraint firstItem="ZUa-2G-z1W" firstAttribute="centerY" secondItem="u8G-y3-qrD" secondAttribute="centerY" id="TeL-gD-nEQ"/>
+                            <constraint firstItem="c1l-Bx-KTv" firstAttribute="top" secondItem="nxH-w1-XhG" secondAttribute="bottom" constant="8" id="Tx1-Fw-0Ie"/>
+                            <constraint firstItem="nxH-w1-XhG" firstAttribute="top" secondItem="gMr-bF-K0Z" secondAttribute="bottom" constant="50" id="YDD-R2-ftO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Wh-Ur-AQn"/>
+                    <connections>
+                        <outlet property="spinnerBox" destination="ZUa-2G-z1W" id="zqU-tZ-MPS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BvA-fI-Otg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1264.8" y="-194.75262368815595"/>
+        </scene>
+    </scenes>
+</document>

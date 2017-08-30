@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let healthStore = HKHealthStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        showInitial()
         return true
     }
     
@@ -26,3 +26,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
+extension AppDelegate {
+    fileprivate func showInitial() {
+        let userExists = AppSettings.shared.userExists()
+        
+        if userExists { showHome() }
+        else { showLogin() }
+    }
+    
+    public func showHome() {
+        guard let main = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() else { return }
+        window?.rootViewController = main
+    }
+    
+    public func showLogin() {
+        guard let auth = UIStoryboard(name: "Auth", bundle: nil).instantiateInitialViewController() else { return }
+        window?.rootViewController = auth
+    }
+}

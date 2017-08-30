@@ -45,6 +45,14 @@
 		B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */; };
 		B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */; };
 		B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E7E1301F0BAEF600618D72 /* JoinCell.xib */; };
+		B2F6A9F51F56D97400B2481D /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9EF1F56D97400B2481D /* AuthInteractor.swift */; };
+		B2F6A9F61F56D97400B2481D /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9F01F56D97400B2481D /* AuthModels.swift */; };
+		B2F6A9F71F56D97400B2481D /* AuthPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9F11F56D97400B2481D /* AuthPresenter.swift */; };
+		B2F6A9F81F56D97400B2481D /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9F21F56D97400B2481D /* AuthRouter.swift */; };
+		B2F6A9F91F56D97400B2481D /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9F31F56D97400B2481D /* AuthViewController.swift */; };
+		B2F6A9FA1F56D97400B2481D /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9F41F56D97400B2481D /* AuthWorker.swift */; };
+		B2F6A9FC1F56D98B00B2481D /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F6A9FB1F56D98B00B2481D /* Auth.storyboard */; };
+		B2F6AA001F56DB1700B2481D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9FF1F56DB1700B2481D /* AppSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +150,14 @@
 		B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
 		B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCell.swift; sourceTree = "<group>"; };
 		B2E7E1301F0BAEF600618D72 /* JoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinCell.xib; sourceTree = "<group>"; };
+		B2F6A9EF1F56D97400B2481D /* AuthInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthInteractor.swift; path = Scene/Auth/AuthInteractor.swift; sourceTree = "<group>"; };
+		B2F6A9F01F56D97400B2481D /* AuthModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthModels.swift; path = Scene/Auth/AuthModels.swift; sourceTree = "<group>"; };
+		B2F6A9F11F56D97400B2481D /* AuthPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthPresenter.swift; path = Scene/Auth/AuthPresenter.swift; sourceTree = "<group>"; };
+		B2F6A9F21F56D97400B2481D /* AuthRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthRouter.swift; path = Scene/Auth/AuthRouter.swift; sourceTree = "<group>"; };
+		B2F6A9F31F56D97400B2481D /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthViewController.swift; path = Scene/Auth/AuthViewController.swift; sourceTree = "<group>"; };
+		B2F6A9F41F56D97400B2481D /* AuthWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthWorker.swift; path = Scene/Auth/AuthWorker.swift; sourceTree = "<group>"; };
+		B2F6A9FB1F56D98B00B2481D /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = Scene/Auth/Auth.storyboard; sourceTree = "<group>"; };
+		B2F6A9FF1F56DB1700B2481D /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = Model/Settings/AppSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +238,8 @@
 		B29452AF1EFA900000B9BE57 /* AIRENAMVP */ = {
 			isa = PBXGroup;
 			children = (
+				B2F6A9FD1F56DAFA00B2481D /* Model */,
+				B2F6A9ED1F56D94300B2481D /* Scene */,
 				B29121BF1F0BB3080074EAE8 /* Helper */,
 				B2E7E1291F0BADF800618D72 /* ViewModel */,
 				B2E7E1261F0BAD9400618D72 /* Controller */,
@@ -332,6 +350,44 @@
 				B2E7E1301F0BAEF600618D72 /* JoinCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		B2F6A9ED1F56D94300B2481D /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6A9EE1F56D94A00B2481D /* Auth */,
+			);
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		B2F6A9EE1F56D94A00B2481D /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6A9EF1F56D97400B2481D /* AuthInteractor.swift */,
+				B2F6A9F01F56D97400B2481D /* AuthModels.swift */,
+				B2F6A9F11F56D97400B2481D /* AuthPresenter.swift */,
+				B2F6A9F21F56D97400B2481D /* AuthRouter.swift */,
+				B2F6A9F31F56D97400B2481D /* AuthViewController.swift */,
+				B2F6A9F41F56D97400B2481D /* AuthWorker.swift */,
+				B2F6A9FB1F56D98B00B2481D /* Auth.storyboard */,
+			);
+			name = Auth;
+			sourceTree = "<group>";
+		};
+		B2F6A9FD1F56DAFA00B2481D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6A9FE1F56DAFE00B2481D /* Settings */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B2F6A9FE1F56DAFE00B2481D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6A9FF1F56DB1700B2481D /* AppSettings.swift */,
+			);
+			name = Settings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,6 +536,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F6A9FC1F56D98B00B2481D /* Auth.storyboard in Resources */,
 				B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */,
 				B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */,
 				B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */,
@@ -519,8 +576,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F6AA001F56DB1700B2481D /* AppSettings.swift in Sources */,
+				B2F6A9F91F56D97400B2481D /* AuthViewController.swift in Sources */,
 				B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */,
+				B2F6A9F61F56D97400B2481D /* AuthModels.swift in Sources */,
+				B2F6A9FA1F56D97400B2481D /* AuthWorker.swift in Sources */,
+				B2F6A9F81F56D97400B2481D /* AuthRouter.swift in Sources */,
 				B29452B31EFA900000B9BE57 /* CreateViewController.swift in Sources */,
+				B2F6A9F51F56D97400B2481D /* AuthInteractor.swift in Sources */,
+				B2F6A9F71F56D97400B2481D /* AuthPresenter.swift in Sources */,
 				B2E7E1281F0BADD600618D72 /* JoinViewController.swift in Sources */,
 				B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */,
 				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
