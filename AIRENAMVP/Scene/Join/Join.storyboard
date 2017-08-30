@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-946" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Join-->
         <scene sceneID="nDI-gB-ixI">
             <objects>
-                <viewController id="ogy-5i-3Rd" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ogy-5i-3Rd" customClass="JoinViewController" customModule="AIRENAMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WYH-Lr-AeA"/>
                         <viewControllerLayoutGuide type="bottom" id="NsA-Mt-tC0"/>
@@ -37,9 +37,28 @@
                     <view key="view" contentMode="scaleToFill" id="awz-07-ajU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kBE-le-anL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ogy-5i-3Rd" id="IEs-RS-LBy"/>
+                                    <outlet property="delegate" destination="ogy-5i-3Rd" id="X5V-uu-2I3"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="NsA-Mt-tC0" firstAttribute="top" secondItem="kBE-le-anL" secondAttribute="bottom" id="0PY-GQ-n50"/>
+                            <constraint firstAttribute="trailing" secondItem="kBE-le-anL" secondAttribute="trailing" id="8kW-Aa-OxH"/>
+                            <constraint firstItem="kBE-le-anL" firstAttribute="leading" secondItem="awz-07-ajU" secondAttribute="leading" id="GLN-yx-5H9"/>
+                            <constraint firstItem="kBE-le-anL" firstAttribute="top" secondItem="WYH-Lr-AeA" secondAttribute="bottom" id="gdw-z9-9OL"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Wkq-WG-528"/>
+                    <navigationItem key="navigationItem" title="Join" id="Wkq-WG-528"/>
+                    <connections>
+                        <outlet property="tableView" destination="kBE-le-anL" id="ZZN-cc-Q5l"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1P-op-JZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

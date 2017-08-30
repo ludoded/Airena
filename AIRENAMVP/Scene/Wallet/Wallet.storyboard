@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-946" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Wallet-->
         <scene sceneID="cbA-z5-neQ">
             <objects>
                 <viewController id="YIt-gQ-5J2" sceneMemberID="viewController">
@@ -37,9 +38,33 @@
                     <view key="view" contentMode="scaleToFill" id="xxX-Qt-24Y">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hY6-dc-uFD">
+                                <rect key="frame" x="16" y="84" width="343" height="21.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Balance: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6rn-QD-aey">
+                                        <rect key="frame" x="0.0" y="0.0" width="272" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$100" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tFE-MZ-EME">
+                                        <rect key="frame" x="272" y="0.0" width="71" height="21.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hY6-dc-uFD" firstAttribute="leading" secondItem="xxX-Qt-24Y" secondAttribute="leadingMargin" id="XqK-Nr-QEK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hY6-dc-uFD" secondAttribute="trailing" id="Zph-IV-EVg"/>
+                            <constraint firstItem="hY6-dc-uFD" firstAttribute="top" secondItem="oW1-r8-85p" secondAttribute="bottom" constant="20" id="eUf-xp-dd2"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TiJ-1S-VCr"/>
+                    <navigationItem key="navigationItem" title="Wallet" id="TiJ-1S-VCr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9gF-3v-0yA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

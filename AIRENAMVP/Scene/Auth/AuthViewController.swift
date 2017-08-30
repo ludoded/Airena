@@ -70,7 +70,17 @@ class AuthViewController: UIViewController, AuthDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        doSomething()
+        startPlaceholderTimer()
+    }
+    
+    func startPlaceholderTimer() {
+        if #available(iOS 10.0, *) {
+            Timer.scheduledTimer(withTimeInterval: 7.0, repeats: false) { _ in
+                (UIApplication.shared.delegate as? AppDelegate)?.showHome()
+            }
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     // MARK: Do something

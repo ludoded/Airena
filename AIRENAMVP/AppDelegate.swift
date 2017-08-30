@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let healthStore = HKHealthStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        showHome() /// TODO: remove this and uncomment the line below. 
-        //showInitial()
+//        showHome() /// TODO: remove this and uncomment the line below. 
+        showInitial()
         return true
     }
     
