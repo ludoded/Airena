@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let healthStore = HKHealthStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        showInitial()
+        showHome() /// TODO: remove this and uncomment the line below. 
+        //showInitial()
         return true
     }
     
@@ -35,7 +36,7 @@ extension AppDelegate {
     }
     
     public func showHome() {
-        guard let main = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() else { return }
+        guard let main = UIStoryboard(name: "TabBar", bundle: nil).instantiateInitialViewController() else { return }
         window?.rootViewController = main
     }
     

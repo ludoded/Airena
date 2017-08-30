@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class JoinViewController: UIViewController {
+final class JoinViewController1: UIViewController {
     fileprivate let viewModel = JoinViewModel()
     
     @IBOutlet weak var tableView: UITableView!
@@ -30,7 +30,7 @@ final class JoinViewController: UIViewController {
     }
 }
 
-extension JoinViewController: UITableViewDataSource {
+extension JoinViewController1: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -48,7 +48,7 @@ extension JoinViewController: UITableViewDataSource {
     }
 }
 
-extension JoinViewController: UITableViewDelegate {
+extension JoinViewController1: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.01
     }

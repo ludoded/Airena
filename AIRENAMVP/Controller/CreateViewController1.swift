@@ -18,7 +18,7 @@ enum AnalysisType: Int {
     case activityPlus
 }
 
-class CreateViewController: UIViewController, FMDeviceDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+class CreateViewController1: UIViewController, FMDeviceDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     private var device: FMDevice!
     private var freestyleModel: FMFreestyleModel!
     private var activityPlusModel: FMActivityPlusModel!

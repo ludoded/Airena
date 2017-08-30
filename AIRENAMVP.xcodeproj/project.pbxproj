@@ -21,7 +21,7 @@
 		B22014F21EFAB63F00DE66D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014F11EFAB63F00DE66D1 /* libc++.tbd */; };
 		B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */; };
 		B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B01EFA900000B9BE57 /* AppDelegate.swift */; };
-		B29452B31EFA900000B9BE57 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* CreateViewController.swift */; };
+		B29452B31EFA900000B9BE57 /* CreateViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* CreateViewController1.swift */; };
 		B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29452B41EFA900000B9BE57 /* Main.storyboard */; };
 		B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B29452B71EFA900000B9BE57 /* Assets.xcassets */; };
 		B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B29452B91EFA900000B9BE57 /* LaunchScreen.storyboard */; };
@@ -41,7 +41,7 @@
 		B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
 		B29453081EFAA5DE00B9BE57 /* FocusMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453041EFA91A400B9BE57 /* FocusMotion.framework */; };
 		B29453091EFAA5DE00B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
-		B2E7E1281F0BADD600618D72 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E1271F0BADD600618D72 /* JoinViewController.swift */; };
+		B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */; };
 		B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */; };
 		B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */; };
 		B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E7E1301F0BAEF600618D72 /* JoinCell.xib */; };
@@ -53,6 +53,34 @@
 		B2F6A9FA1F56D97400B2481D /* AuthWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9F41F56D97400B2481D /* AuthWorker.swift */; };
 		B2F6A9FC1F56D98B00B2481D /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F6A9FB1F56D98B00B2481D /* Auth.storyboard */; };
 		B2F6AA001F56DB1700B2481D /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9FF1F56DB1700B2481D /* AppSettings.swift */; };
+		B2F6AA081F56DCA100B2481D /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA021F56DCA100B2481D /* TabBarInteractor.swift */; };
+		B2F6AA091F56DCA100B2481D /* TabBarModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA031F56DCA100B2481D /* TabBarModels.swift */; };
+		B2F6AA0A1F56DCA100B2481D /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA041F56DCA100B2481D /* TabBarPresenter.swift */; };
+		B2F6AA0B1F56DCA100B2481D /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA051F56DCA100B2481D /* TabBarRouter.swift */; };
+		B2F6AA0C1F56DCA100B2481D /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA061F56DCA100B2481D /* TabBarViewController.swift */; };
+		B2F6AA0D1F56DCA100B2481D /* TabBarWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA071F56DCA100B2481D /* TabBarWorker.swift */; };
+		B2F6AA0F1F56DCB000B2481D /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F6AA0E1F56DCB000B2481D /* TabBar.storyboard */; };
+		B2F6AA121F56DCDB00B2481D /* Create.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F6AA111F56DCDB00B2481D /* Create.storyboard */; };
+		B2F6AA151F56DCF100B2481D /* Join.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F6AA141F56DCF100B2481D /* Join.storyboard */; };
+		B2F6AA181F56DD0F00B2481D /* Wallet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2F6AA171F56DD0F00B2481D /* Wallet.storyboard */; };
+		B2F6AA1F1F56DD3800B2481D /* CreateInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA191F56DD3800B2481D /* CreateInteractor.swift */; };
+		B2F6AA201F56DD3800B2481D /* CreateModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA1A1F56DD3800B2481D /* CreateModels.swift */; };
+		B2F6AA211F56DD3800B2481D /* CreatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA1B1F56DD3800B2481D /* CreatePresenter.swift */; };
+		B2F6AA221F56DD3800B2481D /* CreateRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA1C1F56DD3800B2481D /* CreateRouter.swift */; };
+		B2F6AA231F56DD3800B2481D /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA1D1F56DD3800B2481D /* CreateViewController.swift */; };
+		B2F6AA241F56DD3800B2481D /* CreateWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA1E1F56DD3800B2481D /* CreateWorker.swift */; };
+		B2F6AA2B1F56DD4A00B2481D /* JoinInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA251F56DD4A00B2481D /* JoinInteractor.swift */; };
+		B2F6AA2C1F56DD4A00B2481D /* JoinModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA261F56DD4A00B2481D /* JoinModels.swift */; };
+		B2F6AA2D1F56DD4A00B2481D /* JoinPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA271F56DD4A00B2481D /* JoinPresenter.swift */; };
+		B2F6AA2E1F56DD4A00B2481D /* JoinRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA281F56DD4A00B2481D /* JoinRouter.swift */; };
+		B2F6AA2F1F56DD4A00B2481D /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA291F56DD4A00B2481D /* JoinViewController.swift */; };
+		B2F6AA301F56DD4A00B2481D /* JoinWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA2A1F56DD4A00B2481D /* JoinWorker.swift */; };
+		B2F6AA371F56DD5900B2481D /* WalletInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA311F56DD5900B2481D /* WalletInteractor.swift */; };
+		B2F6AA381F56DD5900B2481D /* WalletModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA321F56DD5900B2481D /* WalletModels.swift */; };
+		B2F6AA391F56DD5900B2481D /* WalletPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA331F56DD5900B2481D /* WalletPresenter.swift */; };
+		B2F6AA3A1F56DD5900B2481D /* WalletRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA341F56DD5900B2481D /* WalletRouter.swift */; };
+		B2F6AA3B1F56DD5900B2481D /* WalletViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA351F56DD5900B2481D /* WalletViewController.swift */; };
+		B2F6AA3C1F56DD5900B2481D /* WalletWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6AA361F56DD5900B2481D /* WalletWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,7 +150,7 @@
 		B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TableView.swift"; sourceTree = "<group>"; };
 		B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIRENAMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29452B01EFA900000B9BE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B29452B21EFA900000B9BE57 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		B29452B21EFA900000B9BE57 /* CreateViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController1.swift; sourceTree = "<group>"; };
 		B29452B51EFA900000B9BE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B29452B71EFA900000B9BE57 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B29452BA1EFA900000B9BE57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -146,7 +174,7 @@
 		B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/iOS/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
 		B29453041EFA91A400B9BE57 /* FocusMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotion.framework; path = AIRENAMVP/Frameworks/watch/FocusMotion.framework; sourceTree = "<group>"; };
 		B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/watch/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
-		B2E7E1271F0BADD600618D72 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController1.swift; sourceTree = "<group>"; };
 		B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
 		B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCell.swift; sourceTree = "<group>"; };
 		B2E7E1301F0BAEF600618D72 /* JoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinCell.xib; sourceTree = "<group>"; };
@@ -158,6 +186,34 @@
 		B2F6A9F41F56D97400B2481D /* AuthWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthWorker.swift; path = Scene/Auth/AuthWorker.swift; sourceTree = "<group>"; };
 		B2F6A9FB1F56D98B00B2481D /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Auth.storyboard; path = Scene/Auth/Auth.storyboard; sourceTree = "<group>"; };
 		B2F6A9FF1F56DB1700B2481D /* AppSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppSettings.swift; path = Model/Settings/AppSettings.swift; sourceTree = "<group>"; };
+		B2F6AA021F56DCA100B2481D /* TabBarInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarInteractor.swift; path = Scene/TabBar/TabBarInteractor.swift; sourceTree = "<group>"; };
+		B2F6AA031F56DCA100B2481D /* TabBarModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarModels.swift; path = Scene/TabBar/TabBarModels.swift; sourceTree = "<group>"; };
+		B2F6AA041F56DCA100B2481D /* TabBarPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarPresenter.swift; path = Scene/TabBar/TabBarPresenter.swift; sourceTree = "<group>"; };
+		B2F6AA051F56DCA100B2481D /* TabBarRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarRouter.swift; path = Scene/TabBar/TabBarRouter.swift; sourceTree = "<group>"; };
+		B2F6AA061F56DCA100B2481D /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarViewController.swift; path = Scene/TabBar/TabBarViewController.swift; sourceTree = "<group>"; };
+		B2F6AA071F56DCA100B2481D /* TabBarWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TabBarWorker.swift; path = Scene/TabBar/TabBarWorker.swift; sourceTree = "<group>"; };
+		B2F6AA0E1F56DCB000B2481D /* TabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = TabBar.storyboard; path = Scene/TabBar/TabBar.storyboard; sourceTree = "<group>"; };
+		B2F6AA111F56DCDB00B2481D /* Create.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Create.storyboard; path = Scene/Create/Create.storyboard; sourceTree = "<group>"; };
+		B2F6AA141F56DCF100B2481D /* Join.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Join.storyboard; path = Scene/Join/Join.storyboard; sourceTree = "<group>"; };
+		B2F6AA171F56DD0F00B2481D /* Wallet.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Wallet.storyboard; path = Scene/Wallet/Wallet.storyboard; sourceTree = "<group>"; };
+		B2F6AA191F56DD3800B2481D /* CreateInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateInteractor.swift; path = Scene/Create/CreateInteractor.swift; sourceTree = "<group>"; };
+		B2F6AA1A1F56DD3800B2481D /* CreateModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateModels.swift; path = Scene/Create/CreateModels.swift; sourceTree = "<group>"; };
+		B2F6AA1B1F56DD3800B2481D /* CreatePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreatePresenter.swift; path = Scene/Create/CreatePresenter.swift; sourceTree = "<group>"; };
+		B2F6AA1C1F56DD3800B2481D /* CreateRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateRouter.swift; path = Scene/Create/CreateRouter.swift; sourceTree = "<group>"; };
+		B2F6AA1D1F56DD3800B2481D /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = Scene/Create/CreateViewController.swift; sourceTree = "<group>"; };
+		B2F6AA1E1F56DD3800B2481D /* CreateWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateWorker.swift; path = Scene/Create/CreateWorker.swift; sourceTree = "<group>"; };
+		B2F6AA251F56DD4A00B2481D /* JoinInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinInteractor.swift; path = Scene/Join/JoinInteractor.swift; sourceTree = "<group>"; };
+		B2F6AA261F56DD4A00B2481D /* JoinModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinModels.swift; path = Scene/Join/JoinModels.swift; sourceTree = "<group>"; };
+		B2F6AA271F56DD4A00B2481D /* JoinPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinPresenter.swift; path = Scene/Join/JoinPresenter.swift; sourceTree = "<group>"; };
+		B2F6AA281F56DD4A00B2481D /* JoinRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinRouter.swift; path = Scene/Join/JoinRouter.swift; sourceTree = "<group>"; };
+		B2F6AA291F56DD4A00B2481D /* JoinViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinViewController.swift; path = Scene/Join/JoinViewController.swift; sourceTree = "<group>"; };
+		B2F6AA2A1F56DD4A00B2481D /* JoinWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinWorker.swift; path = Scene/Join/JoinWorker.swift; sourceTree = "<group>"; };
+		B2F6AA311F56DD5900B2481D /* WalletInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletInteractor.swift; path = Scene/Wallet/WalletInteractor.swift; sourceTree = "<group>"; };
+		B2F6AA321F56DD5900B2481D /* WalletModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletModels.swift; path = Scene/Wallet/WalletModels.swift; sourceTree = "<group>"; };
+		B2F6AA331F56DD5900B2481D /* WalletPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletPresenter.swift; path = Scene/Wallet/WalletPresenter.swift; sourceTree = "<group>"; };
+		B2F6AA341F56DD5900B2481D /* WalletRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletRouter.swift; path = Scene/Wallet/WalletRouter.swift; sourceTree = "<group>"; };
+		B2F6AA351F56DD5900B2481D /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletViewController.swift; path = Scene/Wallet/WalletViewController.swift; sourceTree = "<group>"; };
+		B2F6AA361F56DD5900B2481D /* WalletWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletWorker.swift; path = Scene/Wallet/WalletWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,7 +377,7 @@
 			isa = PBXGroup;
 			children = (
 				B2E7E12C1F0BAED600618D72 /* Join */,
-				B29452B21EFA900000B9BE57 /* CreateViewController.swift */,
+				B29452B21EFA900000B9BE57 /* CreateViewController1.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -338,7 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				B2E7E12D1F0BAEDC00618D72 /* Cell */,
-				B2E7E1271F0BADD600618D72 /* JoinViewController.swift */,
+				B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -355,6 +411,10 @@
 		B2F6A9ED1F56D94300B2481D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B2F6AA161F56DCF500B2481D /* Wallet */,
+				B2F6AA131F56DCDE00B2481D /* Join */,
+				B2F6AA101F56DCCA00B2481D /* Create */,
+				B2F6AA011F56DC7B00B2481D /* Tab */,
 				B2F6A9EE1F56D94A00B2481D /* Auth */,
 			);
 			name = Scene;
@@ -388,6 +448,62 @@
 				B2F6A9FF1F56DB1700B2481D /* AppSettings.swift */,
 			);
 			name = Settings;
+			sourceTree = "<group>";
+		};
+		B2F6AA011F56DC7B00B2481D /* Tab */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6AA021F56DCA100B2481D /* TabBarInteractor.swift */,
+				B2F6AA031F56DCA100B2481D /* TabBarModels.swift */,
+				B2F6AA041F56DCA100B2481D /* TabBarPresenter.swift */,
+				B2F6AA051F56DCA100B2481D /* TabBarRouter.swift */,
+				B2F6AA061F56DCA100B2481D /* TabBarViewController.swift */,
+				B2F6AA071F56DCA100B2481D /* TabBarWorker.swift */,
+				B2F6AA0E1F56DCB000B2481D /* TabBar.storyboard */,
+			);
+			name = Tab;
+			sourceTree = "<group>";
+		};
+		B2F6AA101F56DCCA00B2481D /* Create */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6AA191F56DD3800B2481D /* CreateInteractor.swift */,
+				B2F6AA1A1F56DD3800B2481D /* CreateModels.swift */,
+				B2F6AA1B1F56DD3800B2481D /* CreatePresenter.swift */,
+				B2F6AA1C1F56DD3800B2481D /* CreateRouter.swift */,
+				B2F6AA1D1F56DD3800B2481D /* CreateViewController.swift */,
+				B2F6AA1E1F56DD3800B2481D /* CreateWorker.swift */,
+				B2F6AA111F56DCDB00B2481D /* Create.storyboard */,
+			);
+			name = Create;
+			sourceTree = "<group>";
+		};
+		B2F6AA131F56DCDE00B2481D /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6AA251F56DD4A00B2481D /* JoinInteractor.swift */,
+				B2F6AA261F56DD4A00B2481D /* JoinModels.swift */,
+				B2F6AA271F56DD4A00B2481D /* JoinPresenter.swift */,
+				B2F6AA281F56DD4A00B2481D /* JoinRouter.swift */,
+				B2F6AA291F56DD4A00B2481D /* JoinViewController.swift */,
+				B2F6AA2A1F56DD4A00B2481D /* JoinWorker.swift */,
+				B2F6AA141F56DCF100B2481D /* Join.storyboard */,
+			);
+			name = Join;
+			sourceTree = "<group>";
+		};
+		B2F6AA161F56DCF500B2481D /* Wallet */ = {
+			isa = PBXGroup;
+			children = (
+				B2F6AA311F56DD5900B2481D /* WalletInteractor.swift */,
+				B2F6AA321F56DD5900B2481D /* WalletModels.swift */,
+				B2F6AA331F56DD5900B2481D /* WalletPresenter.swift */,
+				B2F6AA341F56DD5900B2481D /* WalletRouter.swift */,
+				B2F6AA351F56DD5900B2481D /* WalletViewController.swift */,
+				B2F6AA361F56DD5900B2481D /* WalletWorker.swift */,
+				B2F6AA171F56DD0F00B2481D /* Wallet.storyboard */,
+			);
+			name = Wallet;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -537,10 +653,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2F6A9FC1F56D98B00B2481D /* Auth.storyboard in Resources */,
+				B2F6AA181F56DD0F00B2481D /* Wallet.storyboard in Resources */,
 				B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */,
 				B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */,
 				B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */,
+				B2F6AA121F56DCDB00B2481D /* Create.storyboard in Resources */,
 				B29452FA1EFA90CE00B9BE57 /* data in Resources */,
+				B2F6AA151F56DCF100B2481D /* Join.storyboard in Resources */,
+				B2F6AA0F1F56DCB000B2481D /* TabBar.storyboard in Resources */,
 				B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -576,18 +696,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2F6AA381F56DD5900B2481D /* WalletModels.swift in Sources */,
+				B2F6AA0B1F56DCA100B2481D /* TabBarRouter.swift in Sources */,
+				B2F6AA201F56DD3800B2481D /* CreateModels.swift in Sources */,
+				B2F6AA081F56DCA100B2481D /* TabBarInteractor.swift in Sources */,
 				B2F6AA001F56DB1700B2481D /* AppSettings.swift in Sources */,
+				B2F6AA3B1F56DD5900B2481D /* WalletViewController.swift in Sources */,
+				B2F6AA091F56DCA100B2481D /* TabBarModels.swift in Sources */,
+				B2F6AA0C1F56DCA100B2481D /* TabBarViewController.swift in Sources */,
+				B2F6AA0D1F56DCA100B2481D /* TabBarWorker.swift in Sources */,
 				B2F6A9F91F56D97400B2481D /* AuthViewController.swift in Sources */,
+				B2F6AA391F56DD5900B2481D /* WalletPresenter.swift in Sources */,
+				B2F6AA231F56DD3800B2481D /* CreateViewController.swift in Sources */,
+				B2F6AA0A1F56DCA100B2481D /* TabBarPresenter.swift in Sources */,
+				B2F6AA1F1F56DD3800B2481D /* CreateInteractor.swift in Sources */,
 				B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */,
 				B2F6A9F61F56D97400B2481D /* AuthModels.swift in Sources */,
 				B2F6A9FA1F56D97400B2481D /* AuthWorker.swift in Sources */,
+				B2F6AA2D1F56DD4A00B2481D /* JoinPresenter.swift in Sources */,
 				B2F6A9F81F56D97400B2481D /* AuthRouter.swift in Sources */,
-				B29452B31EFA900000B9BE57 /* CreateViewController.swift in Sources */,
+				B2F6AA301F56DD4A00B2481D /* JoinWorker.swift in Sources */,
+				B2F6AA211F56DD3800B2481D /* CreatePresenter.swift in Sources */,
+				B2F6AA2E1F56DD4A00B2481D /* JoinRouter.swift in Sources */,
+				B29452B31EFA900000B9BE57 /* CreateViewController1.swift in Sources */,
+				B2F6AA241F56DD3800B2481D /* CreateWorker.swift in Sources */,
+				B2F6AA371F56DD5900B2481D /* WalletInteractor.swift in Sources */,
+				B2F6AA3C1F56DD5900B2481D /* WalletWorker.swift in Sources */,
 				B2F6A9F51F56D97400B2481D /* AuthInteractor.swift in Sources */,
 				B2F6A9F71F56D97400B2481D /* AuthPresenter.swift in Sources */,
-				B2E7E1281F0BADD600618D72 /* JoinViewController.swift in Sources */,
+				B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */,
 				B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */,
+				B2F6AA2B1F56DD4A00B2481D /* JoinInteractor.swift in Sources */,
+				B2F6AA3A1F56DD5900B2481D /* WalletRouter.swift in Sources */,
 				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
+				B2F6AA2C1F56DD4A00B2481D /* JoinModels.swift in Sources */,
+				B2F6AA221F56DD3800B2481D /* CreateRouter.swift in Sources */,
+				B2F6AA2F1F56DD4A00B2481D /* JoinViewController.swift in Sources */,
 				B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
