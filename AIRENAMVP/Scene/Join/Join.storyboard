@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o3i-6d-kda">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,7 +12,7 @@
         <scene sceneID="vuZ-Yi-Wgk">
             <objects>
                 <navigationController id="o3i-6d-kda" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Join" id="tjz-2L-k3v"/>
+                    <tabBarItem key="tabBarItem" title="Join" image="join" id="tjz-2L-k3v"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcP-F3-Q1D">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -46,4 +46,7 @@
             <point key="canvasLocation" x="6" y="151"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="join" width="25" height="25"/>
+    </resources>
 </document>
