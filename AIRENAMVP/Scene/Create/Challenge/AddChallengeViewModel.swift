@@ -11,6 +11,9 @@ import Foundation
 final class AddChallengeViewModel {
     var challenge: Challenge
     
+    var currentRound: Round?
+    var currentExercise: Exercise?
+    
     init(type: ChallengeType) {
         challenge = Challenge(type: type)
     }
@@ -44,5 +47,25 @@ final class AddChallengeViewModel {
         default:
             return ""
         }
+    }
+}
+
+/// MARK: Round
+extension AddChallengeViewModel {
+    
+}
+
+/// MARK: Exercise
+extension AddChallengeViewModel {
+    func initializeCurrentExercise() {
+        currentExercise = Exercise()
+    }
+    
+    func deinitializeCurrentExercise() {
+        currentExercise = nil
+    }
+    
+    func saveCurrentExercise() {
+        currentRound?.exercises.append(currentExercise!)
     }
 }

@@ -72,7 +72,10 @@ extension AddChallengeViewController {
         tableView.reloadRows(at: [IndexPath(row: 0, section: 1),
                                   IndexPath(row: 1, section: 1)],
                              with: .none)
-        view.endEditing(true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
+            self?.view.endEditing(true)
+        }
     }
 }
 

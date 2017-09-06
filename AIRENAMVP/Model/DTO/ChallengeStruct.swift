@@ -32,21 +32,28 @@ struct Challenge {
 }
 
 struct Round {
-    var title: String
-    var repetition: Int
-    var exercises: [Exercise]
+    var title: String = ""
+    var repetition: Int = 0
+    var exercises: [Exercise] = []
 }
 
 enum ExecutionMeasurment {
     case repetition
     case duration
+    
+    init(with index: Int) {
+        switch index {
+        case 0: self = .repetition
+        default: self = .duration
+        }
+    }
 }
 
 struct Exercise {
-    let name: String
-    let executionNumber: Int
-    let executionMeasurement: ExecutionMeasurment
-    let rest: Int
+    var name: String = ""
+    var executionNumber: Int = 0
+    var executionMeasurement: ExecutionMeasurment = .duration
+    var rest: Int = 0
 }
 
 
