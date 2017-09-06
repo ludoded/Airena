@@ -14,76 +14,77 @@ import UIKit
 
 protocol CreateDisplayLogic: class
 {
-  func displaySomething(viewModel: Create.Something.ViewModel)
+    func displaySomething(viewModel: Create.Something.ViewModel)
 }
 
 class CreateViewController: UIViewController, CreateDisplayLogic
 {
-  var interactor: CreateBusinessLogic?
-  var router: (NSObjectProtocol & CreateRoutingLogic & CreateDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = CreateInteractor()
-    let presenter = CreatePresenter()
-    let router = CreateRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    var interactor: CreateBusinessLogic?
+    var router: (NSObjectProtocol & CreateRoutingLogic & CreateDataPassing)?
+    
+    @IBAction func openChallenge(_ sender: UIButton) {
+        performSegue(withIdentifier: "openAddChallenge", sender: nil)
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  //@IBOutlet weak var nameTextField: UITextField!
-  
-  func doSomething()
-  {
-    let request = Create.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Create.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+    
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = CreateInteractor()
+        let presenter = CreatePresenter()
+        let router = CreateRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "openAddChallenge" {
+            guard let vc = segue.destination as? AddChallengeViewController else { fatalError() }
+            vc.type = ChallengeType.private
+        }
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        doSomething()
+    }
+    
+    // MARK: Do something
+    
+    //@IBOutlet weak var nameTextField: UITextField!
+    
+    func doSomething()
+    {
+        let request = Create.Something.Request()
+        interactor?.doSomething(request: request)
+    }
+    
+    func displaySomething(viewModel: Create.Something.ViewModel)
+    {
+        //nameTextField.text = viewModel.name
+    }
 }

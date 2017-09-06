@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,12 +20,121 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Dzh-eT-3az" kind="relationship" relationship="rootViewController" id="tDd-bq-SLA"/>
+                        <segue destination="bV2-oI-nRf" kind="relationship" relationship="rootViewController" id="VvL-tf-142"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i1a-AA-AbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-946" y="151"/>
+        </scene>
+        <!--Create-->
+        <scene sceneID="wZD-gL-TUB">
+            <objects>
+                <viewController id="bV2-oI-nRf" customClass="CreateViewController" customModule="AIRENAMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9N4-7u-D5j"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dqk-me-3H8"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PYl-vM-g89">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-Hj-cmj">
+                                <rect key="frame" x="16" y="84" width="343" height="82"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csT-vn-kd7">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Public Challenges">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openChallenge:" destination="bV2-oI-nRf" eventType="touchUpInside" id="LZ5-2v-M6t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L7B-sc-rc8">
+                                        <rect key="frame" x="0.0" y="46" width="343" height="36"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Private Challenges">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="openChallenge:" destination="bV2-oI-nRf" eventType="touchUpInside" id="bVo-zm-DBD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fTb-Hj-cmj" secondAttribute="trailing" id="Dg5-PF-lvy"/>
+                            <constraint firstItem="fTb-Hj-cmj" firstAttribute="top" secondItem="9N4-7u-D5j" secondAttribute="bottom" constant="20" id="QMi-sb-G4j"/>
+                            <constraint firstItem="fTb-Hj-cmj" firstAttribute="leading" secondItem="PYl-vM-g89" secondAttribute="leadingMargin" id="X0F-y3-3T5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Create" id="LIP-8e-3VK"/>
+                    <connections>
+                        <segue destination="Xn7-g1-1Z4" kind="show" identifier="openAddChallenge" id="yYB-uJ-jRx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07D-Bb-Cvf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-76" y="151"/>
+        </scene>
+        <!--Challenge-->
+        <scene sceneID="55P-ca-Uxc">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Xn7-g1-1Z4" customClass="AddChallengeViewController" customModule="AIRENAMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="APr-eq-nnd"/>
+                        <viewControllerLayoutGuide type="bottom" id="TL8-cZ-64s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TzH-4y-eIc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zbd-bi-7n8">
+                                <rect key="frame" x="0.0" y="64" width="375" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xn7-g1-1Z4" id="tPT-OB-1gH"/>
+                                    <outlet property="delegate" destination="Xn7-g1-1Z4" id="lNo-Cd-ASH"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0f-op-GN1">
+                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.047058823530000002" green="0.83921568629999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="KCd-fi-aBy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Pay To Initiate">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="payToInitiate:" destination="Xn7-g1-1Z4" eventType="touchUpInside" id="i0Y-8k-GsZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zbd-bi-7n8" firstAttribute="top" secondItem="APr-eq-nnd" secondAttribute="bottom" id="7fS-Sa-mtY"/>
+                            <constraint firstItem="a0f-op-GN1" firstAttribute="leading" secondItem="TzH-4y-eIc" secondAttribute="leading" id="7rz-DQ-GEk"/>
+                            <constraint firstItem="a0f-op-GN1" firstAttribute="top" secondItem="zbd-bi-7n8" secondAttribute="bottom" id="D3O-FB-Kk0"/>
+                            <constraint firstAttribute="trailing" secondItem="zbd-bi-7n8" secondAttribute="trailing" id="GdP-3c-Wfj"/>
+                            <constraint firstItem="zbd-bi-7n8" firstAttribute="leading" secondItem="TzH-4y-eIc" secondAttribute="leading" id="Im3-kg-aZd"/>
+                            <constraint firstAttribute="trailing" secondItem="a0f-op-GN1" secondAttribute="trailing" id="RI5-9L-U3A"/>
+                            <constraint firstItem="TL8-cZ-64s" firstAttribute="top" secondItem="a0f-op-GN1" secondAttribute="bottom" id="Twi-Ku-nLP"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Challenge" id="HEg-UQ-MB4"/>
+                    <connections>
+                        <outlet property="tableView" destination="zbd-bi-7n8" id="g8Y-UA-W6d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="79i-qt-OzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="816.79999999999995" y="150.67466266866569"/>
         </scene>
         <!--Create-->
         <scene sceneID="ggN-Tw-JXm">
@@ -39,10 +149,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8M7-dJ-Cmw">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tuw-gx-Q95">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="iv6-d4-dyi">
                                                 <rect key="frame" x="28" y="10" width="319" height="444"/>
@@ -248,7 +358,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVC-jb-x5F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-146" y="151"/>
+            <point key="canvasLocation" x="-77" y="868"/>
         </scene>
     </scenes>
     <resources>

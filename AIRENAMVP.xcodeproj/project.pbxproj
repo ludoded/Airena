@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B213D6791F59B9C100DD4BD7 /* JSONRPCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B213D6771F59B9C100DD4BD7 /* JSONRPCKit.framework */; };
+		B213D67A1F59B9C100DD4BD7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B213D6781F59B9C100DD4BD7 /* Result.framework */; };
+		B21F7ACA1F5FF6E900DADD40 /* AddChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AC91F5FF6E900DADD40 /* AddChallengeCell.swift */; };
+		B21F7ACC1F5FF72100DADD40 /* AddChallengeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21F7ACB1F5FF72100DADD40 /* AddChallengeCell.xib */; };
+		B21F7ACE1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7ACD1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift */; };
+		B21F7AD01F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21F7ACF1F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib */; };
+		B21F7AD61F60170400DADD40 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AD51F60170400DADD40 /* DateFormatter.swift */; };
 		B22014DA1EFAB49F00DE66D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014D91EFAB49F00DE66D1 /* CoreMotion.framework */; };
 		B22014DC1EFAB4AC00DE66D1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014DB1EFAB4AC00DE66D1 /* HealthKit.framework */; };
 		B22014DE1EFAB4C500DE66D1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014DD1EFAB4C500DE66D1 /* libz.tbd */; };
@@ -41,6 +48,9 @@
 		B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
 		B29453081EFAA5DE00B9BE57 /* FocusMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453041EFA91A400B9BE57 /* FocusMotion.framework */; };
 		B29453091EFAA5DE00B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */; };
+		B2C52C891F5D53200074E6FD /* AddChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C881F5D53200074E6FD /* AddChallengeViewController.swift */; };
+		B2C52C8C1F5D6CFF0074E6FD /* ChallengeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */; };
+		B2C52C8E1F5D70180074E6FD /* AddChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C8D1F5D70180074E6FD /* AddChallengeViewModel.swift */; };
 		B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */; };
 		B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */; };
 		B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */; };
@@ -133,6 +143,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B213D6771F59B9C100DD4BD7 /* JSONRPCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONRPCKit.framework; path = Carthage/Build/iOS/JSONRPCKit.framework; sourceTree = "<group>"; };
+		B213D6781F59B9C100DD4BD7 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		B21F7AC91F5FF6E900DADD40 /* AddChallengeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeCell.swift; path = Scene/Create/Challenge/Cell/AddChallengeCell.swift; sourceTree = "<group>"; };
+		B21F7ACB1F5FF72100DADD40 /* AddChallengeCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddChallengeCell.xib; path = Scene/Create/Challenge/Cell/AddChallengeCell.xib; sourceTree = "<group>"; };
+		B21F7ACD1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeTextFieldCell.swift; path = Scene/Create/Challenge/Cell/AddChallengeTextFieldCell.swift; sourceTree = "<group>"; };
+		B21F7ACF1F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AddChallengeTextFieldCell.xib; path = Scene/Create/Challenge/Cell/AddChallengeTextFieldCell.xib; sourceTree = "<group>"; };
+		B21F7AD51F60170400DADD40 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Model/Helper/Formatter/DateFormatter.swift; sourceTree = "<group>"; };
 		B22014D91EFAB49F00DE66D1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		B22014DB1EFAB4AC00DE66D1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		B22014DD1EFAB4C500DE66D1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
@@ -174,6 +191,9 @@
 		B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/iOS/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
 		B29453041EFA91A400B9BE57 /* FocusMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotion.framework; path = AIRENAMVP/Frameworks/watch/FocusMotion.framework; sourceTree = "<group>"; };
 		B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FocusMotionAppleWatch.framework; path = AIRENAMVP/Frameworks/watch/FocusMotionAppleWatch.framework; sourceTree = "<group>"; };
+		B2C52C881F5D53200074E6FD /* AddChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeViewController.swift; path = Scene/Create/Challenge/AddChallengeViewController.swift; sourceTree = "<group>"; };
+		B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeStruct.swift; path = Model/DTO/ChallengeStruct.swift; sourceTree = "<group>"; };
+		B2C52C8D1F5D70180074E6FD /* AddChallengeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeViewModel.swift; path = Scene/Create/Challenge/AddChallengeViewModel.swift; sourceTree = "<group>"; };
 		B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController1.swift; sourceTree = "<group>"; };
 		B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
 		B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCell.swift; sourceTree = "<group>"; };
@@ -228,6 +248,8 @@
 				B22014E81EFAB51900DE66D1 /* WatchConnectivity.framework in Frameworks */,
 				B22014E61EFAB50F00DE66D1 /* libz.tbd in Frameworks */,
 				B22014E41EFAB50600DE66D1 /* AudioToolbox.framework in Frameworks */,
+				B213D6791F59B9C100DD4BD7 /* JSONRPCKit.framework in Frameworks */,
+				B213D67A1F59B9C100DD4BD7 /* Result.framework in Frameworks */,
 				B22014E21EFAB4FD00DE66D1 /* WatchKit.framework in Frameworks */,
 				B29453061EFA91A400B9BE57 /* FocusMotion.framework in Frameworks */,
 				B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
@@ -259,6 +281,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B21F7AC81F5FF61900DADD40 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B21F7AC91F5FF6E900DADD40 /* AddChallengeCell.swift */,
+				B21F7ACB1F5FF72100DADD40 /* AddChallengeCell.xib */,
+				B21F7ACD1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift */,
+				B21F7ACF1F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		B21F7AD11F5FFAE500DADD40 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B21F7AD21F5FFAF100DADD40 /* Formatter */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		B21F7AD21F5FFAF100DADD40 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				B21F7AD51F60170400DADD40 /* DateFormatter.swift */,
+			);
+			name = Formatter;
+			sourceTree = "<group>";
+		};
 		B29121BF1F0BB3080074EAE8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +402,8 @@
 		B29452FB1EFA90F300B9BE57 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B213D6771F59B9C100DD4BD7 /* JSONRPCKit.framework */,
+				B213D6781F59B9C100DD4BD7 /* Result.framework */,
 				B22014F11EFAB63F00DE66D1 /* libc++.tbd */,
 				B22014ED1EFAB53700DE66D1 /* HealthKit.framework */,
 				B22014EB1EFAB53000DE66D1 /* CoreMotion.framework */,
@@ -371,6 +422,24 @@
 				B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2C52C871F5D52A50074E6FD /* Challenge */ = {
+			isa = PBXGroup;
+			children = (
+				B21F7AC81F5FF61900DADD40 /* Cell */,
+				B2C52C881F5D53200074E6FD /* AddChallengeViewController.swift */,
+				B2C52C8D1F5D70180074E6FD /* AddChallengeViewModel.swift */,
+			);
+			name = Challenge;
+			sourceTree = "<group>";
+		};
+		B2C52C8A1F5D6CE10074E6FD /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */,
+			);
+			name = DTO;
 			sourceTree = "<group>";
 		};
 		B2E7E1261F0BAD9400618D72 /* Controller */ = {
@@ -437,6 +506,8 @@
 		B2F6A9FD1F56DAFA00B2481D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B21F7AD11F5FFAE500DADD40 /* Helper */,
+				B2C52C8A1F5D6CE10074E6FD /* DTO */,
 				B2F6A9FE1F56DAFE00B2481D /* Settings */,
 			);
 			name = Model;
@@ -467,6 +538,7 @@
 		B2F6AA101F56DCCA00B2481D /* Create */ = {
 			isa = PBXGroup;
 			children = (
+				B2C52C871F5D52A50074E6FD /* Challenge */,
 				B2F6AA191F56DD3800B2481D /* CreateInteractor.swift */,
 				B2F6AA1A1F56DD3800B2481D /* CreateModels.swift */,
 				B2F6AA1B1F56DD3800B2481D /* CreatePresenter.swift */,
@@ -517,6 +589,7 @@
 				B29452AA1EFA900000B9BE57 /* Frameworks */,
 				B29452AB1EFA900000B9BE57 /* Resources */,
 				B29452F21EFA900100B9BE57 /* Embed Watch Content */,
+				B213D67B1F59B9E000DD4BD7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -660,8 +733,10 @@
 				B2F6AA121F56DCDB00B2481D /* Create.storyboard in Resources */,
 				B29452FA1EFA90CE00B9BE57 /* data in Resources */,
 				B2F6AA151F56DCF100B2481D /* Join.storyboard in Resources */,
+				B21F7ACC1F5FF72100DADD40 /* AddChallengeCell.xib in Resources */,
 				B2F6AA0F1F56DCB000B2481D /* TabBar.storyboard in Resources */,
 				B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */,
+				B21F7AD01F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -691,16 +766,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B213D67B1F59B9E000DD4BD7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/JSONRPCKit.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B29452A91EFA900000B9BE57 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C52C8C1F5D6CFF0074E6FD /* ChallengeStruct.swift in Sources */,
 				B2F6AA381F56DD5900B2481D /* WalletModels.swift in Sources */,
 				B2F6AA0B1F56DCA100B2481D /* TabBarRouter.swift in Sources */,
 				B2F6AA201F56DD3800B2481D /* CreateModels.swift in Sources */,
 				B2F6AA081F56DCA100B2481D /* TabBarInteractor.swift in Sources */,
 				B2F6AA001F56DB1700B2481D /* AppSettings.swift in Sources */,
+				B2C52C8E1F5D70180074E6FD /* AddChallengeViewModel.swift in Sources */,
 				B2F6AA3B1F56DD5900B2481D /* WalletViewController.swift in Sources */,
 				B2F6AA091F56DCA100B2481D /* TabBarModels.swift in Sources */,
 				B2F6AA0C1F56DCA100B2481D /* TabBarViewController.swift in Sources */,
@@ -720,14 +815,18 @@
 				B2F6AA2E1F56DD4A00B2481D /* JoinRouter.swift in Sources */,
 				B29452B31EFA900000B9BE57 /* CreateViewController1.swift in Sources */,
 				B2F6AA241F56DD3800B2481D /* CreateWorker.swift in Sources */,
+				B21F7ACA1F5FF6E900DADD40 /* AddChallengeCell.swift in Sources */,
 				B2F6AA371F56DD5900B2481D /* WalletInteractor.swift in Sources */,
 				B2F6AA3C1F56DD5900B2481D /* WalletWorker.swift in Sources */,
+				B21F7ACE1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift in Sources */,
+				B2C52C891F5D53200074E6FD /* AddChallengeViewController.swift in Sources */,
 				B2F6A9F51F56D97400B2481D /* AuthInteractor.swift in Sources */,
 				B2F6A9F71F56D97400B2481D /* AuthPresenter.swift in Sources */,
 				B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */,
 				B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */,
 				B2F6AA2B1F56DD4A00B2481D /* JoinInteractor.swift in Sources */,
 				B2F6AA3A1F56DD5900B2481D /* WalletRouter.swift in Sources */,
+				B21F7AD61F60170400DADD40 /* DateFormatter.swift in Sources */,
 				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
 				B2F6AA2C1F56DD4A00B2481D /* JoinModels.swift in Sources */,
 				B2F6AA221F56DD3800B2481D /* CreateRouter.swift in Sources */,
@@ -986,6 +1085,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/iOS",
 					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/watch",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AIRENAMVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -1008,6 +1108,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/iOS",
 					"$(PROJECT_DIR)/AIRENAMVP/Frameworks/watch",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = AIRENAMVP/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
