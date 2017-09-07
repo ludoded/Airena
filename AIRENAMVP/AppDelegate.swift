@@ -9,6 +9,9 @@
 import UIKit
 import HealthKit
 
+import FocusMotion
+import FocusMotionAppleWatch
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,8 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let healthStore = HKHealthStore()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-//        showHome() /// TODO: remove this and uncomment the line below. 
-        showInitial()
+        /// Focus Motion setup
+        
+        
+        /// Init FocusMotion SDK
+        let config = FMConfig()
+        
+        // Setup the secret API key
+        guard FMFocusMotion.startup(config, apiKey: "EQZjg7s9xf4Mk83gvCYngxBBTuhZg8eV") else { fatalError("Could not initialize the Focus Motion") }
+        
+        /// Init general device support
+        FMDevice.startup()
+        
+        /// Init Apple Watch support
+        FMAppleWatchDevice.startup(nil)
+        
+        
+        showHome() /// TODO: remove this and uncomment the line below. 
+//        showInitial()
         return true
     }
     

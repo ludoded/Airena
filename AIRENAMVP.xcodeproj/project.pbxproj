@@ -16,6 +16,12 @@
 		B21F7AD61F60170400DADD40 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AD51F60170400DADD40 /* DateFormatter.swift */; };
 		B21F7AD91F6027C600DADD40 /* AddRoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AD81F6027C600DADD40 /* AddRoundViewController.swift */; };
 		B21F7ADC1F6030D600DADD40 /* AddExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7ADB1F6030D600DADD40 /* AddExerciseViewController.swift */; };
+		B21F7ADF1F61644400DADD40 /* FullTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7ADE1F61644400DADD40 /* FullTextFieldTableViewCell.swift */; };
+		B21F7AE11F61645E00DADD40 /* FullTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21F7AE01F61645E00DADD40 /* FullTextFieldTableViewCell.xib */; };
+		B21F7AE31F6171AC00DADD40 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AE21F6171AC00DADD40 /* ExerciseTableViewCell.swift */; };
+		B21F7AE51F6171BF00DADD40 /* ExerciseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21F7AE41F6171BF00DADD40 /* ExerciseTableViewCell.xib */; };
+		B21F7AE71F6193C800DADD40 /* RoundTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AE61F6193C800DADD40 /* RoundTableViewCell.swift */; };
+		B21F7AE91F6193E200DADD40 /* RoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21F7AE81F6193E200DADD40 /* RoundTableViewCell.xib */; };
 		B22014DA1EFAB49F00DE66D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014D91EFAB49F00DE66D1 /* CoreMotion.framework */; };
 		B22014DC1EFAB4AC00DE66D1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014DB1EFAB4AC00DE66D1 /* HealthKit.framework */; };
 		B22014DE1EFAB4C500DE66D1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014DD1EFAB4C500DE66D1 /* libz.tbd */; };
@@ -154,6 +160,12 @@
 		B21F7AD51F60170400DADD40 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateFormatter.swift; path = Model/Helper/Formatter/DateFormatter.swift; sourceTree = "<group>"; };
 		B21F7AD81F6027C600DADD40 /* AddRoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddRoundViewController.swift; path = Scene/Create/Round/AddRoundViewController.swift; sourceTree = "<group>"; };
 		B21F7ADB1F6030D600DADD40 /* AddExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddExerciseViewController.swift; path = Scene/Create/Exercise/AddExerciseViewController.swift; sourceTree = "<group>"; };
+		B21F7ADE1F61644400DADD40 /* FullTextFieldTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FullTextFieldTableViewCell.swift; path = Scene/Create/Round/Cell/FullTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		B21F7AE01F61645E00DADD40 /* FullTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FullTextFieldTableViewCell.xib; path = Scene/Create/Round/Cell/FullTextFieldTableViewCell.xib; sourceTree = "<group>"; };
+		B21F7AE21F6171AC00DADD40 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExerciseTableViewCell.swift; path = Scene/Create/Round/Cell/ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		B21F7AE41F6171BF00DADD40 /* ExerciseTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ExerciseTableViewCell.xib; path = Scene/Create/Round/Cell/ExerciseTableViewCell.xib; sourceTree = "<group>"; };
+		B21F7AE61F6193C800DADD40 /* RoundTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundTableViewCell.swift; path = Scene/Create/Challenge/Cell/RoundTableViewCell.swift; sourceTree = "<group>"; };
+		B21F7AE81F6193E200DADD40 /* RoundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RoundTableViewCell.xib; path = Scene/Create/Challenge/Cell/RoundTableViewCell.xib; sourceTree = "<group>"; };
 		B22014D91EFAB49F00DE66D1 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
 		B22014DB1EFAB4AC00DE66D1 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
 		B22014DD1EFAB4C500DE66D1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.0.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
@@ -292,6 +304,8 @@
 				B21F7ACB1F5FF72100DADD40 /* AddChallengeCell.xib */,
 				B21F7ACD1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift */,
 				B21F7ACF1F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib */,
+				B21F7AE61F6193C800DADD40 /* RoundTableViewCell.swift */,
+				B21F7AE81F6193E200DADD40 /* RoundTableViewCell.xib */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -315,6 +329,7 @@
 		B21F7AD71F60279800DADD40 /* Round */ = {
 			isa = PBXGroup;
 			children = (
+				B21F7ADD1F61641B00DADD40 /* Cell */,
 				B21F7AD81F6027C600DADD40 /* AddRoundViewController.swift */,
 			);
 			name = Round;
@@ -326,6 +341,17 @@
 				B21F7ADB1F6030D600DADD40 /* AddExerciseViewController.swift */,
 			);
 			name = Exercise;
+			sourceTree = "<group>";
+		};
+		B21F7ADD1F61641B00DADD40 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B21F7ADE1F61644400DADD40 /* FullTextFieldTableViewCell.swift */,
+				B21F7AE01F61645E00DADD40 /* FullTextFieldTableViewCell.xib */,
+				B21F7AE21F6171AC00DADD40 /* ExerciseTableViewCell.swift */,
+				B21F7AE41F6171BF00DADD40 /* ExerciseTableViewCell.xib */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		B29121BF1F0BB3080074EAE8 /* Helper */ = {
@@ -753,12 +779,15 @@
 				B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */,
 				B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */,
 				B2F6AA121F56DCDB00B2481D /* Create.storyboard in Resources */,
+				B21F7AE91F6193E200DADD40 /* RoundTableViewCell.xib in Resources */,
 				B29452FA1EFA90CE00B9BE57 /* data in Resources */,
 				B2F6AA151F56DCF100B2481D /* Join.storyboard in Resources */,
 				B21F7ACC1F5FF72100DADD40 /* AddChallengeCell.xib in Resources */,
 				B2F6AA0F1F56DCB000B2481D /* TabBar.storyboard in Resources */,
 				B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */,
+				B21F7AE51F6171BF00DADD40 /* ExerciseTableViewCell.xib in Resources */,
 				B21F7AD01F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib in Resources */,
+				B21F7AE11F61645E00DADD40 /* FullTextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -820,10 +849,12 @@
 				B2F6AA001F56DB1700B2481D /* AppSettings.swift in Sources */,
 				B2C52C8E1F5D70180074E6FD /* AddChallengeViewModel.swift in Sources */,
 				B2F6AA3B1F56DD5900B2481D /* WalletViewController.swift in Sources */,
+				B21F7AE31F6171AC00DADD40 /* ExerciseTableViewCell.swift in Sources */,
 				B2F6AA091F56DCA100B2481D /* TabBarModels.swift in Sources */,
 				B2F6AA0C1F56DCA100B2481D /* TabBarViewController.swift in Sources */,
 				B2F6AA0D1F56DCA100B2481D /* TabBarWorker.swift in Sources */,
 				B21F7ADC1F6030D600DADD40 /* AddExerciseViewController.swift in Sources */,
+				B21F7AE71F6193C800DADD40 /* RoundTableViewCell.swift in Sources */,
 				B2F6A9F91F56D97400B2481D /* AuthViewController.swift in Sources */,
 				B2F6AA391F56DD5900B2481D /* WalletPresenter.swift in Sources */,
 				B2F6AA231F56DD3800B2481D /* CreateViewController.swift in Sources */,
@@ -835,6 +866,7 @@
 				B2F6AA2D1F56DD4A00B2481D /* JoinPresenter.swift in Sources */,
 				B2F6A9F81F56D97400B2481D /* AuthRouter.swift in Sources */,
 				B2F6AA301F56DD4A00B2481D /* JoinWorker.swift in Sources */,
+				B21F7ADF1F61644400DADD40 /* FullTextFieldTableViewCell.swift in Sources */,
 				B2F6AA211F56DD3800B2481D /* CreatePresenter.swift in Sources */,
 				B2F6AA2E1F56DD4A00B2481D /* JoinRouter.swift in Sources */,
 				B29452B31EFA900000B9BE57 /* CreateViewController1.swift in Sources */,

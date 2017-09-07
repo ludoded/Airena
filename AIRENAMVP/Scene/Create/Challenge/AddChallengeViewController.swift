@@ -19,6 +19,10 @@ final class AddChallengeViewController: UIViewController {
         
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
     var type: ChallengeType!
     var viewModel: AddChallengeViewModel!
     
@@ -30,9 +34,19 @@ final class AddChallengeViewController: UIViewController {
         setupPickers()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+    }
+    
     func setupTableView() {
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 60.0
+        
         tableView.register(AddChallengeCell.nib, forCellReuseIdentifier: AddChallengeCell.cellId)
         tableView.register(AddChallengeTextFieldCell.nib, forCellReuseIdentifier: AddChallengeTextFieldCell.cellId)
+        tableView.register(RoundTableViewCell.nib, forCellReuseIdentifier: RoundTableViewCell.cellId)
     }
     
     func setupPickers() {
@@ -54,6 +68,12 @@ final class AddChallengeViewController: UIViewController {
         toolbar.sizeToFit()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showAddRound" {
+            guard let vc = segue.destination as? AddRoundViewController else { fatalError() }
+            vc.viewModel = viewModel
+        }
+    }
 }
 
 /// MARK: - Date Picker
@@ -92,6 +112,18 @@ extension AddChallengeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 0.1
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        if indexPath.section == 0 && indexPath.row == viewModel.challenge.rounds.count {
+            performSegue(withIdentifier: "showAddRound", sender: nil)
+        }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
 }
 
 extension AddChallengeViewController: UITableViewDataSource {
@@ -110,13 +142,17 @@ extension AddChallengeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: AddChallengeCell.cellId, for: indexPath) as? AddChallengeCell else { fatalError() }
-            
             if let round = viewModel.round(for: indexPath) {
-                cell.roundTitle.text = round.title
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: RoundTableViewCell.cellId, for: indexPath) as? RoundTableViewCell else { fatalError() }
+                cell.name.text = round.title
+                cell.reps.text = String(round.repetition)
+                cell.exercises.text = round.exercises.map({ $0.name }).joined(separator: ", ")
+                return cell
             }
-            
-            return cell
+            else {
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: AddChallengeCell.cellId, for: indexPath) as? AddChallengeCell else { fatalError() }
+                return cell
+            }
         }
         else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AddChallengeTextFieldCell.cellId, for: indexPath) as? AddChallengeTextFieldCell else { fatalError() }

@@ -127,10 +127,16 @@
                             <constraint firstItem="TL8-cZ-64s" firstAttribute="top" secondItem="a0f-op-GN1" secondAttribute="bottom" id="Twi-Ku-nLP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Challenge" id="HEg-UQ-MB4"/>
+                    <navigationItem key="navigationItem" title="Challenge" id="HEg-UQ-MB4">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="oz4-Wy-u3e">
+                            <connections>
+                                <action selector="cancel:" destination="Xn7-g1-1Z4" id="ym6-E7-XDN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="zbd-bi-7n8" id="g8Y-UA-W6d"/>
-                        <segue destination="uld-e4-rAx" kind="show" id="P0r-9g-NRV"/>
+                        <segue destination="uld-e4-rAx" kind="show" identifier="showAddRound" id="P0r-9g-NRV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="79i-qt-OzF" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -166,10 +172,21 @@
                             <constraint firstItem="GT4-lK-AjZ" firstAttribute="top" secondItem="Xmm-if-A7i" secondAttribute="bottom" id="o9W-ub-HsH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Round" id="DPx-uf-1Q5"/>
+                    <navigationItem key="navigationItem" title="Round" id="DPx-uf-1Q5">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="DwU-0F-HdW">
+                            <connections>
+                                <action selector="cancel:" destination="uld-e4-rAx" id="iI2-Pi-S7m"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="K5T-XQ-1O8">
+                            <connections>
+                                <action selector="save:" destination="uld-e4-rAx" id="YFU-ya-tPo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="GT4-lK-AjZ" id="yrD-zP-t7n"/>
-                        <segue destination="oTg-Bh-HCY" kind="show" id="ssV-qf-hCE"/>
+                        <segue destination="oTg-Bh-HCY" kind="show" identifier="showAddExercise" id="ssV-qf-hCE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hK1-uD-pUM" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -75,18 +75,7 @@ class CreateViewController1: UIViewController, FMDeviceDelegate, UIPickerViewDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /// Init FocusMotion SDK
-        let config = FMConfig()
-        
-        // Setup the secret API key
-        guard FMFocusMotion.startup(config, apiKey: "EQZjg7s9xf4Mk83gvCYngxBBTuhZg8eV") else { fatalError("Could not initialize the Focus Motion") }
-        
-        /// Init general device support
-        FMDevice.startup()
         FMDevice.add(self)
-        
-        /// Init Apple Watch support
-        FMAppleWatchDevice.startup(nil)
         
         /// Load freestyle model
         freestyleModel = FMFreestyleModel()

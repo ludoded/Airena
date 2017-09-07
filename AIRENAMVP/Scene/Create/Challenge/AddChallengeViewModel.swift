@@ -52,7 +52,36 @@ final class AddChallengeViewModel {
 
 /// MARK: Round
 extension AddChallengeViewModel {
+    func initializeCurrentRound() {
+        currentRound = Round()
+    }
     
+    func deinitializeCurrentRound() {
+        currentRound = nil
+    }
+    
+    func saveCurrentRound() {
+        challenge.rounds.append(currentRound!)
+    }
+    
+    func numberOfExercise() -> Int {
+        return (currentRound?.exercises.count ?? 0) + 1
+    }
+    
+    func exercise(for indexPath: IndexPath) -> Exercise? {
+        let index = indexPath.row
+        
+        if currentRound?.exercises.count ?? 0 > index {
+            return currentRound?.exercises[index]
+        }
+        
+        return nil
+    }
+    
+    func addExercise(for exerciseName: String, workIndex workTime: Int, restIndex restTime: Int) {
+        let exercise = Exercise(name: exerciseName, executionNumber: workTime, executionMeasurement: .duration, rest: restTime)
+        currentRound?.exercises.append(exercise)
+    }
 }
 
 /// MARK: Exercise
