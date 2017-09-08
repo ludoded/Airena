@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2013951537D6ECDF931AC7EA /* Pods_AIRENAMVPTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7924353EF56A67344638BEE2 /* Pods_AIRENAMVPTests.framework */; };
+		530F4E9962C6A9CADF45E016 /* Pods_AIRENAMVP_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62F4ABDE26514CDC27DC6B2 /* Pods_AIRENAMVP_WatchKit_Extension.framework */; };
+		6A357CC9D6FFEAEDF1D531C8 /* Pods_AIRENAMVP_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27986E5897215830C57A4627 /* Pods_AIRENAMVP_WatchKit_App.framework */; };
+		9B984B362EAFFC2DCA11B9B7 /* Pods_AIRENAMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32510C2E10AF60F9E95098A /* Pods_AIRENAMVP.framework */; };
 		B213D6791F59B9C100DD4BD7 /* JSONRPCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B213D6771F59B9C100DD4BD7 /* JSONRPCKit.framework */; };
 		B213D67A1F59B9C100DD4BD7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B213D6781F59B9C100DD4BD7 /* Result.framework */; };
 		B21F7ACA1F5FF6E900DADD40 /* AddChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AC91F5FF6E900DADD40 /* AddChallengeCell.swift */; };
@@ -34,6 +38,8 @@
 		B22014EC1EFAB53000DE66D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014EB1EFAB53000DE66D1 /* CoreMotion.framework */; };
 		B22014EE1EFAB53700DE66D1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014ED1EFAB53700DE66D1 /* HealthKit.framework */; };
 		B22014F21EFAB63F00DE66D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014F11EFAB63F00DE66D1 /* libc++.tbd */; };
+		B27C26131F62DC0200E3FE8D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26121F62DC0200E3FE8D /* Router.swift */; };
+		B27C26151F62E1D400E3FE8D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26141F62E1D400E3FE8D /* API.swift */; };
 		B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */; };
 		B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B01EFA900000B9BE57 /* AppDelegate.swift */; };
 		B29452B31EFA900000B9BE57 /* CreateViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* CreateViewController1.swift */; };
@@ -151,6 +157,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1508F226F153C9EBE99D7F51 /* Pods-AIRENAMVP WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVP WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVP WatchKit App/Pods-AIRENAMVP WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		1662543BEEF2F67949B64CC5 /* Pods-AIRENAMVP WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVP WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVP WatchKit Extension/Pods-AIRENAMVP WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		1E58356786C1FE1C5310C9DB /* Pods-AIRENAMVP WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVP WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVP WatchKit App/Pods-AIRENAMVP WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
+		27986E5897215830C57A4627 /* Pods_AIRENAMVP_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIRENAMVP_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1CF384A2EC2D51AAC8B957 /* Pods-AIRENAMVPTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVPTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVPTests/Pods-AIRENAMVPTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51F3D68F1D0A600EA68B28B1 /* Pods-AIRENAMVP WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVP WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVP WatchKit Extension/Pods-AIRENAMVP WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
+		731E66452D179EA9C22FB82D /* Pods-AIRENAMVPTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVPTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVPTests/Pods-AIRENAMVPTests.release.xcconfig"; sourceTree = "<group>"; };
+		77264219569758978C122ACD /* Pods-AIRENAMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVP.release.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVP/Pods-AIRENAMVP.release.xcconfig"; sourceTree = "<group>"; };
+		7924353EF56A67344638BEE2 /* Pods_AIRENAMVPTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIRENAMVPTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B5F994C07B1BCFD57E614DF /* Pods-AIRENAMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AIRENAMVP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AIRENAMVP/Pods-AIRENAMVP.debug.xcconfig"; sourceTree = "<group>"; };
 		B213D6771F59B9C100DD4BD7 /* JSONRPCKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JSONRPCKit.framework; path = Carthage/Build/iOS/JSONRPCKit.framework; sourceTree = "<group>"; };
 		B213D6781F59B9C100DD4BD7 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		B21F7AC91F5FF6E900DADD40 /* AddChallengeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeCell.swift; path = Scene/Create/Challenge/Cell/AddChallengeCell.swift; sourceTree = "<group>"; };
@@ -180,6 +196,8 @@
 		B22014EF1EFAB58700DE66D1 /* AIRENAMVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AIRENAMVP.entitlements; sourceTree = "<group>"; };
 		B22014F01EFAB5A500DE66D1 /* AIRENAMVP WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AIRENAMVP WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		B22014F11EFAB63F00DE66D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B27C26121F62DC0200E3FE8D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router/Router.swift; sourceTree = "<group>"; };
+		B27C26141F62E1D400E3FE8D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Networking/Router/API.swift; sourceTree = "<group>"; };
 		B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TableView.swift"; sourceTree = "<group>"; };
 		B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIRENAMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29452B01EFA900000B9BE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -250,6 +268,8 @@
 		B2F6AA341F56DD5900B2481D /* WalletRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletRouter.swift; path = Scene/Wallet/WalletRouter.swift; sourceTree = "<group>"; };
 		B2F6AA351F56DD5900B2481D /* WalletViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletViewController.swift; path = Scene/Wallet/WalletViewController.swift; sourceTree = "<group>"; };
 		B2F6AA361F56DD5900B2481D /* WalletWorker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletWorker.swift; path = Scene/Wallet/WalletWorker.swift; sourceTree = "<group>"; };
+		B32510C2E10AF60F9E95098A /* Pods_AIRENAMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIRENAMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E62F4ABDE26514CDC27DC6B2 /* Pods_AIRENAMVP_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AIRENAMVP_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +291,7 @@
 				B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
 				B29453021EFA919800B9BE57 /* FocusMotion.framework in Frameworks */,
 				B29453031EFA919800B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
+				9B984B362EAFFC2DCA11B9B7 /* Pods_AIRENAMVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +299,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2013951537D6ECDF931AC7EA /* Pods_AIRENAMVPTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +313,15 @@
 				B22014DA1EFAB49F00DE66D1 /* CoreMotion.framework in Frameworks */,
 				B29453081EFAA5DE00B9BE57 /* FocusMotion.framework in Frameworks */,
 				B29453091EFAA5DE00B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
+				530F4E9962C6A9CADF45E016 /* Pods_AIRENAMVP_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED0B0EA077C249E04F56007C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A357CC9D6FFEAEDF1D531C8 /* Pods_AIRENAMVP_WatchKit_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +385,23 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		B27C26101F62DB5300E3FE8D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B27C26111F62DB6E00E3FE8D /* Router */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		B27C26111F62DB6E00E3FE8D /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				B27C26121F62DC0200E3FE8D /* Router.swift */,
+				B27C26141F62E1D400E3FE8D /* API.swift */,
+			);
+			name = Router;
+			sourceTree = "<group>";
+		};
 		B29121BF1F0BB3080074EAE8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +420,7 @@
 				B29452CE1EFA900000B9BE57 /* AIRENAMVP WatchKit App */,
 				B29452DD1EFA900100B9BE57 /* AIRENAMVP WatchKit Extension */,
 				B29452AE1EFA900000B9BE57 /* Products */,
+				EF9249E80CC9F589327CED8E /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -389,6 +438,7 @@
 		B29452AF1EFA900000B9BE57 /* AIRENAMVP */ = {
 			isa = PBXGroup;
 			children = (
+				B27C26101F62DB5300E3FE8D /* Networking */,
 				B2F6A9FD1F56DAFA00B2481D /* Model */,
 				B2F6A9ED1F56D94300B2481D /* Scene */,
 				B29121BF1F0BB3080074EAE8 /* Helper */,
@@ -466,6 +516,10 @@
 				B29453051EFA91A400B9BE57 /* FocusMotionAppleWatch.framework */,
 				B29453001EFA919800B9BE57 /* FocusMotion.framework */,
 				B29453011EFA919800B9BE57 /* FocusMotionAppleWatch.framework */,
+				B32510C2E10AF60F9E95098A /* Pods_AIRENAMVP.framework */,
+				27986E5897215830C57A4627 /* Pods_AIRENAMVP_WatchKit_App.framework */,
+				E62F4ABDE26514CDC27DC6B2 /* Pods_AIRENAMVP_WatchKit_Extension.framework */,
+				7924353EF56A67344638BEE2 /* Pods_AIRENAMVPTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -626,6 +680,21 @@
 			name = Wallet;
 			sourceTree = "<group>";
 		};
+		EF9249E80CC9F589327CED8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B5F994C07B1BCFD57E614DF /* Pods-AIRENAMVP.debug.xcconfig */,
+				77264219569758978C122ACD /* Pods-AIRENAMVP.release.xcconfig */,
+				1508F226F153C9EBE99D7F51 /* Pods-AIRENAMVP WatchKit App.debug.xcconfig */,
+				1E58356786C1FE1C5310C9DB /* Pods-AIRENAMVP WatchKit App.release.xcconfig */,
+				1662543BEEF2F67949B64CC5 /* Pods-AIRENAMVP WatchKit Extension.debug.xcconfig */,
+				51F3D68F1D0A600EA68B28B1 /* Pods-AIRENAMVP WatchKit Extension.release.xcconfig */,
+				3E1CF384A2EC2D51AAC8B957 /* Pods-AIRENAMVPTests.debug.xcconfig */,
+				731E66452D179EA9C22FB82D /* Pods-AIRENAMVPTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -633,11 +702,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B29452F31EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP" */;
 			buildPhases = (
+				27FDABCE1A77A10F4E4C9835 /* [CP] Check Pods Manifest.lock */,
 				B29452A91EFA900000B9BE57 /* Sources */,
 				B29452AA1EFA900000B9BE57 /* Frameworks */,
 				B29452AB1EFA900000B9BE57 /* Resources */,
 				B29452F21EFA900100B9BE57 /* Embed Watch Content */,
 				B213D67B1F59B9E000DD4BD7 /* ShellScript */,
+				98C8218762FEA2DD94500C10 /* [CP] Embed Pods Frameworks */,
+				9752529B92DA1E70BFD1BB5E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -653,9 +725,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B29452F61EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVPTests" */;
 			buildPhases = (
+				37BEFB33309657D4BAE63F59 /* [CP] Check Pods Manifest.lock */,
 				B29452BD1EFA900000B9BE57 /* Sources */,
 				B29452BE1EFA900000B9BE57 /* Frameworks */,
 				B29452BF1EFA900000B9BE57 /* Resources */,
+				CC490EABBEF96311307B032C /* [CP] Embed Pods Frameworks */,
+				B74C44CBEF1FFF6BB91BB70B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -671,8 +746,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B29452EF1EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP WatchKit App" */;
 			buildPhases = (
+				5AA7AED6C41286CEA740342B /* [CP] Check Pods Manifest.lock */,
 				B29452C81EFA900000B9BE57 /* Resources */,
 				B29452EE1EFA900100B9BE57 /* Embed App Extensions */,
+				ED0B0EA077C249E04F56007C /* Frameworks */,
+				649A1A84EB6AB0AD38E5DC60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -688,9 +766,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B29452EB1EFA900100B9BE57 /* Build configuration list for PBXNativeTarget "AIRENAMVP WatchKit Extension" */;
 			buildPhases = (
+				CE69B148E1A65FD066E796FE /* [CP] Check Pods Manifest.lock */,
 				B29452D51EFA900100B9BE57 /* Sources */,
 				B29452D61EFA900100B9BE57 /* Frameworks */,
 				B29452D71EFA900100B9BE57 /* Resources */,
+				090EA1700528FF49EAAAC70E /* [CP] Embed Pods Frameworks */,
+				3D25FEE7E973D2D6BB489AA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -818,6 +899,140 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		090EA1700528FF49EAAAC70E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP WatchKit Extension/Pods-AIRENAMVP WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		27FDABCE1A77A10F4E4C9835 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIRENAMVP-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		37BEFB33309657D4BAE63F59 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIRENAMVPTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D25FEE7E973D2D6BB489AA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP WatchKit Extension/Pods-AIRENAMVP WatchKit Extension-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AA7AED6C41286CEA740342B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIRENAMVP WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		649A1A84EB6AB0AD38E5DC60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP WatchKit App/Pods-AIRENAMVP WatchKit App-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9752529B92DA1E70BFD1BB5E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP/Pods-AIRENAMVP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98C8218762FEA2DD94500C10 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP/Pods-AIRENAMVP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP/Pods-AIRENAMVP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B213D67B1F59B9E000DD4BD7 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -832,6 +1047,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		B74C44CBEF1FFF6BB91BB70B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVPTests/Pods-AIRENAMVPTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC490EABBEF96311307B032C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVPTests/Pods-AIRENAMVPTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE69B148E1A65FD066E796FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AIRENAMVP WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -878,11 +1141,13 @@
 				B2C52C891F5D53200074E6FD /* AddChallengeViewController.swift in Sources */,
 				B2F6A9F51F56D97400B2481D /* AuthInteractor.swift in Sources */,
 				B2F6A9F71F56D97400B2481D /* AuthPresenter.swift in Sources */,
+				B27C26131F62DC0200E3FE8D /* Router.swift in Sources */,
 				B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */,
 				B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */,
 				B2F6AA2B1F56DD4A00B2481D /* JoinInteractor.swift in Sources */,
 				B2F6AA3A1F56DD5900B2481D /* WalletRouter.swift in Sources */,
 				B21F7AD61F60170400DADD40 /* DateFormatter.swift in Sources */,
+				B27C26151F62E1D400E3FE8D /* API.swift in Sources */,
 				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
 				B2F6AA2C1F56DD4A00B2481D /* JoinModels.swift in Sources */,
 				B2F6AA221F56DD3800B2481D /* CreateRouter.swift in Sources */,
@@ -1052,6 +1317,7 @@
 		};
 		B29452EC1EFA900100B9BE57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1662543BEEF2F67949B64CC5 /* Pods-AIRENAMVP WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "AIRENAMVP WatchKit Extension/AIRENAMVP WatchKit Extension.entitlements";
@@ -1074,6 +1340,7 @@
 		};
 		B29452ED1EFA900100B9BE57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51F3D68F1D0A600EA68B28B1 /* Pods-AIRENAMVP WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "AIRENAMVP WatchKit Extension/AIRENAMVP WatchKit Extension.entitlements";
@@ -1096,6 +1363,7 @@
 		};
 		B29452F01EFA900100B9BE57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1508F226F153C9EBE99D7F51 /* Pods-AIRENAMVP WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1114,6 +1382,7 @@
 		};
 		B29452F11EFA900100B9BE57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E58356786C1FE1C5310C9DB /* Pods-AIRENAMVP WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -1132,6 +1401,7 @@
 		};
 		B29452F41EFA900100B9BE57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B5F994C07B1BCFD57E614DF /* Pods-AIRENAMVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AIRENAMVP/AIRENAMVP.entitlements;
@@ -1155,6 +1425,7 @@
 		};
 		B29452F51EFA900100B9BE57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77264219569758978C122ACD /* Pods-AIRENAMVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AIRENAMVP/AIRENAMVP.entitlements;
@@ -1178,6 +1449,7 @@
 		};
 		B29452F71EFA900100B9BE57 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E1CF384A2EC2D51AAC8B957 /* Pods-AIRENAMVPTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -1193,6 +1465,7 @@
 		};
 		B29452F81EFA900100B9BE57 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 731E66452D179EA9C22FB82D /* Pods-AIRENAMVPTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
