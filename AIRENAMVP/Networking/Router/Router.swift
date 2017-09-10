@@ -96,7 +96,7 @@ enum Router: BaseRouter {
         var urlRequest = URLRequest(url: url.appendingPathComponent(path))
         urlRequest.httpMethod = method.rawValue
         
-//        let urlEncoder = URLEncoding.default
+        let urlEncoder = URLEncoding.default
         let jsonEncoder = JSONEncoding.default
         
         switch self {
@@ -108,7 +108,7 @@ enum Router: BaseRouter {
              .etherium(.receiveFree(let params)):
             return try jsonEncoder.encode(urlRequest, with: params)
         default:
-            return try jsonEncoder.encode(urlRequest, with: nil)
+            return try urlEncoder.encode(urlRequest, with: nil)
         }
     }
 }

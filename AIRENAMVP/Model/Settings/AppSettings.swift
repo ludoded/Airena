@@ -15,6 +15,11 @@ final class AppSettings {
     
     private init() {}
     
+    func save(wallet: WalletResponse) {
+        ud.set(wallet.address, forKey: "UserAddress")
+        ud.set(wallet.privateKey, forKey: "PrivateKey")
+    }
+    
     func userExists() -> Bool {
         guard let _ = ud.string(forKey: "UserAddress") else { return false }
         return true

@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import Alamofire
 
 protocol AuthDisplayLogic: class
 {
@@ -74,12 +75,12 @@ class AuthViewController: UIViewController, AuthDisplayLogic
     }
     
     func startPlaceholderTimer() {
-        if #available(iOS 10.0, *) {
-            Timer.scheduledTimer(withTimeInterval: 7.0, repeats: false) { _ in
+        WalletResponse.loadType(request: API.etheriumCreateWallet()) { (resp, error) in
+            if error == nil {
+                dump(resp)
+                AppSettings.shared.save(wallet: resp!)
                 (UIApplication.shared.delegate as? AppDelegate)?.showHome()
             }
-        } else {
-            // Fallback on earlier versions
         }
     }
     

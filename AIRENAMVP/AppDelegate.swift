@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FMAppleWatchDevice.startup(nil)
         
         
-        showHome() /// TODO: remove this and uncomment the line below. 
-//        showInitial()
+//        showHome() /// TODO: remove this and uncomment the line below. 
+        showInitial()
         return true
     }
     

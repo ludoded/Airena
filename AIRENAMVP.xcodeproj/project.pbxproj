@@ -40,6 +40,9 @@
 		B22014F21EFAB63F00DE66D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014F11EFAB63F00DE66D1 /* libc++.tbd */; };
 		B27C26131F62DC0200E3FE8D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26121F62DC0200E3FE8D /* Router.swift */; };
 		B27C26151F62E1D400E3FE8D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26141F62E1D400E3FE8D /* API.swift */; };
+		B27C26171F62FB2B00E3FE8D /* WalletResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26161F62FB2B00E3FE8D /* WalletResponse.swift */; };
+		B27C261A1F632D6700E3FE8D /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26191F632D6700E3FE8D /* JSONable.swift */; };
+		B27C261C1F632DA400E3FE8D /* DataRequest+ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C261B1F632DA400E3FE8D /* DataRequest+ParseResponse.swift */; };
 		B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */; };
 		B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B01EFA900000B9BE57 /* AppDelegate.swift */; };
 		B29452B31EFA900000B9BE57 /* CreateViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* CreateViewController1.swift */; };
@@ -198,6 +201,9 @@
 		B22014F11EFAB63F00DE66D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		B27C26121F62DC0200E3FE8D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router/Router.swift; sourceTree = "<group>"; };
 		B27C26141F62E1D400E3FE8D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Networking/Router/API.swift; sourceTree = "<group>"; };
+		B27C26161F62FB2B00E3FE8D /* WalletResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletResponse.swift; path = Model/DTO/WalletResponse.swift; sourceTree = "<group>"; };
+		B27C26191F632D6700E3FE8D /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONable.swift; path = Model/Helper/Networking/JSONable.swift; sourceTree = "<group>"; };
+		B27C261B1F632DA400E3FE8D /* DataRequest+ParseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataRequest+ParseResponse.swift"; path = "Model/Helper/Networking/DataRequest+ParseResponse.swift"; sourceTree = "<group>"; };
 		B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TableView.swift"; sourceTree = "<group>"; };
 		B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIRENAMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29452B01EFA900000B9BE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -344,6 +350,7 @@
 		B21F7AD11F5FFAE500DADD40 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				B27C26181F632D4800E3FE8D /* Networking */,
 				B21F7AD21F5FFAF100DADD40 /* Formatter */,
 			);
 			name = Helper;
@@ -400,6 +407,15 @@
 				B27C26141F62E1D400E3FE8D /* API.swift */,
 			);
 			name = Router;
+			sourceTree = "<group>";
+		};
+		B27C26181F632D4800E3FE8D /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				B27C26191F632D6700E3FE8D /* JSONable.swift */,
+				B27C261B1F632DA400E3FE8D /* DataRequest+ParseResponse.swift */,
+			);
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		B29121BF1F0BB3080074EAE8 /* Helper */ = {
@@ -538,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */,
+				B27C26161F62FB2B00E3FE8D /* WalletResponse.swift */,
 			);
 			name = DTO;
 			sourceTree = "<group>";
@@ -1129,6 +1146,7 @@
 				B2F6AA2D1F56DD4A00B2481D /* JoinPresenter.swift in Sources */,
 				B2F6A9F81F56D97400B2481D /* AuthRouter.swift in Sources */,
 				B2F6AA301F56DD4A00B2481D /* JoinWorker.swift in Sources */,
+				B27C261C1F632DA400E3FE8D /* DataRequest+ParseResponse.swift in Sources */,
 				B21F7ADF1F61644400DADD40 /* FullTextFieldTableViewCell.swift in Sources */,
 				B2F6AA211F56DD3800B2481D /* CreatePresenter.swift in Sources */,
 				B2F6AA2E1F56DD4A00B2481D /* JoinRouter.swift in Sources */,
@@ -1150,7 +1168,9 @@
 				B27C26151F62E1D400E3FE8D /* API.swift in Sources */,
 				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
 				B2F6AA2C1F56DD4A00B2481D /* JoinModels.swift in Sources */,
+				B27C261A1F632D6700E3FE8D /* JSONable.swift in Sources */,
 				B2F6AA221F56DD3800B2481D /* CreateRouter.swift in Sources */,
+				B27C26171F62FB2B00E3FE8D /* WalletResponse.swift in Sources */,
 				B2F6AA2F1F56DD4A00B2481D /* JoinViewController.swift in Sources */,
 				B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */,
 			);
@@ -1405,6 +1425,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AIRENAMVP/AIRENAMVP.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2JRU28287L;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1419,6 +1440,7 @@
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1429,6 +1451,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = AIRENAMVP/AIRENAMVP.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 2JRU28287L;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1443,6 +1466,7 @@
 				OTHER_CFLAGS = "-fembed-bitcode";
 				PRODUCT_BUNDLE_IDENTIFIER = com.odessite.AIRENAMVP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

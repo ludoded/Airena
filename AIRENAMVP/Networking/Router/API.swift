@@ -78,7 +78,7 @@ extension API {
         return Alamofire.request(router.etherium(.receiveFree(params: params)))
     }
     
-    static func etheriumCreateWallet(with params: Parameters) -> DataRequest {
+    static func etheriumCreateWallet() -> DataRequest {
         return Alamofire.request(router.etherium(.walletCreate))
     }
 }

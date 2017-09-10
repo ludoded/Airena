@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 enum ChallengeType {
     enum PublicType {
@@ -19,15 +20,25 @@ enum ChallengeType {
 }
 
 struct Challenge {
+    var owner: String = ""
     var title: String = ""
     var type: ChallengeType
     var rounds: [Round] = []
-    var peers: [Peer] = []
+    var peers: [String] = []
     var startDate: Date?
     var endDate: Date?
     
     init(type: ChallengeType) {
         self.type = type
+    }
+    
+    init(with json: JSON, and type: ChallengeType) {
+        self.owner = json["ownerAddress"].stringValue
+        self.type = type
+        self.startDate = Date() /// TODO:
+        self.endDate = Date() /// TODO:
+        self.rounds = json["rounds"].arrayValue.map(Round.init)
+        self.peers = json["participantIds"].arrayValue.map({ $0.stringValue })
     }
 }
 
@@ -35,6 +46,14 @@ struct Round {
     var title: String = ""
     var repetition: Int = 0
     var exercises: [Exercise] = []
+}
+
+extension Round {
+    init(with json: JSON) {
+        self.title = json["title"].stringValue
+        self.repetition = json["repetition"].intValue
+        self.exercises = json["exercises"].arrayValue.map(Exercise.init)
+    }
 }
 
 enum ExecutionMeasurment {
@@ -56,8 +75,11 @@ struct Exercise {
     var rest: Int = 0
 }
 
-
-/// TODO: users
-struct Peer {
-    
+extension Exercise {
+    init(with json: JSON) {
+        self.name = json["name"].stringValue
+        self.executionNumber = json["rest"].intValue
+        self.executionMeasurement = .duration
+        self.rest = json["work"].intValue
+    }
 }
