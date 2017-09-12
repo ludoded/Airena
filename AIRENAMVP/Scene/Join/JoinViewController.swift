@@ -22,7 +22,7 @@ class JoinViewController: UIViewController, JoinDisplayLogic
     var interactor: JoinBusinessLogic?
     var router: (NSObjectProtocol & JoinRoutingLogic & JoinDataPassing)?
     
-    fileprivate let viewModel = JoinViewModel()
+    fileprivate let viewModel = JoinViewModel1()
     
     @IBOutlet weak var tableView: UITableView!
     // MARK: Object lifecycle
@@ -87,6 +87,9 @@ class JoinViewController: UIViewController, JoinDisplayLogic
     }
     
     // MARK: Do something
+    func loadChallenges() {
+        
+    }
     
     //@IBOutlet weak var nameTextField: UITextField!
     
@@ -127,5 +130,6 @@ extension JoinViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "showJoinTimer", sender: nil)
     }
 }

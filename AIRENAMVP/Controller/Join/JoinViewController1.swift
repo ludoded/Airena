@@ -9,7 +9,7 @@
 import UIKit
 
 final class JoinViewController1: UIViewController {
-    fileprivate let viewModel = JoinViewModel()
+    fileprivate let viewModel = JoinViewModel1()
     
     @IBOutlet weak var tableView: UITableView!
     

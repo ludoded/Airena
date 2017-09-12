@@ -38,6 +38,10 @@
 		B22014EC1EFAB53000DE66D1 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014EB1EFAB53000DE66D1 /* CoreMotion.framework */; };
 		B22014EE1EFAB53700DE66D1 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014ED1EFAB53700DE66D1 /* HealthKit.framework */; };
 		B22014F21EFAB63F00DE66D1 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B22014F11EFAB63F00DE66D1 /* libc++.tbd */; };
+		B2401E2E1F66D90200A3DB5F /* JoinTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2401E2D1F66D90200A3DB5F /* JoinTimerViewController.swift */; };
+		B2401E301F66ED3C00A3DB5F /* JoinTimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2401E2F1F66ED3C00A3DB5F /* JoinTimerViewModel.swift */; };
+		B2401E331F66EECD00A3DB5F /* challengeStub.json in Resources */ = {isa = PBXBuildFile; fileRef = B2401E321F66EECD00A3DB5F /* challengeStub.json */; };
+		B26A351F1F66CDB400C3CDDC /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A351E1F66CDB400C3CDDC /* JoinViewModel.swift */; };
 		B27C26131F62DC0200E3FE8D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26121F62DC0200E3FE8D /* Router.swift */; };
 		B27C26151F62E1D400E3FE8D /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26141F62E1D400E3FE8D /* API.swift */; };
 		B27C26171F62FB2B00E3FE8D /* WalletResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26161F62FB2B00E3FE8D /* WalletResponse.swift */; };
@@ -69,7 +73,7 @@
 		B2C52C8C1F5D6CFF0074E6FD /* ChallengeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */; };
 		B2C52C8E1F5D70180074E6FD /* AddChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C8D1F5D70180074E6FD /* AddChallengeViewModel.swift */; };
 		B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */; };
-		B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */; };
+		B2E7E12B1F0BAE0A00618D72 /* JoinViewModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12A1F0BAE0A00618D72 /* JoinViewModel1.swift */; };
 		B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */; };
 		B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2E7E1301F0BAEF600618D72 /* JoinCell.xib */; };
 		B2F6A9F51F56D97400B2481D /* AuthInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F6A9EF1F56D97400B2481D /* AuthInteractor.swift */; };
@@ -199,6 +203,10 @@
 		B22014EF1EFAB58700DE66D1 /* AIRENAMVP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AIRENAMVP.entitlements; sourceTree = "<group>"; };
 		B22014F01EFAB5A500DE66D1 /* AIRENAMVP WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "AIRENAMVP WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		B22014F11EFAB63F00DE66D1 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		B2401E2D1F66D90200A3DB5F /* JoinTimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinTimerViewController.swift; path = Scene/Join/Timer/JoinTimerViewController.swift; sourceTree = "<group>"; };
+		B2401E2F1F66ED3C00A3DB5F /* JoinTimerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinTimerViewModel.swift; path = Scene/Join/Timer/JoinTimerViewModel.swift; sourceTree = "<group>"; };
+		B2401E321F66EECD00A3DB5F /* challengeStub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = challengeStub.json; path = AIRENAMVP/rsources/challengeStub.json; sourceTree = "<group>"; };
+		B26A351E1F66CDB400C3CDDC /* JoinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinViewModel.swift; path = Scene/Join/JoinViewModel.swift; sourceTree = "<group>"; };
 		B27C26121F62DC0200E3FE8D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router/Router.swift; sourceTree = "<group>"; };
 		B27C26141F62E1D400E3FE8D /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = API.swift; path = Networking/Router/API.swift; sourceTree = "<group>"; };
 		B27C26161F62FB2B00E3FE8D /* WalletResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletResponse.swift; path = Model/DTO/WalletResponse.swift; sourceTree = "<group>"; };
@@ -235,7 +243,7 @@
 		B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeStruct.swift; path = Model/DTO/ChallengeStruct.swift; sourceTree = "<group>"; };
 		B2C52C8D1F5D70180074E6FD /* AddChallengeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeViewModel.swift; path = Scene/Create/Challenge/AddChallengeViewModel.swift; sourceTree = "<group>"; };
 		B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController1.swift; sourceTree = "<group>"; };
-		B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel.swift; sourceTree = "<group>"; };
+		B2E7E12A1F0BAE0A00618D72 /* JoinViewModel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel1.swift; sourceTree = "<group>"; };
 		B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCell.swift; sourceTree = "<group>"; };
 		B2E7E1301F0BAEF600618D72 /* JoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JoinCell.xib; sourceTree = "<group>"; };
 		B2F6A9EF1F56D97400B2481D /* AuthInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthInteractor.swift; path = Scene/Auth/AuthInteractor.swift; sourceTree = "<group>"; };
@@ -392,6 +400,23 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		B2401E2C1F66D8E300A3DB5F /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				B2401E2D1F66D90200A3DB5F /* JoinTimerViewController.swift */,
+				B2401E2F1F66ED3C00A3DB5F /* JoinTimerViewModel.swift */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+		B2401E311F66EE9D00A3DB5F /* rsources */ = {
+			isa = PBXGroup;
+			children = (
+				B2401E321F66EECD00A3DB5F /* challengeStub.json */,
+			);
+			name = rsources;
+			sourceTree = "<group>";
+		};
 		B27C26101F62DB5300E3FE8D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +454,7 @@
 		B29452A41EFA900000B9BE57 = {
 			isa = PBXGroup;
 			children = (
+				B2401E311F66EE9D00A3DB5F /* rsources */,
 				B29452FB1EFA90F300B9BE57 /* Frameworks */,
 				B29452F91EFA90CE00B9BE57 /* data */,
 				B29452AF1EFA900000B9BE57 /* AIRENAMVP */,
@@ -571,7 +597,7 @@
 		B2E7E1291F0BADF800618D72 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				B2E7E12A1F0BAE0A00618D72 /* JoinViewModel.swift */,
+				B2E7E12A1F0BAE0A00618D72 /* JoinViewModel1.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -672,11 +698,13 @@
 		B2F6AA131F56DCDE00B2481D /* Join */ = {
 			isa = PBXGroup;
 			children = (
+				B2401E2C1F66D8E300A3DB5F /* Timer */,
 				B2F6AA251F56DD4A00B2481D /* JoinInteractor.swift */,
 				B2F6AA261F56DD4A00B2481D /* JoinModels.swift */,
 				B2F6AA271F56DD4A00B2481D /* JoinPresenter.swift */,
 				B2F6AA281F56DD4A00B2481D /* JoinRouter.swift */,
 				B2F6AA291F56DD4A00B2481D /* JoinViewController.swift */,
+				B26A351E1F66CDB400C3CDDC /* JoinViewModel.swift */,
 				B2F6AA2A1F56DD4A00B2481D /* JoinWorker.swift */,
 				B2F6AA141F56DCF100B2481D /* Join.storyboard */,
 			);
@@ -885,6 +913,7 @@
 				B29452B61EFA900000B9BE57 /* Main.storyboard in Resources */,
 				B21F7AE51F6171BF00DADD40 /* ExerciseTableViewCell.xib in Resources */,
 				B21F7AD01F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib in Resources */,
+				B2401E331F66EECD00A3DB5F /* challengeStub.json in Resources */,
 				B21F7AE11F61645E00DADD40 /* FullTextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1120,6 +1149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2401E301F66ED3C00A3DB5F /* JoinTimerViewModel.swift in Sources */,
 				B2C52C8C1F5D6CFF0074E6FD /* ChallengeStruct.swift in Sources */,
 				B2F6AA381F56DD5900B2481D /* WalletModels.swift in Sources */,
 				B2F6AA0B1F56DCA100B2481D /* TabBarRouter.swift in Sources */,
@@ -1161,9 +1191,10 @@
 				B2F6A9F71F56D97400B2481D /* AuthPresenter.swift in Sources */,
 				B27C26131F62DC0200E3FE8D /* Router.swift in Sources */,
 				B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */,
-				B2E7E12B1F0BAE0A00618D72 /* JoinViewModel.swift in Sources */,
+				B2E7E12B1F0BAE0A00618D72 /* JoinViewModel1.swift in Sources */,
 				B2F6AA2B1F56DD4A00B2481D /* JoinInteractor.swift in Sources */,
 				B2F6AA3A1F56DD5900B2481D /* WalletRouter.swift in Sources */,
+				B26A351F1F66CDB400C3CDDC /* JoinViewModel.swift in Sources */,
 				B21F7AD61F60170400DADD40 /* DateFormatter.swift in Sources */,
 				B27C26151F62E1D400E3FE8D /* API.swift in Sources */,
 				B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */,
@@ -1173,6 +1204,7 @@
 				B27C26171F62FB2B00E3FE8D /* WalletResponse.swift in Sources */,
 				B2F6AA2F1F56DD4A00B2481D /* JoinViewController.swift in Sources */,
 				B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */,
+				B2401E2E1F66D90200A3DB5F /* JoinTimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

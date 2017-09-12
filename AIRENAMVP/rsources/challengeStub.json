@@ -1,0 +1,45 @@
+{
+"endDate": "2017-09-08T12:35:16.720Z",
+"ownerAddress": "string",
+"participantIds": [
+"string"
+],
+"rounds": [
+{
+"exercises": [
+{
+"name": "Jumping Jack",
+"rest": 5,
+"work": 3
+},
+
+{
+"name": "Squat",
+"rest": 5,
+"work": 3
+},
+
+{
+"name": "Leg Press",
+"rest": 5,
+"work": 3
+}
+],
+"repetition": 3,
+"title": "Full Body"
+},
+
+{
+"exercises": [
+{
+"name": "Push-up",
+"rest": 5,
+"work": 3
+}
+],
+"repetition": 3,
+"title": "Chest Round"
+}
+],
+"startDate": "2017-09-08T12:35:16.720Z"
+}

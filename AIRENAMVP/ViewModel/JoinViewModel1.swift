@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class JoinViewModel {
+final class JoinViewModel1 {
     func existingChallenge(for row: Int) -> JoinModel {
         switch row {
         case 0:
