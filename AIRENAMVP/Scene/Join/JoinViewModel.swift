@@ -9,7 +9,15 @@
 import Foundation
 
 final class JoinViewModel {
-    func fetchChallenges(callback: @escaping ([Challenge]?, String?) -> Void) {
-        
+    var challenges: [Challenge] = []
+    
+    func fetchChallenges(callback: @escaping (String?) -> Void) {
+        Challenge.load(request: API.fetchChallenge(availability: false)) { [unowned self] (chal, error) in
+            if error == nil {
+                self.challenges = chal!
+            }
+            
+            callback(error)
+        }
     }
 }

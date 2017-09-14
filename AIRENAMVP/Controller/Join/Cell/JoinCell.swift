@@ -17,9 +17,9 @@ final class JoinCell: UITableViewCell {
     @IBAction func joinNow(_ sender: Any) {
     }
     
-    func setup(with join: JoinModel) {
-        name.text = join.name
-        challengeDescription.text = join.description
-        participantsNumber.text = String(join.numberOfParticipants)
+    func setup(with join: Challenge) {
+        name.text = "Challenge"
+        challengeDescription.text = "Rounds: \(join.rounds.count)"
+        participantsNumber.text = String(join.peers.count)
     }
 }

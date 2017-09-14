@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 protocol JoinDisplayLogic: class
 {
@@ -22,7 +23,7 @@ class JoinViewController: UIViewController, JoinDisplayLogic
     var interactor: JoinBusinessLogic?
     var router: (NSObjectProtocol & JoinRoutingLogic & JoinDataPassing)?
     
-    fileprivate let viewModel = JoinViewModel1()
+    fileprivate let viewModel = JoinViewModel()
     
     @IBOutlet weak var tableView: UITableView!
     // MARK: Object lifecycle
@@ -84,11 +85,19 @@ class JoinViewController: UIViewController, JoinDisplayLogic
         
         setupTableView()
         registerCell()
+        loadChallenges()
     }
     
     // MARK: Do something
     func loadChallenges() {
+        MBProgressHUD.showAdded(to: view, animated: true)
         
+        viewModel.fetchChallenges { [unowned self] (error) in
+            DispatchQueue.main.async {
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.tableView.reloadData()
+            }
+        }
     }
     
     //@IBOutlet weak var nameTextField: UITextField!
@@ -111,12 +120,12 @@ extension JoinViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return viewModel.challenges.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: JoinCell.cellId, for: indexPath) as? JoinCell else { fatalError("Can't load the cell") }
-        let join = viewModel.existingChallenge(for: indexPath.row)
+        let join = viewModel.challenges[indexPath.row]
         cell.setup(with: join)
         
         return cell

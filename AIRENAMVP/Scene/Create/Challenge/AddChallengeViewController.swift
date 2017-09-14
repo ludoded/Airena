@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 final class AddChallengeViewController: UIViewController {
     var startDatePicker: UIDatePicker!
@@ -16,7 +17,26 @@ final class AddChallengeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func payToInitiate(_ sender: UIButton) {
-        
+        MBProgressHUD.showAdded(to: self.view, animated: true)
+        viewModel.save { [unowned self] (error) in
+            DispatchQueue.main.async {
+                MBProgressHUD.hide(for: self.view, animated: true)
+                
+                let alert: UIAlertController
+                if error == nil {
+                    alert = UIAlertController(title: "Success", message: "Challenge is created", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [weak self] (_) in
+                        self?.navigationController?.popViewController(animated: true)
+                    }))
+                }
+                else {
+                    alert = UIAlertController(title: "Error!", message: error!, preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                }
+                
+                self.navigationController?.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     @IBAction func cancel(_ sender: Any) {

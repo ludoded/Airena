@@ -42,7 +42,7 @@ extension JoinViewController1: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: JoinCell.cellId, for: indexPath) as? JoinCell else { fatalError("Can't load the cell") }
         let join = viewModel.existingChallenge(for: indexPath.row)
-        cell.setup(with: join)
+//        cell.setup(with: join)
         
         return cell
     }

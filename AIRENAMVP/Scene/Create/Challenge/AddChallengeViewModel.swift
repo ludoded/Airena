@@ -48,6 +48,13 @@ final class AddChallengeViewModel {
             return ""
         }
     }
+    
+    func save(completion: @escaping (String?) -> Void) {
+        let params = ["challenge" : challenge.jsonDict()]
+        API.createChallenge(with: params, availability: false).response(completionHandler: { (response) in
+            completion(response.error?.localizedDescription)
+        })
+    }
 }
 
 /// MARK: Round

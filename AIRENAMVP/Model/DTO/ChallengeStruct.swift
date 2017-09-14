@@ -19,7 +19,7 @@ enum ChallengeType {
     case `private`
 }
 
-struct Challenge {
+struct Challenge: JSONable {
     var owner: String = ""
     var title: String = ""
     var type: ChallengeType
@@ -35,10 +35,23 @@ struct Challenge {
     init(with json: JSON, and type: ChallengeType) {
         self.owner = json["ownerAddress"].stringValue
         self.type = type
-        self.startDate = Date() /// TODO:
-        self.endDate = Date() /// TODO:
+        self.startDate = Date(fromISO8601: json["startDate"].stringValue)
+        self.endDate = Date(fromISO8601: json["endDate"].stringValue)
         self.rounds = json["rounds"].arrayValue.map(Round.init)
         self.peers = json["participantIds"].arrayValue.map({ $0.stringValue })
+    }
+    
+    init(json: JSON) {
+        self.init(with: json, and: .private)
+    }
+    
+    func jsonDict() -> [String : Any] {
+        return [
+            "ownerAddress" : owner,
+            "startDate" : startDate?.toJsonFormat() ?? "",
+            "endDate" : endDate?.toJsonFormat() ?? "",
+            "rounds" : rounds.map({ $0.jsonDict() })
+        ]
     }
 }
 
@@ -46,6 +59,14 @@ struct Round {
     var title: String = ""
     var repetition: Int = 0
     var exercises: [Exercise] = []
+    
+    func jsonDict() -> [String : Any] {
+        return [
+            "title" : title,
+            "repetition" : repetition,
+            "exercises" : exercises.map({ $0.jsonDict() })
+        ]
+    }
 }
 
 extension Round {
@@ -73,6 +94,14 @@ struct Exercise {
     var executionNumber: Int = 0
     var executionMeasurement: ExecutionMeasurment = .duration
     var rest: Int = 0
+    
+    func jsonDict() -> [String : Any] {
+        return [
+            "name" : name,
+            "work" : executionNumber,
+            "rest" : rest
+        ]
+    }
 }
 
 extension Exercise {
