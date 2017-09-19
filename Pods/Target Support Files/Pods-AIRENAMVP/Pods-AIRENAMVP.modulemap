@@ -1,0 +1,6 @@
+framework module Pods_AIRENAMVP {
+  umbrella header "Pods-AIRENAMVP-umbrella.h"
+
+  export *
+  module * { export * }
+}
