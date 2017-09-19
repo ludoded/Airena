@@ -30,6 +30,7 @@ struct Challenge: JSONable {
     
     init(type: ChallengeType) {
         self.type = type
+        self.owner = AppSettings.shared.address()
     }
     
     init(with json: JSON, and type: ChallengeType) {

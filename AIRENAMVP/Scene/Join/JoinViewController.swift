@@ -23,6 +23,8 @@ class JoinViewController: UIViewController, JoinDisplayLogic
     var interactor: JoinBusinessLogic?
     var router: (NSObjectProtocol & JoinRoutingLogic & JoinDataPassing)?
     
+    var refreshControl: UIRefreshControl!
+    
     fileprivate let viewModel = JoinViewModel()
     
     @IBOutlet weak var tableView: UITableView!
@@ -65,6 +67,12 @@ class JoinViewController: UIViewController, JoinDisplayLogic
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
+    private func setupRefreshControl() {
+        refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(loadChallenges), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
     // MARK: Routing
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -86,14 +94,17 @@ class JoinViewController: UIViewController, JoinDisplayLogic
         setupTableView()
         registerCell()
         loadChallenges()
+        setupRefreshControl()
     }
     
     // MARK: Do something
     func loadChallenges() {
+        self.refreshControl?.beginRefreshing()
         MBProgressHUD.showAdded(to: view, animated: true)
         
         viewModel.fetchChallenges { [unowned self] (error) in
             DispatchQueue.main.async {
+                self.refreshControl?.endRefreshing()
                 MBProgressHUD.hide(for: self.view, animated: true)
                 self.tableView.reloadData()
             }

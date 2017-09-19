@@ -24,4 +24,8 @@ final class AppSettings {
         guard let _ = ud.string(forKey: "UserAddress") else { return false }
         return true
     }
+    
+    func address() -> String {
+        return ud.string(forKey: "UserAddress") ?? ""
+    }
 }

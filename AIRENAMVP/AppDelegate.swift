@@ -21,7 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         /// Focus Motion setup
         
-        
         /// Init FocusMotion SDK
         let config = FMConfig()
         
@@ -34,8 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         /// Init Apple Watch support
         FMAppleWatchDevice.startup(nil)
         
-        
-//        showHome() /// TODO: remove this and uncomment the line below. 
+        /// Pre-setup: authentication
         showInitial()
         return true
     }
