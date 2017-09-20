@@ -10,19 +10,15 @@ import Foundation
 import SwiftyJSON
 
 final class JoinTimerViewModel {
-    var challenge: Challenge!
+    let challenge: Challenge
     
     var currentRoundIndex: Int = 0
     var currentRoundRepIndex: Int = 0
     var currentExerciseIndex: Int = 0
     var isCurrentWork = true
     
-    init() {
-        if let path = Bundle.main.path(forResource: "challengeStub", ofType: "json"),
-            let jsonData = try? String(contentsOfFile: path, encoding: String.Encoding.utf8) {
-            challenge = Challenge(with: JSON(parseJSON: jsonData), and: .private)
-            dump(challenge)
-        }
+    init(challenge: Challenge) {
+        self.challenge = challenge
     }
     
     func next() -> JoinTimer.State? {

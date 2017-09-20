@@ -26,6 +26,7 @@ class JoinViewController: UIViewController, JoinDisplayLogic
     var refreshControl: UIRefreshControl!
     
     fileprivate let viewModel = JoinViewModel()
+    fileprivate var selectedIndex = 0
     
     @IBOutlet weak var tableView: UITableView!
     // MARK: Object lifecycle
@@ -77,10 +78,9 @@ class JoinViewController: UIViewController, JoinDisplayLogic
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
+        if segue.identifier == "showJoinDescription" {
+            if let vc = segue.destination as? JoinDescriptionViewController {
+                vc.challenge = viewModel.challenges[selectedIndex]
             }
         }
     }
@@ -150,6 +150,8 @@ extension JoinViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        performSegue(withIdentifier: "showJoinTimer", sender: nil)
+        
+        selectedIndex = indexPath.row
+        performSegue(withIdentifier: "showJoinDescription", sender: nil)
     }
 }

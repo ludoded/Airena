@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o3i-6d-kda">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="o3i-6d-kda">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,7 +16,7 @@
                     <tabBarItem key="tabBarItem" title="Join" image="join" id="tjz-2L-k3v"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xcP-F3-Q1D">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -58,7 +59,7 @@
                     <navigationItem key="navigationItem" title="Join" id="Wkq-WG-528"/>
                     <connections>
                         <outlet property="tableView" destination="kBE-le-anL" id="ZZN-cc-Q5l"/>
-                        <segue destination="fY4-9h-f20" kind="show" id="98a-9K-dbl"/>
+                        <segue destination="fY4-9h-f20" kind="show" identifier="showJoinDescription" id="98a-9K-dbl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z1P-op-JZl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -68,7 +69,7 @@
         <!--Description-->
         <scene sceneID="HlY-uk-Z0Q">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fY4-9h-f20" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="fY4-9h-f20" customClass="JoinDescriptionViewController" customModule="AIRENAMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lkP-Oa-gL6"/>
                         <viewControllerLayoutGuide type="bottom" id="LqP-qs-fx6"/>
@@ -77,27 +78,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VEN-FP-gSF">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8h-rF-lm9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNo-Jc-Kkq">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <color key="backgroundColor" red="0.047058823530000002" green="0.83921568629999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <state key="normal" title="Connect">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="connectAction:" destination="fY4-9h-f20" eventType="touchUpInside" id="rm3-0i-PBZ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="sNo-Jc-Kkq" secondAttribute="trailing" id="DfI-Bt-UUY"/>
+                                    <constraint firstItem="sNo-Jc-Kkq" firstAttribute="leading" secondItem="b8h-rF-lm9" secondAttribute="leading" id="URq-zG-ueS"/>
+                                    <constraint firstAttribute="height" constant="60" id="bts-3u-4g1"/>
+                                    <constraint firstItem="sNo-Jc-Kkq" firstAttribute="top" secondItem="b8h-rF-lm9" secondAttribute="top" id="j8x-91-Cbp"/>
+                                    <constraint firstAttribute="bottom" secondItem="sNo-Jc-Kkq" secondAttribute="bottom" id="wiI-cC-n1i"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VEN-FP-gSF">
+                                <rect key="frame" x="0.0" y="124" width="375" height="494"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fY4-9h-f20" id="iX9-HH-0Ff"/>
+                                    <outlet property="delegate" destination="fY4-9h-f20" id="HDL-Tn-aQA"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="b8h-rF-lm9" firstAttribute="leading" secondItem="Z5F-M2-ISA" secondAttribute="leading" id="18g-vY-KNc"/>
                             <constraint firstItem="VEN-FP-gSF" firstAttribute="leading" secondItem="Z5F-M2-ISA" secondAttribute="leading" id="HlA-za-dCX"/>
+                            <constraint firstItem="VEN-FP-gSF" firstAttribute="top" secondItem="b8h-rF-lm9" secondAttribute="bottom" id="MXT-pf-GNP"/>
+                            <constraint firstAttribute="trailing" secondItem="b8h-rF-lm9" secondAttribute="trailing" id="MmL-e9-lSb"/>
+                            <constraint firstItem="b8h-rF-lm9" firstAttribute="top" secondItem="lkP-Oa-gL6" secondAttribute="bottom" id="NBC-zB-W6b"/>
                             <constraint firstItem="LqP-qs-fx6" firstAttribute="top" secondItem="VEN-FP-gSF" secondAttribute="bottom" id="qoG-5r-7Vg"/>
                             <constraint firstAttribute="trailing" secondItem="VEN-FP-gSF" secondAttribute="trailing" id="tbY-q0-Qcf"/>
-                            <constraint firstItem="VEN-FP-gSF" firstAttribute="top" secondItem="lkP-Oa-gL6" secondAttribute="bottom" id="uh8-nl-20x"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Description" id="9tm-DN-YKu"/>
                     <connections>
-                        <segue destination="Njy-f7-Yjw" kind="show" id="a2R-RL-qOC"/>
+                        <outlet property="connect" destination="sNo-Jc-Kkq" id="eEG-Rd-9hj"/>
+                        <outlet property="tableView" destination="VEN-FP-gSF" id="1mQ-z4-cBb"/>
+                        <segue destination="Njy-f7-Yjw" kind="show" identifier="showJoinTimer" id="a2R-RL-qOC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jn-1F-1Gs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="756" y="151"/>
+            <point key="canvasLocation" x="756" y="150.67466266866569"/>
         </scene>
         <!--Timer-->
         <scene sceneID="zMr-2T-Rla">
@@ -153,7 +187,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-Nn-9GS">
-                                        <rect key="frame" x="135.5" y="253" width="103.5" height="48"/>
+                                        <rect key="frame" x="136.5" y="253" width="101.5" height="48"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>

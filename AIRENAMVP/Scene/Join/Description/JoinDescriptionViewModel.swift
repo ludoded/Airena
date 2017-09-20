@@ -9,5 +9,18 @@
 import Foundation
 
 final class JoinDescriptionViewModel {
+    let challenge: Challenge
     
+    init(challenge: Challenge) {
+        self.challenge = challenge
+    }
+    
+    func numberOfRows(in section: Int) -> Int {
+        if section == 0 {
+            return 1
+        }
+        else {
+            return challenge.rounds[section - 1].exercises.count
+        }
+    }
 }

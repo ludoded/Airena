@@ -11,8 +11,6 @@
 		530F4E9962C6A9CADF45E016 /* Pods_AIRENAMVP_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E62F4ABDE26514CDC27DC6B2 /* Pods_AIRENAMVP_WatchKit_Extension.framework */; };
 		6A357CC9D6FFEAEDF1D531C8 /* Pods_AIRENAMVP_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27986E5897215830C57A4627 /* Pods_AIRENAMVP_WatchKit_App.framework */; };
 		9B984B362EAFFC2DCA11B9B7 /* Pods_AIRENAMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B32510C2E10AF60F9E95098A /* Pods_AIRENAMVP.framework */; };
-		B213D6791F59B9C100DD4BD7 /* JSONRPCKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B213D6771F59B9C100DD4BD7 /* JSONRPCKit.framework */; };
-		B213D67A1F59B9C100DD4BD7 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B213D6781F59B9C100DD4BD7 /* Result.framework */; };
 		B21F7ACA1F5FF6E900DADD40 /* AddChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7AC91F5FF6E900DADD40 /* AddChallengeCell.swift */; };
 		B21F7ACC1F5FF72100DADD40 /* AddChallengeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21F7ACB1F5FF72100DADD40 /* AddChallengeCell.xib */; };
 		B21F7ACE1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21F7ACD1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift */; };
@@ -306,8 +304,6 @@
 				B22014E81EFAB51900DE66D1 /* WatchConnectivity.framework in Frameworks */,
 				B22014E61EFAB50F00DE66D1 /* libz.tbd in Frameworks */,
 				B22014E41EFAB50600DE66D1 /* AudioToolbox.framework in Frameworks */,
-				B213D6791F59B9C100DD4BD7 /* JSONRPCKit.framework in Frameworks */,
-				B213D67A1F59B9C100DD4BD7 /* Result.framework in Frameworks */,
 				B22014E21EFAB4FD00DE66D1 /* WatchKit.framework in Frameworks */,
 				B29453061EFA91A400B9BE57 /* FocusMotion.framework in Frameworks */,
 				B29453071EFA91A400B9BE57 /* FocusMotionAppleWatch.framework in Frameworks */,
@@ -780,7 +776,6 @@
 				B29452AA1EFA900000B9BE57 /* Frameworks */,
 				B29452AB1EFA900000B9BE57 /* Resources */,
 				B29452F21EFA900100B9BE57 /* Embed Watch Content */,
-				B213D67B1F59B9E000DD4BD7 /* ShellScript */,
 				98C8218762FEA2DD94500C10 /* [CP] Embed Pods Frameworks */,
 				9752529B92DA1E70BFD1BB5E /* [CP] Copy Pods Resources */,
 			);
@@ -1109,21 +1104,6 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP/Pods-AIRENAMVP-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
-		};
-		B213D67B1F59B9E000DD4BD7 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/JSONRPCKit.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
 		B74C44CBEF1FFF6BB91BB70B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;

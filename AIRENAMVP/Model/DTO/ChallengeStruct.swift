@@ -36,8 +36,8 @@ struct Challenge: JSONable {
     init(with json: JSON, and type: ChallengeType) {
         self.owner = json["ownerAddress"].stringValue
         self.type = type
-        self.startDate = Date(fromISO8601: json["startDate"].stringValue)
-        self.endDate = Date(fromISO8601: json["endDate"].stringValue)
+        self.startDate = Date(timeIntervalSince1970: json["startDate"].doubleValue / 1000)
+        self.endDate = Date(timeIntervalSince1970: json["endDate"].doubleValue / 1000) 
         self.rounds = json["rounds"].arrayValue.map(Round.init)
         self.peers = json["participantIds"].arrayValue.map({ $0.stringValue })
     }
@@ -108,8 +108,8 @@ struct Exercise {
 extension Exercise {
     init(with json: JSON) {
         self.name = json["name"].stringValue
-        self.executionNumber = json["rest"].intValue
+        self.executionNumber = json["work"].intValue
         self.executionMeasurement = .duration
-        self.rest = json["work"].intValue
+        self.rest = json["rest"].intValue
     }
 }

@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 
 final class JoinTimerViewController: UIViewController {
-    var viewModel = JoinTimerViewModel()
+    var challenge: Challenge!
+    var viewModel: JoinTimerViewModel!
     var timer: Timer!
     
     let synthesizer = AVSpeechSynthesizer()
@@ -30,6 +31,7 @@ final class JoinTimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel = JoinTimerViewModel(challenge: challenge)
         initialSetup()
     }
     
