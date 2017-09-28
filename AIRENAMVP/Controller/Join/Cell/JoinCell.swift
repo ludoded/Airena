@@ -18,8 +18,8 @@ final class JoinCell: UITableViewCell {
     }
     
     func setup(with join: Challenge) {
-        name.text = "Challenge"
-        challengeDescription.text = "Rounds: \(join.rounds.count)"
+        name.text = join.title
+        challengeDescription.text = join.description
         participantsNumber.text = String(join.peers.count)
     }
 }

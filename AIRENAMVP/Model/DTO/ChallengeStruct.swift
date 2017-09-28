@@ -22,6 +22,7 @@ enum ChallengeType {
 struct Challenge: JSONable {
     var owner: String = ""
     var title: String = ""
+    var description: String = ""
     var type: ChallengeType
     var rounds: [Round] = []
     var peers: [String] = []
@@ -36,8 +37,10 @@ struct Challenge: JSONable {
     init(with json: JSON, and type: ChallengeType) {
         self.owner = json["ownerAddress"].stringValue
         self.type = type
-        self.startDate = Date(timeIntervalSince1970: json["startDate"].doubleValue / 1000)
-        self.endDate = Date(timeIntervalSince1970: json["endDate"].doubleValue / 1000) 
+        self.title = json["title"].stringValue
+        self.description = json["description"].stringValue
+        self.startDate = Date(timeIntervalSince1970: json["startDate"].doubleValue)
+        self.endDate = Date(timeIntervalSince1970: json["endDate"].doubleValue)
         self.rounds = json["rounds"].arrayValue.map(Round.init)
         self.peers = json["participantIds"].arrayValue.map({ $0.stringValue })
     }
@@ -49,8 +52,10 @@ struct Challenge: JSONable {
     func jsonDict() -> [String : Any] {
         return [
             "ownerAddress" : owner,
-            "startDate" : startDate?.toJsonFormat() ?? "",
-            "endDate" : endDate?.toJsonFormat() ?? "",
+            "title" : title,
+            "description" : description,
+            "startDate" : startDate?.timeIntervalSince1970 ?? 0,
+            "endDate" : endDate?.timeIntervalSince1970 ?? 0,
             "rounds" : rounds.map({ $0.jsonDict() })
         ]
     }
@@ -92,6 +97,7 @@ enum ExecutionMeasurment {
 
 struct Exercise {
     var name: String = ""
+    var movement: String = ""
     var executionNumber: Int = 0
     var executionMeasurement: ExecutionMeasurment = .duration
     var rest: Int = 0
@@ -99,6 +105,7 @@ struct Exercise {
     func jsonDict() -> [String : Any] {
         return [
             "name" : name,
+            "movementName" : movement,
             "work" : executionNumber,
             "rest" : rest
         ]
@@ -108,6 +115,7 @@ struct Exercise {
 extension Exercise {
     init(with json: JSON) {
         self.name = json["name"].stringValue
+        self.movement = json["movementName"].stringValue
         self.executionNumber = json["work"].intValue
         self.executionMeasurement = .duration
         self.rest = json["rest"].intValue

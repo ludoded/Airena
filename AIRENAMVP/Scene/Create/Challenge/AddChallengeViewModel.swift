@@ -35,11 +35,15 @@ final class AddChallengeViewModel {
     func title(for indexPath: IndexPath) -> String {
         switch indexPath.row {
         case 0:
+            return challenge.title
+        case 1:
+            return challenge.description
+        case 2:
             if let date = challenge.startDate {
                 return date.toChallengeFormat()
             }
             return ""
-        case 1:
+        case 3:
             if let date = challenge.endDate {
                 return date.toChallengeFormat()
             }
@@ -84,8 +88,8 @@ extension AddChallengeViewModel {
         return nil
     }
     
-    func addExercise(for exerciseName: String, workIndex workTime: Int, restIndex restTime: Int) {
-        let exercise = Exercise(name: exerciseName, executionNumber: workTime, executionMeasurement: .duration, rest: restTime)
+    func addExercise(for exerciseName: String, movement: String, workIndex workTime: Int, restIndex restTime: Int) {
+        let exercise = Exercise(name: exerciseName, movement: movement, executionNumber: workTime, executionMeasurement: .duration, rest: restTime)
         currentRound?.exercises.append(exercise)
     }
 }

@@ -13,11 +13,6 @@ final class JoinDescriptionViewController: UIViewController {
     var viewModel: JoinDescriptionViewModel!
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var connect: UIButton!
-    
-    @IBAction func connectAction(_ sender: UIButton) {
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -90,5 +85,13 @@ extension JoinDescriptionViewController: UITableViewDelegate, UITableViewDataSou
         
         let round = viewModel.challenge.rounds[section - 1]
         return round.title
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

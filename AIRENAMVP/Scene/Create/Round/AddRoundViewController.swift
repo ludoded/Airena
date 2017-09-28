@@ -12,6 +12,7 @@ import FocusMotionAppleWatch
 
 final class AddRoundViewController: UIViewController {
     fileprivate var exercises: [String]!
+    fileprivate var movements: [String]!
     
     var viewModel: AddChallengeViewModel!
     var exercisePicker: UIPickerView!
@@ -42,12 +43,14 @@ final class AddRoundViewController: UIViewController {
     /// MARK: - Setup handling
     func setupExercises() {
         exercises = []
+        movements = []
         
         /// Load Jay's exercises
-        if let jumpingJack = FMMovement.findSdkMovement("jumpingjacks")?.displayName { exercises.append(jumpingJack) }
-        if let pushups = FMMovement.findSdkMovement("pushups")?.displayName { exercises.append(pushups) }
-        if let situps = FMMovement.findSdkMovement("situps")?.displayName { exercises.append(situps) }
-        if let barbellsquat = FMMovement.findSdkMovement("barbellsquat")?.displayName { exercises.append(barbellsquat) }
+        movements.append(contentsOf: ["jumpingjacks", "pushups", "situps", "barbellsquat"])
+        
+        for movement in movements {
+            if let displayName = FMMovement.findSdkMovement(movement)?.displayName { exercises.append(displayName) }
+        }
     }
     
     func setupPickers() {
@@ -226,8 +229,12 @@ extension AddRoundViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func done(toolbar: UIToolbar) {
-        let exerciseName = exercises[exercisePicker.selectedRow(inComponent: 0)]
+        let selectedRow = exercisePicker.selectedRow(inComponent: 0)
+        let exerciseName = exercises[selectedRow]
+        let movementName = movements[selectedRow]
+        
         viewModel.addExercise(for: exerciseName,
+                              movement: movementName,
                               workIndex: exercisePicker.selectedRow(inComponent: 1) + 1,
                               restIndex: exercisePicker.selectedRow(inComponent: 2) + 1)
         

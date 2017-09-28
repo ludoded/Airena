@@ -109,8 +109,8 @@ extension AddChallengeViewController {
     }
     
     func done(toolbar: UIToolbar) {
-        tableView.reloadRows(at: [IndexPath(row: 0, section: 1),
-                                  IndexPath(row: 1, section: 1)],
+        tableView.reloadRows(at: [IndexPath(row: 2, section: 1),
+                                  IndexPath(row: 3, section: 1)],
                              with: .none)
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) { [weak self] in
@@ -156,7 +156,7 @@ extension AddChallengeViewController: UITableViewDataSource {
             return viewModel.numberOfRounds()
         }
         else {
-            return 3
+            return 5
         }
     }
     
@@ -178,23 +178,40 @@ extension AddChallengeViewController: UITableViewDataSource {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: AddChallengeTextFieldCell.cellId, for: indexPath) as? AddChallengeTextFieldCell else { fatalError() }
             let row = indexPath.row
             
+            cell.textDidChange = nil
+            cell.date.inputView = nil
+            cell.date.inputAccessoryView = nil
+            cell.date.text = ""
+            
             switch row {
-            /// Start Date
+            /// Title
             case 0:
+                cell.dateTitle.text = "Title:"
+                cell.date.text = viewModel.title(for: indexPath)
+                cell.textDidChange = { [weak self] t in
+                    self?.viewModel.challenge.title = t
+                }
+            /// Description
+            case 1:
+                cell.dateTitle.text = "Description:"
+                cell.date.text = viewModel.title(for: indexPath)
+                cell.textDidChange = { [weak self] t in
+                    self?.viewModel.challenge.description = t
+                }
+            /// Start Date
+            case 2:
                 cell.date.inputAccessoryView = toolbar
                 cell.date.inputView = startDatePicker
                 cell.date.text = viewModel.title(for: indexPath)
                 cell.dateTitle.text = "Start Date:"
             /// End Date
-            case 1:
+            case 3:
                 cell.date.inputAccessoryView = toolbar
                 cell.date.inputView = endDatePicker
                 cell.date.text = viewModel.title(for: indexPath)
                 cell.dateTitle.text = "End Date:"
             /// Fee
             default:
-                cell.date.inputAccessoryView = nil
-                cell.date.inputView = nil
                 cell.dateTitle.text = "Fee:"
             }
             

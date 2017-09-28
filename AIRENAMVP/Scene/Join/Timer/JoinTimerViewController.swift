@@ -8,8 +8,15 @@
 
 import UIKit
 import AVFoundation
+import FocusMotion
+import FocusMotionAppleWatch
 
 final class JoinTimerViewController: UIViewController {
+    fileprivate var device: FMDevice!
+    fileprivate var analyzer: FMMovementAnalyzer!
+    
+    fileprivate var currentState: JoinTimer.State?
+    
     var challenge: Challenge!
     var viewModel: JoinTimerViewModel!
     var timer: Timer!
@@ -28,16 +35,47 @@ final class JoinTimerViewController: UIViewController {
     @IBOutlet weak var initCountdown: UILabel!
     @IBOutlet weak var initBackgroundView: UIView!
     
+    @IBOutlet weak var onboardingView: UIView!
+    @IBOutlet weak var connectButton: UIButton!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    @IBAction func connect(_ sender: UIButton) {
+        if device != nil {
+            if device.connected {
+                device.disconnect()
+            }
+            else {
+                device.connect()
+            }
+        }
+        
+        updateConnectButton()
+    }
+    
+    @IBAction func start(_ sender: UIButton) {
+        initialSetup()
+        if device != nil {
+            if device.recording {
+                print("Wrong State, Device is Already Recording")
+                device.stopRecording()
+            }
+            else {
+                device.startRecording()
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         viewModel = JoinTimerViewModel(challenge: challenge)
-        initialSetup()
+        fmSetup()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        timer.invalidate()
+        timer?.invalidate()
     }
     
     func synthesizerSetup(for state: JoinTimer.State) {
@@ -59,7 +97,12 @@ final class JoinTimerViewController: UIViewController {
         synthesizer.speak(utterance)
     }
     
+    func fmSetup() {
+        FMDevice.add(self)
+    }
+    
     func initialSetup() {
+        onboardingView.isHidden = true
         bgView.backgroundColor = .lightGray
         initCountdown.text = String(initTimerCount)
         pronounce(text: "Get Ready")
@@ -68,6 +111,7 @@ final class JoinTimerViewController: UIViewController {
     
     func nextStep() {
         if let state = viewModel.next() {
+            currentState = state
             synthesizerSetup(for: state)
             timerCount = state.time
             bgView.backgroundColor = state.color
@@ -77,6 +121,7 @@ final class JoinTimerViewController: UIViewController {
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerHandler(timer:)), userInfo: nil, repeats: true)
         }
         else {
+            currentState = nil
             pronounce(text: "Congratulations! You've done it!")
         }
     }
@@ -104,5 +149,120 @@ final class JoinTimerViewController: UIViewController {
             timer.invalidate()
             nextStep()
         }
+    }
+    
+    /// Focus Motion related methods
+    
+    fileprivate func updateStatusLabel() {
+        if device != nil {
+            let status = device.connected ? "connected" : "disconnected"
+            let name = device.name ?? "No Name"
+            statusLabel.text = "\(name): \(status)"
+        }
+        else {
+            statusLabel.text = "No available devices"
+        }
+    }
+    
+    fileprivate func updateConnectButton() {
+        if device != nil {
+            startButton.isEnabled = false
+            if device.connected {
+                connectButton.setTitle("Disconnect", for: .normal)
+                connectButton.isEnabled = true
+                startButton.isEnabled = true
+            }
+            else if device.connecting {
+                connectButton.setTitle("Connecting...", for: .normal)
+                connectButton.isEnabled = false
+            }
+            else {
+                connectButton.setTitle("Connect", for: .normal)
+                connectButton.isEnabled = true
+            }
+        }
+        else {
+            connectButton.setTitle("Connect", for: .normal)
+            connectButton.isEnabled = false
+            startButton.isEnabled = false
+        }
+    }
+    
+    fileprivate func updateStartButton() {
+        if device != nil && device.connected {
+            let title = device.recording ? "Stop" : "Start"
+            startButton.isEnabled = true
+            startButton.setTitle(title, for: .normal)
+        }
+        else {
+            startButton.isEnabled = false
+        }
+    }
+    
+    fileprivate func nextDevice(dev: FMDevice) {
+        let availableDevices = FMDevice.availableDevices()
+        guard !availableDevices.isEmpty else { device = nil; return }
+        
+        var index = availableDevices.index(where: { ($0.identifier ?? "") == (dev.identifier ?? "") }) ?? 0
+        
+        /// next devices index
+        index = index.advanced(by: 1)
+        index = index % availableDevices.count
+        
+        /// Setup device as next one
+        device = availableDevices[index]
+    }
+}
+
+extension JoinTimerViewController: FMDeviceDelegate {
+    /// Is used when Heart Rate is sent
+    func messageReceived(_ device: FMDevice, message: Data) {
+        DispatchQueue.main.async { [weak self] in
+            let hrStr = String(data: message, encoding: String.Encoding.utf8)
+//            self?.avgHR.text = hrStr ?? "No Data"
+        }
+    }
+    
+    func availableChanged(_ device: FMDevice, available: Bool) {
+        if available && self.device == nil {
+            self.device = device
+        }
+        
+        if !available && self.device == device {
+            self.device = FMDevice.availableDevices().first
+        }
+        
+        updateConnectButton()
+        updateStatusLabel()
+    }
+    
+    func connectedChanged(_ device: FMDevice, connected: Bool) {
+        if connected {
+            device.sendMessage("Full Demo".data(using: .utf8)!)
+        }
+        else {
+            nextDevice(dev: device)
+        }
+        
+        updateConnectButton()
+        updateStartButton()
+        updateStatusLabel()
+    }
+    
+    func recordingChanged(_ device: FMDevice, recording: Bool) {
+        if recording {
+            
+        }
+    }
+    
+    func connectionFailed(_ device: FMDevice, error: Error) {
+        nextDevice(dev: device)
+        
+        updateConnectButton()
+        updateStatusLabel()
+        
+        let alert = UIAlertController(title: "Connection Failed", message: error.localizedDescription, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
 }

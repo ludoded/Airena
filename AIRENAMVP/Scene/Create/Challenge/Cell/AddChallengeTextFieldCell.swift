@@ -13,6 +13,12 @@ final class AddChallengeTextFieldCell: UITableViewCell {
     @IBOutlet weak var date: UITextField!
     
     var textDidChange: ((String) -> Void)?
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        date.delegate = self
+    }
 }
 
 extension AddChallengeTextFieldCell: UITextFieldDelegate {
