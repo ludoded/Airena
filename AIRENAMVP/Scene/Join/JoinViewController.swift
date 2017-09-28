@@ -98,7 +98,7 @@ class JoinViewController: UIViewController, JoinDisplayLogic
     }
     
     // MARK: Do something
-    func loadChallenges() {
+    @objc func loadChallenges() {
         self.refreshControl?.beginRefreshing()
         MBProgressHUD.showAdded(to: view, animated: true)
         

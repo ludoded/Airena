@@ -98,7 +98,7 @@ final class AddChallengeViewController: UIViewController {
 
 /// MARK: - Date Picker
 extension AddChallengeViewController {
-    func datePickerValueChanged(picker: UIDatePicker) {
+    @objc func datePickerValueChanged(picker: UIDatePicker) {
         switch picker {
         case startDatePicker:
             viewModel.challenge.startDate = picker.date
@@ -108,7 +108,7 @@ extension AddChallengeViewController {
         }
     }
     
-    func done(toolbar: UIToolbar) {
+    @objc func done(toolbar: UIToolbar) {
         tableView.reloadRows(at: [IndexPath(row: 2, section: 1),
                                   IndexPath(row: 3, section: 1)],
                              with: .none)

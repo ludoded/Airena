@@ -32,7 +32,7 @@ final class JoinDescriptionViewController: UIViewController {
         tableView.register(JoinDescriptionHeaderCell.nib, forCellReuseIdentifier: JoinDescriptionHeaderCell.cellId)
     }
     
-    func startTimer() {
+    @objc func startTimer() {
         performSegue(withIdentifier: "showJoinTimer", sender: nil)
     }
     

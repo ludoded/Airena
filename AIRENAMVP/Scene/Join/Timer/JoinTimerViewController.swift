@@ -14,6 +14,7 @@ import FocusMotionAppleWatch
 final class JoinTimerViewController: UIViewController {
     fileprivate var device: FMDevice!
     fileprivate var analyzer: FMMovementAnalyzer!
+    fileprivate var analyzerTimer: Timer!
     
     fileprivate var currentState: JoinTimer.State?
     
@@ -30,14 +31,15 @@ final class JoinTimerViewController: UIViewController {
     @IBOutlet weak var bgView: UIView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var biometrics: UILabel!
     @IBOutlet weak var nextButton: UIButton!
     
     @IBOutlet weak var initCountdown: UILabel!
     @IBOutlet weak var initBackgroundView: UIView!
     
     @IBOutlet weak var onboardingView: UIView!
-    @IBOutlet weak var connectButton: UIButton!
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var connectButton: AirenaButton!
+    @IBOutlet weak var startButton: AirenaButton!
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBAction func connect(_ sender: UIButton) {
@@ -55,15 +57,6 @@ final class JoinTimerViewController: UIViewController {
     
     @IBAction func start(_ sender: UIButton) {
         initialSetup()
-        if device != nil {
-            if device.recording {
-                print("Wrong State, Device is Already Recording")
-                device.stopRecording()
-            }
-            else {
-                device.startRecording()
-            }
-        }
     }
     
     override func viewDidLoad() {
@@ -71,11 +64,19 @@ final class JoinTimerViewController: UIViewController {
         
         viewModel = JoinTimerViewModel(challenge: challenge)
         fmSetup()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(willTerminate), name: NSNotification.Name.UIApplicationWillTerminate, object: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        destruct()
+    }
+    
+    func destruct() {
         timer?.invalidate()
+        analyzerTimer?.invalidate()
+        device.stopRecording()
     }
     
     func synthesizerSetup(for state: JoinTimer.State) {
@@ -119,6 +120,13 @@ final class JoinTimerViewController: UIViewController {
             time.text = String(state.time)
             dump(state)
             timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(timerHandler(timer:)), userInfo: nil, repeats: true)
+            
+            if state.isWork {
+                device.startRecording()
+            }
+            else {
+                device.stopRecording()
+            }
         }
         else {
             currentState = nil
@@ -148,6 +156,39 @@ final class JoinTimerViewController: UIViewController {
         if nextTimerCount == 0 {
             timer.invalidate()
             nextStep()
+        }
+    }
+    
+    @objc private func onTimer(aTimer: Timer) {
+        analyzer.analyze(device.output)
+        showQuantOrFreestyleResults()
+    }
+    
+    @objc private func willTerminate(notification: Notification) {
+        destruct()
+    }
+    
+    private func showQuantOrFreestyleResults() {
+        if let results = analyzer?.results, !results.isEmpty {
+            let result = results.first!
+            
+            biometrics.text = """
+            \n
+            \(result.repCount) reps \n
+            duration: \(result.duration) \n
+            mean rep time: \(result.meanRepDuration) \n
+            variation between reps: \(result.internalVariation) \n
+            variation from reference: \(result.idealVariation) \n
+            mean angular range: \(result.meanAngle)
+            """
+            
+//            if result.repCount > prevReps {
+//                AudioServicesPlaySystemSound(1057)
+//                prevReps = result.repCount
+//            }
+        }
+        else {
+            biometrics.text = "analyzing..."
         }
     }
     
@@ -250,8 +291,22 @@ extension JoinTimerViewController: FMDeviceDelegate {
     }
     
     func recordingChanged(_ device: FMDevice, recording: Bool) {
-        if recording {
+        if recording,
+            let state = currentState,
+            let movement = state.movement {
             
+            analyzer = FMMovementAnalyzer.newQuantAnalyzer(movement)
+            analyzer.start()
+            analyzerTimer = Timer.scheduledTimer(timeInterval: 0.1,
+                                                 target: self,
+                                                 selector: #selector(onTimer(aTimer:)),
+                                                 userInfo: nil,
+                                                 repeats: true)
+        }
+        else {
+            biometrics.text = "Resting..."
+            analyzer?.stop()
+            analyzerTimer?.invalidate()
         }
     }
     

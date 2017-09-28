@@ -7,6 +7,8 @@
 //
 
 import Foundation
+
+import FocusMotion
 import SwiftyJSON
 
 final class JoinTimerViewModel {
@@ -30,8 +32,9 @@ final class JoinTimerViewModel {
         let title = "Round: " + roundTitle + " - " + String(currentRoundRepIndex + 1) + " rep" + "\n" + exercise.name
         let time = isCurrentWork ? exercise.executionNumber : exercise.rest
         let color = isCurrentWork ? UIColor.blue : UIColor.green
+        let mov: FMMovement? = isCurrentWork ? FMMovement.findSdkMovement("jumpingjacks"/*exercise.movement*/) : nil
         
-        let state = JoinTimer.State(title: title, time: time, color: color, isWork: isCurrentWork, exerciseName: exercise.name)
+        let state = JoinTimer.State(title: title, time: time, color: color, isWork: isCurrentWork, exerciseName: exercise.name, movement: mov)
         
         /// Post setup
         
@@ -65,5 +68,7 @@ struct JoinTimer {
         
         let isWork: Bool
         let exerciseName: String
+        
+        let movement: FMMovement?
     }
 }

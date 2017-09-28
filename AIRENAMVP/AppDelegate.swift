@@ -42,6 +42,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationShouldRequestHealthAuthorization(_ application: UIApplication) {
         healthStore.handleAuthorizationForExtension { success, error in }
     }
+    
+    func applicationWillTerminate(_ application: UIApplication) {
+        FMFocusMotion.shutdown()
+    }
 }
 
 extension AppDelegate {

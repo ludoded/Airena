@@ -228,7 +228,7 @@ extension AddRoundViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         return width - 80.0
     }
     
-    func done(toolbar: UIToolbar) {
+    @objc func done(toolbar: UIToolbar) {
         let selectedRow = exercisePicker.selectedRow(inComponent: 0)
         let exerciseName = exercises[selectedRow]
         let movementName = movements[selectedRow]
@@ -245,7 +245,7 @@ extension AddRoundViewController: UIPickerViewDataSource, UIPickerViewDelegate {
         }
     }
     
-    func cancel(toolbar: UIToolbar) {
+    @objc func cancel(toolbar: UIToolbar) {
         view.endEditing(true)
     }
 }

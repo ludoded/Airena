@@ -124,19 +124,25 @@
                                         <rect key="frame" x="10" y="10" width="355" height="534"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUw-zo-Dga">
-                                                <rect key="frame" x="0.0" y="0.0" width="355" height="115.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="355" height="97.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAG-Z0-A5x">
-                                                <rect key="frame" x="0.0" y="115.5" width="355" height="259.5"/>
+                                                <rect key="frame" x="0.0" y="97.5" width="355" height="219"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxf-b5-mOq">
+                                                <rect key="frame" x="0.0" y="316.5" width="355" height="83.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pxq-FI-awn">
-                                                <rect key="frame" x="0.0" y="375" width="355" height="159"/>
+                                                <rect key="frame" x="0.0" y="400" width="355" height="134"/>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                 <state key="normal" title="NEXT"/>
                                             </button>
@@ -198,7 +204,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COr-zd-N0B">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COr-zd-N0B" customClass="AirenaButton" customModule="AIRENAMVP" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="246" width="335" height="60"/>
                                                 <color key="backgroundColor" red="0.047058823530000002" green="0.83921568629999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -212,7 +218,7 @@
                                                     <action selector="connect:" destination="Njy-f7-Yjw" eventType="touchUpInside" id="enl-1h-Cwc"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-hu-2Yc">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-hu-2Yc" customClass="AirenaButton" customModule="AIRENAMVP" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="374" width="335" height="60"/>
                                                 <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -257,6 +263,7 @@
                     <navigationItem key="navigationItem" title="Timer" id="aU1-E2-m6L"/>
                     <connections>
                         <outlet property="bgView" destination="ZO1-qS-6py" id="jjW-SG-yES"/>
+                        <outlet property="biometrics" destination="Zxf-b5-mOq" id="yns-IG-eSV"/>
                         <outlet property="connectButton" destination="COr-zd-N0B" id="EPJ-xw-eue"/>
                         <outlet property="initBackgroundView" destination="pxw-mz-JN8" id="eBI-Qj-6Sw"/>
                         <outlet property="initCountdown" destination="gv3-Nn-9GS" id="lf2-mY-fku"/>
