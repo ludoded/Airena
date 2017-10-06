@@ -131,6 +131,7 @@ final class JoinTimerViewController: UIViewController {
         else {
             currentState = nil
             pronounce(text: "Congratulations! You've done it!")
+            performSegue(withIdentifier: "showCongratulations", sender: nil)
         }
     }
     

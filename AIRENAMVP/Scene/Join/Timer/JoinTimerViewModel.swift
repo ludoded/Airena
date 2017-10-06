@@ -32,7 +32,8 @@ final class JoinTimerViewModel {
         let title = "Round: " + roundTitle + " - " + String(currentRoundRepIndex + 1) + " rep" + "\n" + exercise.name
         let time = isCurrentWork ? exercise.executionNumber : exercise.rest
         let color = isCurrentWork ? UIColor.blue : UIColor.green
-        let mov: FMMovement? = isCurrentWork ? FMMovement.findSdkMovement("jumpingjacks"/*exercise.movement*/) : nil
+        let mov: FMMovement? = isCurrentWork ? FMMovement.findSdkMovement(exercise.movement) : nil
+        debugPrint("exercise: ", exercise.movement)
         
         let state = JoinTimer.State(title: title, time: time, color: color, isWork: isCurrentWork, exerciseName: exercise.name, movement: mov)
         

@@ -75,6 +75,7 @@
 		B2C52C891F5D53200074E6FD /* AddChallengeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C881F5D53200074E6FD /* AddChallengeViewController.swift */; };
 		B2C52C8C1F5D6CFF0074E6FD /* ChallengeStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */; };
 		B2C52C8E1F5D70180074E6FD /* AddChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C52C8D1F5D70180074E6FD /* AddChallengeViewModel.swift */; };
+		B2C70DE01F825E47005C2860 /* JoinCongratulationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C70DDF1F825E47005C2860 /* JoinCongratulationsViewController.swift */; };
 		B2E7E1281F0BADD600618D72 /* JoinViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */; };
 		B2E7E12B1F0BAE0A00618D72 /* JoinViewModel1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12A1F0BAE0A00618D72 /* JoinViewModel1.swift */; };
 		B2E7E12F1F0BAEE900618D72 /* JoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */; };
@@ -250,6 +251,7 @@
 		B2C52C881F5D53200074E6FD /* AddChallengeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeViewController.swift; path = Scene/Create/Challenge/AddChallengeViewController.swift; sourceTree = "<group>"; };
 		B2C52C8B1F5D6CFF0074E6FD /* ChallengeStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeStruct.swift; path = Model/DTO/ChallengeStruct.swift; sourceTree = "<group>"; };
 		B2C52C8D1F5D70180074E6FD /* AddChallengeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddChallengeViewModel.swift; path = Scene/Create/Challenge/AddChallengeViewModel.swift; sourceTree = "<group>"; };
+		B2C70DDF1F825E47005C2860 /* JoinCongratulationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JoinCongratulationsViewController.swift; path = Scene/Join/Congratulations/JoinCongratulationsViewController.swift; sourceTree = "<group>"; };
 		B2E7E1271F0BADD600618D72 /* JoinViewController1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController1.swift; sourceTree = "<group>"; };
 		B2E7E12A1F0BAE0A00618D72 /* JoinViewModel1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewModel1.swift; sourceTree = "<group>"; };
 		B2E7E12E1F0BAEE900618D72 /* JoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinCell.swift; sourceTree = "<group>"; };
@@ -611,6 +613,14 @@
 			name = DTO;
 			sourceTree = "<group>";
 		};
+		B2C70DDE1F825E0D005C2860 /* Congratulations */ = {
+			isa = PBXGroup;
+			children = (
+				B2C70DDF1F825E47005C2860 /* JoinCongratulationsViewController.swift */,
+			);
+			name = Congratulations;
+			sourceTree = "<group>";
+		};
 		B2E7E1261F0BAD9400618D72 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -724,6 +734,7 @@
 		B2F6AA131F56DCDE00B2481D /* Join */ = {
 			isa = PBXGroup;
 			children = (
+				B2C70DDE1F825E0D005C2860 /* Congratulations */,
 				B2401E341F68121800A3DB5F /* Description */,
 				B2401E2C1F66D8E300A3DB5F /* Timer */,
 				B2F6AA251F56DD4A00B2481D /* JoinInteractor.swift */,
@@ -1166,6 +1177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2C70DE01F825E47005C2860 /* JoinCongratulationsViewController.swift in Sources */,
 				B2401E301F66ED3C00A3DB5F /* JoinTimerViewModel.swift in Sources */,
 				B2C52C8C1F5D6CFF0074E6FD /* ChallengeStruct.swift in Sources */,
 				B2F6AA381F56DD5900B2481D /* WalletModels.swift in Sources */,

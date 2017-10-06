@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -273,11 +274,44 @@
                         <outlet property="startButton" destination="kJI-hu-2Yc" id="V7p-bK-0tx"/>
                         <outlet property="statusLabel" destination="Gpa-0d-y7Q" id="NRQ-Jy-jCQ"/>
                         <outlet property="time" destination="pAG-Z0-A5x" id="h05-FF-idK"/>
+                        <segue destination="V88-Lm-fGO" kind="show" identifier="showCongratulations" id="mxm-t0-4nj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pvE-uq-LGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1504.8" y="150.67466266866569"/>
+            <point key="canvasLocation" x="1554" y="151"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XCM-U2-rWO">
+            <objects>
+                <viewController id="V88-Lm-fGO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jZ5-DP-xfA"/>
+                        <viewControllerLayoutGuide type="bottom" id="XyO-cv-eQx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2hX-h5-waa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHh-zX-nh0">
+                                <rect key="frame" x="26" y="315.5" width="323" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bHh-zX-nh0" firstAttribute="leading" secondItem="2hX-h5-waa" secondAttribute="leadingMargin" constant="10" id="A8R-d6-gqU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bHh-zX-nh0" secondAttribute="trailing" constant="10" id="Z96-jj-YVh"/>
+                            <constraint firstItem="bHh-zX-nh0" firstAttribute="centerY" secondItem="2hX-h5-waa" secondAttribute="centerY" id="oeN-NZ-IgW"/>
+                            <constraint firstItem="bHh-zX-nh0" firstAttribute="centerX" secondItem="2hX-h5-waa" secondAttribute="centerX" id="w9g-xd-nsb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QFM-Pa-fF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2346" y="151"/>
         </scene>
     </scenes>
     <resources>
