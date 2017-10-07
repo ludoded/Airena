@@ -20,19 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         /// Focus Motion setup
-        
-        /// Init FocusMotion SDK
-        let config = FMConfig()
-        
-        // Setup the secret API key
-        guard FMFocusMotion.startup(config, apiKey: "EQZjg7s9xf4Mk83gvCYngxBBTuhZg8eV") else { fatalError("Could not initialize the Focus Motion") }
-        
-        /// Init general device support
-        FMDevice.startup()
-        
-        /// Init Apple Watch support
-        FMAppleWatchDevice.startup(nil)
-        
+        FMSettings.shared.initSetup()
+
         /// Pre-setup: authentication
         showInitial()
         return true
@@ -45,6 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         FMFocusMotion.shutdown()
+        FMAppleWatchDevice.shutdown()
     }
 }
 

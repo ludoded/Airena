@@ -43,6 +43,9 @@
 		B2401E391F68164900A3DB5F /* JoinDescriptionHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2401E381F68164900A3DB5F /* JoinDescriptionHeaderCell.swift */; };
 		B2401E3B1F68175300A3DB5F /* JoinDescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2401E3A1F68175300A3DB5F /* JoinDescriptionViewController.swift */; };
 		B2401E3D1F6827B700A3DB5F /* JoinDescriptionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2401E3C1F6827B700A3DB5F /* JoinDescriptionViewModel.swift */; };
+		B24751C71F87CB42009EF9DB /* ConnectivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24751C61F87CB42009EF9DB /* ConnectivityViewController.swift */; };
+		B24751C91F87CB78009EF9DB /* Connectivity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B24751C81F87CB78009EF9DB /* Connectivity.storyboard */; };
+		B24751CB1F87CDE2009EF9DB /* FMSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24751CA1F87CDE2009EF9DB /* FMSettings.swift */; };
 		B264CDD01F7D2BE600DBF82B /* AirenaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B264CDCF1F7D2BE600DBF82B /* AirenaButton.swift */; };
 		B26A351F1F66CDB400C3CDDC /* JoinViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26A351E1F66CDB400C3CDDC /* JoinViewModel.swift */; };
 		B27C26131F62DC0200E3FE8D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26121F62DC0200E3FE8D /* Router.swift */; };
@@ -214,6 +217,9 @@
 		B2401E381F68164900A3DB5F /* JoinDescriptionHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinDescriptionHeaderCell.swift; path = Scene/Join/Description/Cell/JoinDescriptionHeaderCell.swift; sourceTree = "<group>"; };
 		B2401E3A1F68175300A3DB5F /* JoinDescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinDescriptionViewController.swift; path = Scene/Join/Description/JoinDescriptionViewController.swift; sourceTree = "<group>"; };
 		B2401E3C1F6827B700A3DB5F /* JoinDescriptionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinDescriptionViewModel.swift; path = Scene/Join/Description/JoinDescriptionViewModel.swift; sourceTree = "<group>"; };
+		B24751C61F87CB42009EF9DB /* ConnectivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ConnectivityViewController.swift; path = Scene/Connectivity/ConnectivityViewController.swift; sourceTree = "<group>"; };
+		B24751C81F87CB78009EF9DB /* Connectivity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Connectivity.storyboard; path = Scene/Connectivity/Connectivity.storyboard; sourceTree = "<group>"; };
+		B24751CA1F87CDE2009EF9DB /* FMSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FMSettings.swift; path = Model/Settings/FMSettings.swift; sourceTree = "<group>"; };
 		B264CDCF1F7D2BE600DBF82B /* AirenaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirenaButton.swift; sourceTree = "<group>"; };
 		B26A351E1F66CDB400C3CDDC /* JoinViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JoinViewModel.swift; path = Scene/Join/JoinViewModel.swift; sourceTree = "<group>"; };
 		B27C26121F62DC0200E3FE8D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Router.swift; path = Networking/Router/Router.swift; sourceTree = "<group>"; };
@@ -444,6 +450,15 @@
 			name = Cell;
 			sourceTree = "<group>";
 		};
+		B24751C51F87CB0C009EF9DB /* Connectivity */ = {
+			isa = PBXGroup;
+			children = (
+				B24751C61F87CB42009EF9DB /* ConnectivityViewController.swift */,
+				B24751C81F87CB78009EF9DB /* Connectivity.storyboard */,
+			);
+			name = Connectivity;
+			sourceTree = "<group>";
+		};
 		B27C26101F62DB5300E3FE8D /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -659,6 +674,7 @@
 		B2F6A9ED1F56D94300B2481D /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				B24751C51F87CB0C009EF9DB /* Connectivity */,
 				B2F6AA161F56DCF500B2481D /* Wallet */,
 				B2F6AA131F56DCDE00B2481D /* Join */,
 				B2F6AA101F56DCCA00B2481D /* Create */,
@@ -696,6 +712,7 @@
 			isa = PBXGroup;
 			children = (
 				B2F6A9FF1F56DB1700B2481D /* AppSettings.swift */,
+				B24751CA1F87CDE2009EF9DB /* FMSettings.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -954,6 +971,7 @@
 				B21F7AE51F6171BF00DADD40 /* ExerciseTableViewCell.xib in Resources */,
 				B21F7AD01F5FF7F300DADD40 /* AddChallengeTextFieldCell.xib in Resources */,
 				B2401E331F66EECD00A3DB5F /* challengeStub.json in Resources */,
+				B24751C91F87CB78009EF9DB /* Connectivity.storyboard in Resources */,
 				B2401E371F68125D00A3DB5F /* JoinDescriptionHeaderCell.xib in Resources */,
 				B21F7AE11F61645E00DADD40 /* FullTextFieldTableViewCell.xib in Resources */,
 			);
@@ -1186,6 +1204,7 @@
 				B2F6AA201F56DD3800B2481D /* CreateModels.swift in Sources */,
 				B2F6AA081F56DCA100B2481D /* TabBarInteractor.swift in Sources */,
 				B2F6AA001F56DB1700B2481D /* AppSettings.swift in Sources */,
+				B24751CB1F87CDE2009EF9DB /* FMSettings.swift in Sources */,
 				B2C52C8E1F5D70180074E6FD /* AddChallengeViewModel.swift in Sources */,
 				B2F6AA3B1F56DD5900B2481D /* WalletViewController.swift in Sources */,
 				B21F7AE31F6171AC00DADD40 /* ExerciseTableViewCell.swift in Sources */,
@@ -1199,6 +1218,7 @@
 				B2F6AA231F56DD3800B2481D /* CreateViewController.swift in Sources */,
 				B2F6AA0A1F56DCA100B2481D /* TabBarPresenter.swift in Sources */,
 				B2F6AA1F1F56DD3800B2481D /* CreateInteractor.swift in Sources */,
+				B24751C71F87CB42009EF9DB /* ConnectivityViewController.swift in Sources */,
 				B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */,
 				B2F6A9F61F56D97400B2481D /* AuthModels.swift in Sources */,
 				B2F6A9FA1F56D97400B2481D /* AuthWorker.swift in Sources */,

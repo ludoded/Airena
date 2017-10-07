@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ajV-lw-xgg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ajV-lw-xgg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,6 +19,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="jc3-cF-ghx" kind="relationship" relationship="viewControllers" id="IDn-nI-fuD"/>
                         <segue destination="VXS-Ee-s5f" kind="relationship" relationship="viewControllers" id="wRh-oS-eUH"/>
                         <segue destination="3n7-iG-VHv" kind="relationship" relationship="viewControllers" id="M9H-D4-Ld5"/>
                         <segue destination="aXV-p2-Mmt" kind="relationship" relationship="viewControllers" id="OsU-uV-W9t"/>
@@ -27,6 +29,16 @@
             </objects>
             <point key="canvasLocation" x="-689" y="-120"/>
         </scene>
+        <!--Connectivity-->
+        <scene sceneID="cUh-B1-xWS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Connectivity" id="jc3-cF-ghx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="LTC-y9-MVy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TW0-0q-nBy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="-407"/>
+        </scene>
         <!--Create-->
         <scene sceneID="fQ3-fP-aZk">
             <objects>
@@ -35,7 +47,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bDX-dQ-zc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1" y="-407"/>
+            <point key="canvasLocation" x="-2" y="-222"/>
         </scene>
         <!--Join-->
         <scene sceneID="kAf-NQ-5Kq">
@@ -45,7 +57,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DMc-rb-2rw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="-121"/>
+            <point key="canvasLocation" x="-3" y="-19"/>
         </scene>
         <!--Wallet-->
         <scene sceneID="ggO-ko-m7a">

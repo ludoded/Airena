@@ -43,16 +43,7 @@ final class JoinTimerViewController: UIViewController {
     @IBOutlet weak var statusLabel: UILabel!
     
     @IBAction func connect(_ sender: UIButton) {
-        if device != nil {
-            if device.connected {
-                device.disconnect()
-            }
-            else {
-                device.connect()
-            }
-        }
         
-        updateConnectButton()
     }
     
     @IBAction func start(_ sender: UIButton) {
