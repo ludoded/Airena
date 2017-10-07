@@ -95,7 +95,7 @@
         <scene sceneID="tKN-aa-fth">
             <objects>
                 <navigationController id="q5o-TV-Yzq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Connect" selectedImage="connect" id="jXf-4v-rSk"/>
+                    <tabBarItem key="tabBarItem" title="Connect" image="connect" id="jXf-4v-rSk"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EZv-QA-Ck0">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

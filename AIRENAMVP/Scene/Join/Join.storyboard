@@ -182,97 +182,27 @@
                                     <constraint firstItem="ckb-N2-8kQ" firstAttribute="leading" secondItem="pxw-mz-JN8" secondAttribute="leading" id="jZU-SK-Wqu"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fvj-Mi-2hv">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AF2-H7-uSn">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XWw-QE-NLl">
-                                        <rect key="frame" x="20" y="60" width="335" height="434"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hey. We need you connect your Apple Watch first and then Press Start!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D6A-Df-e4i">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="90"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpa-0d-y7Q">
-                                                <rect key="frame" x="0.0" y="158" width="335" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COr-zd-N0B" customClass="AirenaButton" customModule="AIRENAMVP" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="246" width="335" height="60"/>
-                                                <color key="backgroundColor" red="0.047058823530000002" green="0.83921568629999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="UcC-fC-Qd0"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Connect">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="connect:" destination="Njy-f7-Yjw" eventType="touchUpInside" id="enl-1h-Cwc"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kJI-hu-2Yc" customClass="AirenaButton" customModule="AIRENAMVP" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="374" width="335" height="60"/>
-                                                <color key="backgroundColor" red="0.96078431369999995" green="0.50980392159999999" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="47K-EY-7bh"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                <state key="normal" title="Start">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="start:" destination="Njy-f7-Yjw" eventType="touchUpInside" id="eN9-R7-5He"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="XWw-QE-NLl" secondAttribute="trailing" constant="20" id="Rb6-N8-yRT"/>
-                                    <constraint firstAttribute="bottom" secondItem="XWw-QE-NLl" secondAttribute="bottom" constant="60" id="T4L-5v-oO3"/>
-                                    <constraint firstItem="XWw-QE-NLl" firstAttribute="leading" secondItem="Fvj-Mi-2hv" secondAttribute="leading" constant="20" id="VTZ-8o-6DP"/>
-                                    <constraint firstItem="XWw-QE-NLl" firstAttribute="top" secondItem="Fvj-Mi-2hv" secondAttribute="top" constant="60" id="bff-gK-rNR"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wkk-NS-9AK" firstAttribute="top" secondItem="pxw-mz-JN8" secondAttribute="bottom" id="3dn-lg-ngx"/>
                             <constraint firstAttribute="trailing" secondItem="ZO1-qS-6py" secondAttribute="trailing" id="4DL-ai-2x8"/>
-                            <constraint firstItem="Fvj-Mi-2hv" firstAttribute="top" secondItem="6kW-5P-BFn" secondAttribute="bottom" id="4gi-68-JjJ"/>
-                            <constraint firstAttribute="trailing" secondItem="Fvj-Mi-2hv" secondAttribute="trailing" id="9f5-Bl-5ca"/>
                             <constraint firstItem="pxw-mz-JN8" firstAttribute="leading" secondItem="S0N-lD-bjJ" secondAttribute="leading" id="GPF-kx-cAg"/>
                             <constraint firstItem="Wkk-NS-9AK" firstAttribute="top" secondItem="ZO1-qS-6py" secondAttribute="bottom" id="L4R-DR-Dej"/>
                             <constraint firstItem="ZO1-qS-6py" firstAttribute="top" secondItem="6kW-5P-BFn" secondAttribute="bottom" id="Lik-hi-oeC"/>
                             <constraint firstItem="ZO1-qS-6py" firstAttribute="leading" secondItem="S0N-lD-bjJ" secondAttribute="leading" id="VTR-Wv-6EQ"/>
                             <constraint firstItem="pxw-mz-JN8" firstAttribute="top" secondItem="6kW-5P-BFn" secondAttribute="bottom" id="d33-jI-8pG"/>
-                            <constraint firstItem="Fvj-Mi-2hv" firstAttribute="leading" secondItem="S0N-lD-bjJ" secondAttribute="leading" id="hhj-XD-G4P"/>
                             <constraint firstAttribute="trailing" secondItem="pxw-mz-JN8" secondAttribute="trailing" id="pJo-D6-GDQ"/>
-                            <constraint firstItem="Wkk-NS-9AK" firstAttribute="top" secondItem="Fvj-Mi-2hv" secondAttribute="bottom" id="qOJ-Df-ST2"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="aU1-E2-m6L"/>
                     <connections>
                         <outlet property="bgView" destination="ZO1-qS-6py" id="jjW-SG-yES"/>
                         <outlet property="biometrics" destination="Zxf-b5-mOq" id="yns-IG-eSV"/>
-                        <outlet property="connectButton" destination="COr-zd-N0B" id="EPJ-xw-eue"/>
                         <outlet property="initBackgroundView" destination="pxw-mz-JN8" id="eBI-Qj-6Sw"/>
                         <outlet property="initCountdown" destination="gv3-Nn-9GS" id="lf2-mY-fku"/>
                         <outlet property="name" destination="cUw-zo-Dga" id="iwt-1v-Vwz"/>
                         <outlet property="nextButton" destination="pxq-FI-awn" id="vbm-U7-IEE"/>
-                        <outlet property="onboardingView" destination="Fvj-Mi-2hv" id="u4B-ex-cuS"/>
-                        <outlet property="startButton" destination="kJI-hu-2Yc" id="V7p-bK-0tx"/>
-                        <outlet property="statusLabel" destination="Gpa-0d-y7Q" id="NRQ-Jy-jCQ"/>
                         <outlet property="time" destination="pAG-Z0-A5x" id="h05-FF-idK"/>
                         <segue destination="V88-Lm-fGO" kind="show" identifier="showCongratulations" id="mxm-t0-4nj"/>
                     </connections>
