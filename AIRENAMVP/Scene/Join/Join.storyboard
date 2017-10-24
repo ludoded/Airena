@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -165,8 +164,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-Nn-9GS">
-                                        <rect key="frame" x="136.5" y="253" width="101.5" height="48"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gv3-Nn-9GS">
+                                        <rect key="frame" x="187.5" y="277" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -211,10 +210,10 @@
             </objects>
             <point key="canvasLocation" x="1554" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Join Congratulations View Controller-->
         <scene sceneID="XCM-U2-rWO">
             <objects>
-                <viewController id="V88-Lm-fGO" sceneMemberID="viewController">
+                <viewController id="V88-Lm-fGO" customClass="JoinCongratulationsViewController" customModule="AIRENAMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jZ5-DP-xfA"/>
                         <viewControllerLayoutGuide type="bottom" id="XyO-cv-eQx"/>
@@ -223,21 +222,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHh-zX-nh0">
-                                <rect key="frame" x="26" y="315.5" width="323" height="36"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XLM-eB-pZi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="V88-Lm-fGO" id="CEN-hv-9nv"/>
+                                    <outlet property="delegate" destination="V88-Lm-fGO" id="dJb-ge-ysR"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="bHh-zX-nh0" firstAttribute="leading" secondItem="2hX-h5-waa" secondAttribute="leadingMargin" constant="10" id="A8R-d6-gqU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="bHh-zX-nh0" secondAttribute="trailing" constant="10" id="Z96-jj-YVh"/>
-                            <constraint firstItem="bHh-zX-nh0" firstAttribute="centerY" secondItem="2hX-h5-waa" secondAttribute="centerY" id="oeN-NZ-IgW"/>
-                            <constraint firstItem="bHh-zX-nh0" firstAttribute="centerX" secondItem="2hX-h5-waa" secondAttribute="centerX" id="w9g-xd-nsb"/>
+                            <constraint firstAttribute="trailing" secondItem="XLM-eB-pZi" secondAttribute="trailing" id="2AF-l0-v2B"/>
+                            <constraint firstItem="XLM-eB-pZi" firstAttribute="leading" secondItem="2hX-h5-waa" secondAttribute="leading" id="6zD-c3-lgL"/>
+                            <constraint firstItem="XyO-cv-eQx" firstAttribute="top" secondItem="XLM-eB-pZi" secondAttribute="bottom" id="LPr-Yl-Zmy"/>
+                            <constraint firstItem="XLM-eB-pZi" firstAttribute="top" secondItem="jZ5-DP-xfA" secondAttribute="bottom" id="hHd-7o-LSS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="XLM-eB-pZi" id="zMh-uf-yCE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QFM-Pa-fF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -212,7 +212,11 @@ extension AddChallengeViewController: UITableViewDataSource {
                 cell.dateTitle.text = "End Date:"
             /// Fee
             default:
-                cell.dateTitle.text = "Fee:"
+                cell.dateTitle.text = "Reward:"
+                cell.date.text = viewModel.title(for: indexPath)
+                cell.textDidChange = { [weak self] t in
+                    self?.viewModel.challenge.reward = t
+                }
             }
             
             return cell

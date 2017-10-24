@@ -53,6 +53,8 @@
 		B27C26171F62FB2B00E3FE8D /* WalletResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26161F62FB2B00E3FE8D /* WalletResponse.swift */; };
 		B27C261A1F632D6700E3FE8D /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C26191F632D6700E3FE8D /* JSONable.swift */; };
 		B27C261C1F632DA400E3FE8D /* DataRequest+ParseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27C261B1F632DA400E3FE8D /* DataRequest+ParseResponse.swift */; };
+		B288620D1F8EC24C001E0944 /* ReviewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B288620C1F8EC24C001E0944 /* ReviewTableViewCell.xib */; };
+		B288620F1F8EC27F001E0944 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B288620E1F8EC27F001E0944 /* ReviewTableViewCell.swift */; };
 		B29121C11F0BB3200074EAE8 /* UIView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */; };
 		B29452B11EFA900000B9BE57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B01EFA900000B9BE57 /* AppDelegate.swift */; };
 		B29452B31EFA900000B9BE57 /* CreateViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29452B21EFA900000B9BE57 /* CreateViewController1.swift */; };
@@ -227,6 +229,8 @@
 		B27C26161F62FB2B00E3FE8D /* WalletResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WalletResponse.swift; path = Model/DTO/WalletResponse.swift; sourceTree = "<group>"; };
 		B27C26191F632D6700E3FE8D /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSONable.swift; path = Model/Helper/Networking/JSONable.swift; sourceTree = "<group>"; };
 		B27C261B1F632DA400E3FE8D /* DataRequest+ParseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "DataRequest+ParseResponse.swift"; path = "Model/Helper/Networking/DataRequest+ParseResponse.swift"; sourceTree = "<group>"; };
+		B288620C1F8EC24C001E0944 /* ReviewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ReviewTableViewCell.xib; path = Scene/Join/Congratulations/Cell/ReviewTableViewCell.xib; sourceTree = "<group>"; };
+		B288620E1F8EC27F001E0944 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ReviewTableViewCell.swift; path = Scene/Join/Congratulations/Cell/ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		B29121C01F0BB3200074EAE8 /* UIView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+TableView.swift"; sourceTree = "<group>"; };
 		B29452AD1EFA900000B9BE57 /* AIRENAMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIRENAMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B29452B01EFA900000B9BE57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -485,6 +489,15 @@
 			name = Networking;
 			sourceTree = "<group>";
 		};
+		B288620B1F8EC226001E0944 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B288620C1F8EC24C001E0944 /* ReviewTableViewCell.xib */,
+				B288620E1F8EC27F001E0944 /* ReviewTableViewCell.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		B29121BF1F0BB3080074EAE8 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
@@ -631,6 +644,7 @@
 		B2C70DDE1F825E0D005C2860 /* Congratulations */ = {
 			isa = PBXGroup;
 			children = (
+				B288620B1F8EC226001E0944 /* Cell */,
 				B2C70DDF1F825E47005C2860 /* JoinCongratulationsViewController.swift */,
 			);
 			name = Congratulations;
@@ -958,6 +972,7 @@
 			files = (
 				B2F6A9FC1F56D98B00B2481D /* Auth.storyboard in Resources */,
 				B2F6AA181F56DD0F00B2481D /* Wallet.storyboard in Resources */,
+				B288620D1F8EC24C001E0944 /* ReviewTableViewCell.xib in Resources */,
 				B29452BB1EFA900000B9BE57 /* LaunchScreen.storyboard in Resources */,
 				B29452B81EFA900000B9BE57 /* Assets.xcassets in Resources */,
 				B2E7E1311F0BAEF600618D72 /* JoinCell.xib in Resources */,
@@ -1126,12 +1141,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AIRENAMVP/Pods-AIRENAMVP-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CorePlot/CorePlot.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CorePlot.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -1236,6 +1253,7 @@
 				B2F6AA371F56DD5900B2481D /* WalletInteractor.swift in Sources */,
 				B2F6AA3C1F56DD5900B2481D /* WalletWorker.swift in Sources */,
 				B21F7ACE1F5FF7A300DADD40 /* AddChallengeTextFieldCell.swift in Sources */,
+				B288620F1F8EC27F001E0944 /* ReviewTableViewCell.swift in Sources */,
 				B2C52C891F5D53200074E6FD /* AddChallengeViewController.swift in Sources */,
 				B2F6A9F51F56D97400B2481D /* AuthInteractor.swift in Sources */,
 				B2F6A9F71F56D97400B2481D /* AuthPresenter.swift in Sources */,

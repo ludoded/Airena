@@ -23,6 +23,7 @@ struct Challenge: JSONable {
     var owner: String = ""
     var title: String = ""
     var description: String = ""
+    var reward: String = ""
     var type: ChallengeType
     var rounds: [Round] = []
     var peers: [String] = []
@@ -39,6 +40,7 @@ struct Challenge: JSONable {
         self.type = type
         self.title = json["title"].stringValue
         self.description = json["description"].stringValue
+        self.reward = json["reward"].stringValue
         self.startDate = Date(timeIntervalSince1970: json["startDate"].doubleValue)
         self.endDate = Date(timeIntervalSince1970: json["endDate"].doubleValue)
         self.rounds = json["rounds"].arrayValue.map(Round.init)
@@ -54,6 +56,7 @@ struct Challenge: JSONable {
             "ownerAddress" : owner,
             "title" : title,
             "description" : description,
+            "reward": reward,
             "startDate" : startDate?.timeIntervalSince1970 ?? 0,
             "endDate" : endDate?.timeIntervalSince1970 ?? 0,
             "rounds" : rounds.map({ $0.jsonDict() })

@@ -7,6 +7,7 @@ target 'AIRENAMVP' do
 
   # Pods for AIRENAMVP
   pod 'Alamofire'
+  pod 'CorePlot', '~> 2.2'
   pod 'MBProgressHUD'
   pod 'SwiftyJSON'
 

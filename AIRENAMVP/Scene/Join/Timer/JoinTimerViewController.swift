@@ -86,6 +86,10 @@ final class JoinTimerViewController: UIViewController {
     }
     
     func nextStep() {
+        if let s = currentState, s.isWork {
+            viewModel.storeMetrics(result: analyzer.results.first)
+        }
+        
         if let state = viewModel.next() {
             currentState = state
             synthesizerSetup(for: state)
@@ -110,6 +114,14 @@ final class JoinTimerViewController: UIViewController {
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showCongratulations" {
+            if let vc = segue.destination as? JoinCongratulationsViewController {
+                vc.viewModel = viewModel
+            }
+        }
+    }
+    
     @objc
     func timerHandlerInit(timer: Timer) {
         let nextTimerCount = initTimerCount - 1
@@ -131,6 +143,7 @@ final class JoinTimerViewController: UIViewController {
         
         if nextTimerCount == 0 {
             timer.invalidate()
+            
             nextStep()
         }
     }

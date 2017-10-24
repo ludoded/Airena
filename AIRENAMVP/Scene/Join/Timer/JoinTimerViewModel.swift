@@ -13,6 +13,7 @@ import SwiftyJSON
 
 final class JoinTimerViewModel {
     let challenge: Challenge
+    var metrics: TimerChallengeMetrics
     
     var currentRoundIndex: Int = 0
     var currentRoundRepIndex: Int = 0
@@ -21,6 +22,7 @@ final class JoinTimerViewModel {
     
     init(challenge: Challenge) {
         self.challenge = challenge
+        self.metrics = TimerChallengeMetrics(with: challenge)
     }
     
     func next() -> JoinTimer.State? {
@@ -36,8 +38,6 @@ final class JoinTimerViewModel {
         debugPrint("exercise: ", exercise.movement)
         
         let state = JoinTimer.State(title: title, time: time, color: color, isWork: isCurrentWork, exerciseName: exercise.name, movement: mov)
-        
-        /// Post setup
         
         /// Change the isWork State
         isCurrentWork = !isCurrentWork
@@ -59,6 +59,37 @@ final class JoinTimerViewModel {
         
         return state
     }
+    
+    func storeMetrics(result: FMAnalyzerResult?) {
+        guard let res = result else { return }
+        metrics
+            .rounds[currentRoundIndex]
+            .exercise[currentExerciseIndex]
+            .append(result: res)
+        
+//        sendMetrics(res: res)
+    }
+    
+    func sendMetrics(res: FMAnalyzerResult) {
+        let exercise = challenge.rounds[currentRoundIndex].exercises[currentExerciseIndex]
+        let params: [String : Any] = [
+            "title" : exercise.name,
+            "duration" : res.duration,
+            "repetition" : res.repCount,
+            "meanAngularRange" : res.meanAngle,
+            "meanRepTime" : res.meanRepDuration,
+            "variationBetweenReps" : res.internalVariation,
+            "variationFromReference" : res.idealVariation,
+            "exercises" : Array([
+                "movementName" : exercise.movement,
+                "name" : exercise.name,
+                "rest" : exercise.rest,
+                "work" : exercise.executionNumber
+            ])
+        ]
+        
+//        API.submitChallenge(with: <#T##String#>, and: <#T##String#>, params: <#T##Parameters#>, availability: <#T##Bool#>)
+    }
 }
 
 struct JoinTimer {
@@ -71,5 +102,45 @@ struct JoinTimer {
         let exerciseName: String
         
         let movement: FMMovement?
+    }
+}
+
+struct TimerChallengeMetrics {
+    struct Round {
+        struct Exercise {
+            let title: String
+            var repetition: Int = 0
+            var duration: Float = 0
+            var meanAngularRange: Float = 0
+            var meanRepTime: Float = 0
+            var variationBetweenReps: Float = 0
+            var variationFromReference: Float = 0
+            
+            init(with title: String) {
+                self.title = title
+            }
+            
+            mutating func append(result: FMAnalyzerResult) {
+                repetition += result.repCount
+                duration += result.duration
+                meanAngularRange = (result.meanAngle + meanAngularRange) / 2
+                meanRepTime = (result.meanRepDuration + meanRepTime) / 2
+                variationBetweenReps = (result.internalVariation + variationBetweenReps) / 2
+                variationFromReference = (result.idealVariation + variationFromReference) / 2
+            }
+        }
+        
+        var exercise: [Round.Exercise] = []
+    }
+    
+    var rounds: [TimerChallengeMetrics.Round] = []
+    
+    init(with challenge: Challenge) {
+        for (roundIndex, round) in challenge.rounds.enumerated() {
+            rounds.append(TimerChallengeMetrics.Round())
+            for exercise in round.exercises {
+                rounds[roundIndex].exercise.append(TimerChallengeMetrics.Round.Exercise(with: exercise.name))
+            }
+        }
     }
 }
